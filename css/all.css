@@ -1,0 +1,47 @@
+/* css para todas as páginas da app */
+
+
+/* ELEMENTOS */
+
+/* fundo */
+body{
+    background-color: #F4EBFF;
+}
+
+/* margens */
+main{
+    margin: 30px;
+}
+
+/* logo FACEBOOMER */
+header {
+    /* background-color: yellow; */
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* TIPOGRAFIA */
+@font-face {
+    font-family: myOpenSans;
+    src: url(fonts/OpenSans-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: myOpenSans;
+    src: url(fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+body{
+    font-family: 'myOpenSans', Helvetica, Arial, sans-serif;
+}
+
+header{
+    color: black;
+    font-size: 30pt;
+    font-weight: bold;
+
+    line-height: 0;
+}

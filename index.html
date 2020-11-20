@@ -1,26 +1,40 @@
 <!-- FEED do FaceBoomer -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FaceBoomer</title>
-</head>
-<body>
 
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/feed.css" />
+  </head>
+  <body>
     <header>FACEBOOMER</header>
 
     <main>
-    <section id="estado">
-        <form>
-            <input type="text" id="estado"><br>
-        </form>
-    </section>
+      <section id="estado">
+        <div id="type-here">
+          <p>
+            <img class="fotoPerfil" src="data/utilizador/foto-de-perfil.jpg" />
+          </p>
+          <form>
+            <input
+              type="text"
+              id="new-post"
+              placeholder="Em que estás a pensar...?"
+            /><br />
+          </form>
+        </div>
+        <button class="fotoGif">GIF</button>
+        <button class="fotoGif">FOTO</button>
+        <button class="fotoGif">Fotografia</button>
+      </section>
 
-    <section id="post1">
+      <section id="post1">
         <h1>Maria</h1>
-    </section>
-</main>
-    
-</body>
+      </section>
+    </main>
+  </body>
 </html>
