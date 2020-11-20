@@ -49,5 +49,6 @@ body{
 header{
     color: black;
     font-size: 30pt;
-    font-weight: normal;
+    font-weight: bold;
+    font-kerning: normal;
 }
