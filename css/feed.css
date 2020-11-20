@@ -1,14 +1,36 @@
 /* ELEMENTOS */
 
 /* ESTADO */
-#estado{
+
+#estado-wrapper{
     background-color: #FAFAFF;
+    height: 50px;
+    width: 100%;
+    padding: 11px 25px;
 }
 
 /* foto de perfil */
-#estado .fotoPerfil {
+#estado-wrapper .fotoPerfil {
+    position: relative;
     display: inline-block;
     height: 30px;
+}
+
+.fotoPerfil img{
+    height: 100%;
+}
+
+/* typing... */
+#type-new-post {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    margin-left: 10px;
+    width: 73%;
+
+    word-wrap: break-word;
+    font-size: 9pt;
+    line-height: 12pt;
 }
 
 /* botões */

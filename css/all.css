@@ -2,6 +2,9 @@
 
 
 /* ELEMENTOS */
+*{
+    box-sizing: border-box;
+}
 
 /* fundo */
 body{
@@ -10,27 +13,32 @@ body{
 
 /* margens */
 main{
-    margin: 30px;
+    position: relative;
+    margin: 2% 7.5%;
 }
 
 /* logo FACEBOOMER */
 header {
-    /* background-color: yellow; */
-    padding: 20px;
-    text-align: center;
+    padding: 7.5%;
+    height: 90px;
+
+    /* para centrar o logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 /* TIPOGRAFIA */
 @font-face {
     font-family: myOpenSans;
-    src: url(fonts/OpenSans-Regular.ttf);
+    src: url(../fonts/OpenSans-Regular.ttf);
     font-weight: normal;
 }
 
 @font-face {
     font-family: myOpenSans;
-    src: url(fonts/OpenSans-Bold.ttf);
+    src: url(../fonts/OpenSans-Bold.ttf);
     font-weight: bold;
 }
 
@@ -41,7 +49,5 @@ body{
 header{
     color: black;
     font-size: 30pt;
-    font-weight: bold;
-
-    line-height: 0;
+    font-weight: normal;
 }
