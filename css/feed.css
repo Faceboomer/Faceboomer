@@ -5,14 +5,14 @@
 #estado-wrapper{
     background-color: #FAFAFF;
     min-height: 50px;
-    height: 50px;
-    width: 100%;
-    padding: 11px 25px;
+    height: auto;
+    width: auto;
+    padding: 11px 7%;
 }
 
 /* foto de perfil */
 #estado-wrapper .fotoPerfil {
-    position: relative;
+    position: absolute;
     display: inline-block;
     height: 30px;
 }
@@ -24,12 +24,14 @@
 /* typing... */
 #type-new-post {
     display: inline-block;
-    position: absolute;
-    top: 20px;
-    margin-left: 10px;
+    position: relative;
+    top: 5px;
+    margin-left: 17%;
     width: 73%;
+    padding-bottom: 5px;
 
     word-wrap: break-word;
+    white-space: normal;
     font-size: 9pt;
     line-height: 12pt;
 }
@@ -44,7 +46,7 @@
     font-size: 8pt;
 }
 
-.publish {
+#publish {
     float: right;
 }
 
