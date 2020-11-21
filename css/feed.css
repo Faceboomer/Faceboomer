@@ -25,7 +25,7 @@
 #type-new-post {
     display: inline-block;
     position: relative;
-    top: 5px;
+    top: 6px;
     margin-left: 17%;
     width: 73%;
     padding-bottom: 5px;
@@ -47,6 +47,6 @@
     font-size: 8pt;
 }
 
-.publish {
+#publish {
     float: right;
 }
