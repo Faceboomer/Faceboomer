@@ -50,3 +50,54 @@
 .publish {
     float: right;
 }
+
+/* POST */
+
+#post-wrapper {
+    background-color: #FAFAFF;
+    padding: 1em;
+    border-radius: 15px;
+    margin: 3vh 0;
+    box-shadow: 1px 1px 10px #D8B7FF;
+}
+
+/* imagem perfil */
+#post-wrapper .iconePerfil {
+    display: inline-block;
+    height: 40px;
+}
+
+.iconePerfil img {
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* nome */
+.nome {
+    display: inline;
+    font-weight: bold;
+    font-size: 8px;
+    margin-left: 1.5vh;
+}
+
+/* conteudo da publicação*/ 
+#post-wrapper .publicacao {
+     height: 200px;
+     text-align: center;
+     margin: 3vh 0;
+}
+
+.publicacao img {
+    height: 100%;
+}
+
+/*nº de gostos e comentários*/
+#gostos{
+    display: inline;
+    font-size: 8px;
+}
+
+#comentarios{
+    display: inline;
+    font-size: 8px;
+}
