@@ -31,7 +31,6 @@
     padding-bottom: 5px;
 
     word-wrap: break-word;
-    white-space: normal;
     font-size: 9pt;
     line-height: 12pt;
 }
@@ -46,9 +45,11 @@
     font-size: 8pt;
 }
 
-.publish {
+#publish {
     float: right;
 }
+
+
 
 /* POST */
 
