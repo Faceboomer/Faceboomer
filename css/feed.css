@@ -56,9 +56,15 @@
 #post-wrapper {
     background-color: #FAFAFF;
     padding: 1em;
-    border-radius: 15px;
     margin: 3vh 0;
+    border-radius: 15px;
     box-shadow: 1px 1px 10px #D8B7FF;
+    overflow: hidden;
+}
+
+/* ultimo post */
+#post1 {
+    margin-bottom: 5em;
 }
 
 /* imagem perfil */
@@ -75,15 +81,16 @@
 /* nome */
 .nome {
     display: inline;
-    font-weight: bold;
     font-size: 8px;
+    font-weight: bold;
+    text-transform: capitalize;
     margin-left: 1.5vh;
 }
 
-/* conteudo da publicação*/ 
+/* conteudo da publicação */ 
 #post-wrapper .publicacao {
-     height: 200px;
      text-align: center;
+     height: 200px;
      margin: 3vh 0;
 }
 
@@ -91,7 +98,7 @@
     height: 100%;
 }
 
-/*nº de gostos e comentários*/
+/* nº de gostos e comentários */
 #gostos{
     display: inline;
     font-size: 8px;
@@ -101,3 +108,51 @@
     display: inline;
     font-size: 8px;
 }
+
+/* publicações com texto */
+.publicacao-texto .post-texto {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 9px;
+    line-height: 11px;
+    text-align: left;
+}
+
+#post-wrapper .publicacao-texto {
+    display: table;
+    position: relative;
+    height: 200px;
+    margin: 2vh 0;
+    text-align: center; 
+}
+
+/* icones */
+i {
+   color: #7D12FF;
+}
+
+.fa-thumbs-up, .fa-comment {
+    padding-right: .5vh;
+}
+
+.fa-share-alt {
+    float: right;
+}
+
+.fa-ellipsis-h {
+    float: right;
+    padding-top: 1vh;
+}
+
+/*VERSÕES COM WIDTH MENOR QUE IMPLICAM IMAGENS MENORES*/
+@media screen and (max-width: 350px) {
+
+    /*Imagem Perfil*/
+    #post-wrapper .iconePerfil {
+        height: 30px;
+    }
+
+    /*Imagem Post*/
+    #post-wrapper .publicacao {
+        height: 150px;
+    }
