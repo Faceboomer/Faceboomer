@@ -63,7 +63,7 @@
 }
 
 /* ultimo post */
-#post1 {
+#antigos-posts article:last-child {
     margin-bottom: 5em;
 }
 
@@ -158,3 +158,4 @@ i {
     #post-wrapper .publicacao {
         height: 150px;
     }
+}
