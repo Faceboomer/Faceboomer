@@ -39,6 +39,7 @@ $('#publish').on("click", function () {
   savePost(post);
 });
 
+/* teste git */
 /* GUARDAR O POST na Local Storage */
 function savePost(data) {
     let posts = localStorage.getItem("publicacoes");
