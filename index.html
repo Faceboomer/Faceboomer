@@ -21,8 +21,12 @@
           <div class="fotoPerfil">
             <img src="data/utilizador/foto-de-perfil.jpg" />
           </div>
-          <textarea id="type-new-post" placeholder="Em que estás a pensar?" rows="1"></textarea
-            ><br />
+          <textarea
+            id="type-new-post"
+            placeholder="Em que estás a pensar?"
+            rows="1"
+          ></textarea
+          ><br />
         </div>
         <button class="gif">GIF</button>
         <button class="foto">FOTO</button>
@@ -31,44 +35,52 @@
       </section>
 
       <!--POSTS-->
-      <article id="post">
+      <div id="novos-posts"></div>
+      <article class="post">
         <div id="post-wrapper">
-            <div class="iconePerfil">
-              <img src="data/posts/icone-perfil1.jpg" />
-            </div>
-            <h3 class="nome">maria</h3>
-            <i class="fa fa-ellipsis-h"></i>
-            <div class="publicacao">
-              <img src="data/posts/imagem-post2.png" />
-            </div>
-            <p id="gostos">20</p>
-            <i class="fa fa-thumbs-up"></i>
-            <p id="comentarios">5</p>
-            <i class="fa fa-comment"></i>
-            <i class="fa fa-share-alt"></i>
+          <div class="iconePerfil">
+            <img src="data/posts/icone-perfil1.jpg" />
+          </div>
+          <h3 class="nome">maria</h3>
+          <i class="fa fa-ellipsis-h"></i>
+          <div class="publicacao">
+            <img src="data/posts/imagem-post2.png" />
+          </div>
+          <p id="gostos">20</p>
+          <i class="fa fa-thumbs-up"></i>
+          <p id="comentarios">5</p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
         </div>
       </article>
 
-      <article id="post">
-        <div id="post-wrapper">
+      <div id="antigos-posts">
+        <article class="post">
+          <div id="post-wrapper">
             <div class="iconePerfil">
               <img src="data/posts/icone-perfil2.jpg" />
             </div>
             <h3 class="nome">joana</h3>
             <i class="fa fa-ellipsis-h"></i>
             <div class="publicacao-texto">
-              <p class="post-texto">ESTE VIG BRODER REVOLUCAM E SO PARA ARRECADAR DINHEIRO DOS PORTUGUESAS QJE TANTO CUSTA A GANHAR QUEM ESPOLSSA E QUEM ESTA A FEENTE DO PROGRAMA AINDA AGORA FOI ESPOLSSO O MELHOR MENINO QUE LA ESTAVA OS PIORES FICAM LA E UMA VERGONHA ESTE PROGRAMA REVOLUCAO VERGONHOSO</p>
+              <p class="post-texto">
+                ESTE VIG BRODER REVOLUCAM E SO PARA ARRECADAR DINHEIRO DOS
+                PORTUGUESAS QJE TANTO CUSTA A GANHAR QUEM ESPOLSSA E QUEM ESTA A
+                FEENTE DO PROGRAMA AINDA AGORA FOI ESPOLSSO O MELHOR MENINO QUE
+                LA ESTAVA OS PIORES FICAM LA E UMA VERGONHA ESTE PROGRAMA
+                REVOLUCAO VERGONHOSO
+              </p>
             </div>
             <p id="gostos">10</p>
             <i class="fa fa-thumbs-up"></i>
             <p id="comentarios">7</p>
             <i class="fa fa-comment"></i>
             <i class="fa fa-share-alt"></i>
-        </div>
-      </article>
+          </div>
+        </article>
 
-      <article id="post">
-        <div id="post-wrapper">
+        <article class="post">
+          <div id="post-wrapper">
             <div class="iconePerfil">
               <img src="data/posts/icone-perfil3.jpg" />
             </div>
@@ -82,11 +94,11 @@
             <p id="comentarios">8</p>
             <i class="fa fa-comment"></i>
             <i class="fa fa-share-alt"></i>
-        </div>
-      </article>
+          </div>
+        </article>
 
-      <article id="post">
-        <div id="post-wrapper">
+        <article class="post">
+          <div id="post-wrapper">
             <div class="iconePerfil">
               <img src="data/posts/icone-perfil4.jpg" />
             </div>
@@ -100,11 +112,11 @@
             <p id="comentarios">2</p>
             <i class="fa fa-comment"></i>
             <i class="fa fa-share-alt"></i>
-        </div>
-      </article>
+          </div>
+        </article>
 
-      <article id="post1">
-        <div id="post-wrapper">
+        <article id="last-post">
+          <div id="post-wrapper">
             <div class="iconePerfil">
               <img src="data/posts/icone-perfil5.jpg" />
             </div>
@@ -118,9 +130,9 @@
             <p id="comentarios">0</p>
             <i class="fa fa-comment"></i>
             <i class="fa fa-share-alt"></i>
-        </div>
-      </article>
-
+          </div>
+        </article>
+      </div>
     </main>
     <section id="navbar">
       <div class="bottomnav">
@@ -130,6 +142,7 @@
       </div>
     </section>
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="js/post-something.js"></script>
+    <script type="text/javascript" src="js/feed_post-something.js"></script>
+    <script type="text/javascript" src="js/feed_resize-textarea.js"></script>
   </body>
 </html>
