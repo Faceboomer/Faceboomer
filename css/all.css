@@ -42,6 +42,10 @@ header {
     font-weight: bold;
 }
 
+strong{
+    font-weight: bold;
+}
+
 body{
     font-family: 'myOpenSans', Helvetica, Arial, sans-serif;
 }
@@ -51,6 +55,10 @@ header{
     font-size: 30pt;
     font-weight: bold;
     font-kerning: normal;
+}
+
+header #pagina{
+    float: left;
 }
 
 .bottomnav {

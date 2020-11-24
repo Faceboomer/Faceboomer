@@ -15,7 +15,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, textarea {
+time, mark, audio, video, textarea, button {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -47,12 +47,12 @@ table {
 	border-spacing: 0;
 }
 
-textarea {
+textarea, button {
 	font-family: 'myOpenSans'; /* textarea altera para monospace */
 	border: none;
 }
 
-textarea:active, textarea:focus{
+textarea:active, textarea:focus, button:active, button:focus{
 	border: none;
 	outline: none;
 }
