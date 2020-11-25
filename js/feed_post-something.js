@@ -28,6 +28,9 @@ $('#publish').on("click", function () {
     };
 
   savePost(post);
+  writePost(post);
+  // apaga o que está escrito
+  $("#type-new-post").val('');
 });
 
 /* GUARDAR O POST na Local Storage */
@@ -42,7 +45,8 @@ function savePost(data) {
         // se não, posts são uma lista (de posts)
       posts = [];
     }
-  
+    
+    // adiciona posts novos à LS e devolve nova lista
     posts.push(data);
   
     // converter em "texto", string, JSON
@@ -53,6 +57,7 @@ function savePost(data) {
   }
 
   /* PARA CONSTRUIR AS PUBLICAÇÕES */
+  function writePost(data) {
   let novosPosts = localStorage.getItem("publicacoes");
 
   // se tiver o objeto na memória
@@ -91,3 +96,4 @@ function savePost(data) {
         $("#novos-posts").prepend(p);
     });
   }
+}

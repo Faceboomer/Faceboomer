@@ -53,7 +53,7 @@
 
 /* POST */
 
-#post-wrapper {
+.post-wrapper {
     background-color: #FAFAFF;
     padding: 1em;
     margin: 3vh 0;
@@ -68,7 +68,7 @@
 }
 
 /* imagem perfil */
-#post-wrapper .iconePerfil {
+.post-wrapper .iconePerfil {
     display: inline-block;
     height: 40px;
 }
@@ -88,7 +88,7 @@
 }
 
 /* conteudo da publicação */ 
-#post-wrapper .publicacao {
+.post-wrapper .publicacao {
      text-align: center;
      height: 200px;
      margin: 3vh 0;
@@ -99,13 +99,13 @@
 }
 
 /* nº de gostos e comentários */
-#gostos{
+.gostos{
     display: inline;
     font-size: 8px;
     padding: 0.5em;
 }
 
-#comentarios{
+.comentarios{
     display: inline;
     font-size: 8px;
     padding: 0.5em;
@@ -120,7 +120,7 @@
     text-align: left;
 }
 
-#post-wrapper .publicacao-texto {
+.post-wrapper .publicacao-texto {
     display: table;
     position: relative;
     height: 200px;
