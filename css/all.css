@@ -15,6 +15,8 @@ body{
 main{
     position: relative;
     margin: 2% 7.5%;
+    /* para ir até a fim do viewport (retira a header) */
+    height: calc(100vh - 90px);
 }
 
 /* logo FACEBOOMER */
@@ -100,4 +102,11 @@ header #pagina{
     justify-content: space-around;
     align-items: center;
     color: #7D12FF;
+  }
+
+  /* onde se escrevem coisas, pesquisa, estado */
+  textarea{
+    word-wrap: break-word;
+    font-size: 9pt;
+    line-height: 12pt;
   }

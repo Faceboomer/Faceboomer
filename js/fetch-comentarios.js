@@ -1,8 +1,26 @@
 /* help: https://www.freecodecamp.org/news/cjn-google-sheets-as-json-endpoint/ */
 
+var items = [];
+
+$.getJSON("https://spreadsheets.google.com/feeds/cells/1ouF6eqgwn9ZfvhakdIN8crQfA8uHg3BX4Loxnzqs9oE/1/public/full?alt=json", function (data) {
+
+    // os objetos já com o parse de JSON
+    console.log(data);
 
 
-(function () {
+    // for
+    $.each(data.feed.entry, function (key, val) {
+        //items.push( "<li id='" + key + "'>" + val + "</li>" );
+        //let txt = val.content.gs$cell.inputValue;
+
+        //console.log('id:' + key);
+        console.log('val: ' + val.content.$t);
+    });
+
+});
+
+
+/* (function () {
 
     // ir buscar os comentarios da Google Sheets
     var listaComentarios = "https://spreadsheets.google.com/feeds/cells/1ouF6eqgwn9ZfvhakdIN8crQfA8uHg3BX4Loxnzqs9oE/1/public/full?alt=json";
@@ -10,10 +28,9 @@
 
     // converter para objeto JSON
     $.getJSON(listaComentarios, {
-        /* tags: "mount rainier",
+        tags: "mount rainier",
         tagmode: "any",
-        format: "json" */
-
+        format: "json"
     })
         // recebe os comentarios em "data"
         .done(function (data) {
@@ -26,7 +43,6 @@
                 // escrever
                 const p = `
         <div class="foto">
-        
             </div>
             <div class="comentario">
                 <p class="comment">${item.inputValue}</p>
@@ -40,10 +56,3 @@
             });
         });
 })();
-
-
-
-/* jQuery.getJSON("https://spreadsheets.google.com/feeds/cells/0AvqEhTnjx7TSdGJocUNFS0F0d0xtcDhubVE5aXZvVXc/od6/public/basic?alt=json-in-script&callback=listEntries", function listEntries(json) {
-    var content = document.createTextNode(json.feed.entry[2].title.$t);
-    jQuery("p.inhalt").append(content);
-}); */
