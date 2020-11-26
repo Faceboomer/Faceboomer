@@ -4,7 +4,7 @@
 
 #estado-wrapper{
     background-color: #FAFAFF;
-    min-height: 50px;
+    min-height: 50px; 
     height: auto;
     width: auto;
     padding: 11px 7%;
@@ -29,10 +29,6 @@
     margin-left: 17%;
     width: 73%;
     padding-bottom: 5px;
-
-    word-wrap: break-word;
-    font-size: 9pt;
-    line-height: 12pt;
 }
 
 /* botões */

@@ -31,26 +31,40 @@
 }
 
 #escrever{
-    width: 85%;
-    overflow: hidden;
-    position: fixed;
-    bottom:10px;
-    padding: 1em;
-    display: flex;
     background-color: #FAFAFF;
+    min-height: 50px; 
+    height: auto;
+    width: 100%;
+    padding: 11px 7%;
+    overflow: hidden;
+    position: absolute;
+
+    bottom: 5vh;
     margin: 3vh 0;
     border-radius: 15px;
     box-shadow: 1px 1px 10px #D8B7FF;
-
 }
 
-#comments{
+#type-container{
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-left: 17%;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+textarea{
+    width: 100%
+}
+
+.comments{
     font-weight: bold;
     float: right;
 
 }
 
-#likes{
+.likes{
     font-weight: bold;
     margin-left: 100px;
 }
