@@ -58,6 +58,12 @@
     padding-bottom: 5px;
 }
 
+#enviar{
+    position: relative;
+    color: #7300FF;
+    float: right;
+}
+
 textarea{
     width: 100%
 }
