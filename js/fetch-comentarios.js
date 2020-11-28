@@ -18,7 +18,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/cells/1ouF6eqgwn9ZfvhakdIN8crQf
             console.log('val: ' + val.gs$cell.col);
         }); */
 
-    // ir buscar 2 a 6 comentarios aleatórios
+    // ir buscar 2 a 7 comentarios aleatórios
     for (i = 0; i < getRandomInt(2, 7); i++) {
 
         let conteudo = data.feed.entry[getRandomInt(1, data.feed.entry.length)]["content"]["$t"];

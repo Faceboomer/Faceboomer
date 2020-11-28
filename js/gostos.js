@@ -1,5 +1,6 @@
 var count = 0;
 
+/* conta o nr de gostos */
 $('.gostos-btn').each(function (index) {
   $(this).on('click', function () {
     console.log("numero de likes", $(this).prev().text());
@@ -20,38 +21,28 @@ $('.gostos-btn').each(function (index) {
       number = number - 1;
     }
     console.log("number", number);
-    
+
     $(this).prev().text(number);
   })
 });
 
+/* nr aleatorio de gostos */
 
+// gerar nr int. aleatório
+// créditos: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-/*
-let likes = $(".gostos").text();
+// por cada comentario
+$(".comentarios").each(function () {
+    // escrever comentário
+    const a = `
+    <a href="comentarios-random.html">${getRandomInt(1,7)}</a>
+    `;
 
-//converter string em numero
-let number = parseInt(likes, 10);
-console.log("number", number);
+$(this).append(a);
 
-(function () {
-    var count = 0;
-
-    $('.like-btn').click(function () {
-      count += 1;
-
-      if (count == 2) {
-        number =+ 1;
-      }
-      if (count > 2) {
-          count = 0;
-          number =- 1;
-      }
-    });
-  })();
-
-$(".like-btn").on("click", function() {
-    var count = 0;
-
-    number =+ 1;
-}); */
+})
