@@ -1,0 +1,88 @@
+/* comentarios */
+.container{
+    padding: 1vh 0;
+}
+
+.c-wrapper{
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.fotoPerfil {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    bottom: 0;
+}
+
+.fotoPerfil img {
+    width: 30px;
+    height: 30px;
+}
+
+.comentario{
+    font-size: 9pt;
+    line-height: 10pt;
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+
+    border: solid #7300FF 1px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #D8B7FF;
+    margin-left: 50px;
+    width: 85%;
+}
+
+.interação{
+    font-size: 8pt;
+    margin-left:55px;
+    margin-top: 10px ;
+    justify-content: space-between;
+}
+
+.comments{
+    font-weight: bold;
+    float: right;
+
+}
+
+.likes{
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+/* escrever comentario */
+#escrever {
+    min-height: 50px;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 7.5vh;
+  }
+  
+  #type-container {
+    display: inline-block;
+    position: relative;
+    background-color: #fafaff;
+    min-height: 50px;
+    padding: 11px 7%;
+    width: 85%;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #d8b7ff;
+  }
+  
+  #enviar {
+    color: #7300ff;
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+  }
+  
+  textarea {
+    width: 100%;
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comentários</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/pag-comments.css" />
+  </head>
+  <body>
+    <header id="pagina">
+        <i id="back" class="fa fa-angle-left" aria-hidden="true"></i>    
+        <h2>Comentários</h2>
+    </header>
+
+    <main>
+      <div id="comments-wrapper"></div>
+
+      <div id="escrever">
+        <div id="type-container">
+          <textarea
+            id="type-here"
+            rows="1"
+            placeholder="Escreve um comentário..."
+          ></textarea>
+        </div>
+        <div id="enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </div>
+
+    </main>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://use.fontawesome.com/b51a055151.js"></script>
+    <script type="text/javascript" src="js/feed_resize-textarea.js"></script>
+    <script type="text/javascript" src="js/fetch-comentarios.js"></script>
+  </body>
+</html>
