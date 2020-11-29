@@ -1,0 +1,76 @@
+/* comentarios */
+.fotoPerfil img {
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.comentario {
+  font-size: 9pt;
+  line-height: 10pt;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+
+  border: solid #7300ff 1px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  margin-left: 50px;
+  width: 85%;
+}
+
+.interação {
+  font-size: 8pt;
+  margin-left: 55px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.container {
+  padding: 1vh 0;
+}
+
+.comments {
+  font-weight: bold;
+  float: right;
+}
+
+.likes {
+  font-weight: bold;
+  margin-left: 100px;
+}
+
+/* escrever comentario */
+
+#escrever {
+  min-height: 50px;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 7vh;
+}
+
+#type-container {
+  display: inline-block;
+  position: relative;
+  background-color: #fafaff;
+  min-height: 50px;
+  padding: 11px 7%;
+  width: 85%;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+}
+
+#enviar {
+  color: #7300ff;
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+}
+
+textarea {
+  width: 100%;
+}

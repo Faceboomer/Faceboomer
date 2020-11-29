@@ -18,7 +18,7 @@ $('#publish').on("click", function () {
     // ir buscar o que se escrever na textarea
     postText = $('#type-new-post').val();
     //data atual
-    date = new Date().toDateString();
+    date = new Date().toUTCString();
   
     // construção do objeto em JSON
     post = {
@@ -71,20 +71,20 @@ function savePost(data) {
         // escrever
         const p = `
         <article id="post-${i}" class="post">
-        <div id="post-wrapper">
+        <div class="post-wrapper">
           <div class="iconePerfil">
-            <img src="data/utilizador/foto-de-perfil.jpg" />
+            <img src="data/posts/icone-perfil1.jpg" />
           </div>
           <h3 class="nome">${post.nome}</h3>
           <i class="fa fa-ellipsis-h"></i>
           <div class="publicacao-texto">
             <p class="post-texto">
-              ${post.texto}
+            ${post.texto}
             </p>
           </div>
-          <p id="gostos">10</p>
-          <i class="fa fa-thumbs-up"></i>
-          <p id="comentarios">7</p>
+          <p class="gostos">20</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios">5</p>
           <i class="fa fa-comment"></i>
           <i class="fa fa-share-alt"></i>
         </div>

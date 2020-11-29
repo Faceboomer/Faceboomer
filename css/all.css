@@ -14,18 +14,37 @@ body{
 /* margens */
 main{
     position: relative;
-    margin: 2% 7.5%;
+    margin: 2vh 7.5vw 0;
+    /* para ir até a fim do viewport (retira a header) */
+    height: calc(96vh - 90px);
 }
 
 /* logo FACEBOOMER */
-header {
-    padding: 7.5%;
+header  {
+    position: relative;
+    padding: 0 7.5vw;
+    padding-top: 6vh;
     height: 90px;
-
+}
+header #logo{
     /* para centrar o logo */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* titulos de pagina */
+header h2 {
+    position: relative;
+    width: 85%;
+    left: 15%;
+}
+
+/* icone voltar para tras */
+header #back{
+    position: absolute;
+    font-size: 30px;
+    color: #7300FF;
 }
 
 /* POPUPS */
@@ -34,7 +53,31 @@ header {
     position: fixed;
     z-index: 10;
 }
+
+/*Popup grupo rissois*/
+#popups1 {
+    margin: 0 3%;
+    position: fixed;
+    z-index: 10;
+}
+
 .popup{
+    position: relative;
+    background-color: #F4EBFF;
+    padding: 10vh 10vw;
+    margin-bottom: 1vh;
+    overflow: hidden;
+
+    border: solid #7300FF 1px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #D8B7FF;
+    
+    color: #7300FF;
+    font-size: 9px;
+    line-height: 12px;
+}
+
+.popup1{
     position: relative;
     background-color: #F4EBFF;
     padding: 10vh 10vw;
@@ -56,6 +99,12 @@ header {
     right: 11px;
 }
 
+.popup-button1{
+    position: absolute;
+    top: 10px;
+    right: 11px;
+}
+
 
 /* TIPOGRAFIA */
 @font-face {
@@ -68,6 +117,10 @@ header {
     font-family: myOpenSans;
     src: url(../fonts/OpenSans-Bold.ttf);
     font-weight: bold;
+}
+
+h2{
+    font-size: 30px;
 }
 
 strong{
@@ -100,4 +153,11 @@ header #pagina{
     justify-content: space-around;
     align-items: center;
     color: #7D12FF;
+  }
+
+  /* onde se escrevem coisas, pesquisa, estado */
+  textarea{
+    word-wrap: break-word;
+    font-size: 9pt;
+    line-height: 12pt;
   }

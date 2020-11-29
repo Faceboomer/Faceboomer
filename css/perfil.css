@@ -1,0 +1,54 @@
+/*css da página de perfil*/
+
+header{
+    float: left;
+}
+
+#capa img{
+height: 100%;
+width: 100%;
+border-radius: 2vh;
+position: relative;
+z-index: 1;
+}
+
+#fotodeperfil{
+    display: flex;
+    justify-content: center;
+}
+
+#fotodeperfil img{
+height: 40%;
+width: 40%;
+border-radius: 2vh;
+border: solid #F4EBFF 6px;
+z-index: 2;
+margin-top: -10vh;
+}
+
+#maria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5vh;
+    font-size: 20pt;
+}
+
+#amigos{
+    padding-top: 1vh;
+}
+
+#amigos img{
+height: 30%;
+width: 30%;
+padding: 0.5vh;
+position: relative;
+border-radius: 1.5vh;
+}
+
+#ttlamigos{
+    position: relative;
+    display: block;
+    padding:2vh 0.5vh;
+    font-weight: 600;
+}
