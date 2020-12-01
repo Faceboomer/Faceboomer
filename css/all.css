@@ -16,7 +16,7 @@ main{
     position: relative;
     margin: 2vh 7.5vw 0;
     /* para ir até a fim do viewport (retira a header) */
-    height: calc(98vh - 90px);
+    height: calc(96vh - 90px);
 }
 
 /* logo FACEBOOMER */
@@ -33,18 +33,18 @@ header #logo{
     align-items: center;
 }
 
-header #pagina{
-    float: left;
-}
-
 /* titulos de pagina */
-header h2, header h4, header p {
+header h2 {
     position: relative;
     width: 85%;
     left: 15%;
 }
 
 /* icone voltar para tras */
+i {
+    color: #7D12FF;
+ }
+
 header #back{
     position: absolute;
     font-size: 30px;
@@ -144,6 +144,10 @@ header #back{
     font-weight: bold;
 }
 
+h2{
+    font-size: 30px;
+}
+
 strong{
     font-weight: bold;
 }
@@ -152,21 +156,33 @@ body{
     font-family: 'myOpenSans', Helvetica, Arial, sans-serif;
 }
 
-/* titulo das paginas */
 header{
-    color: black;
+    color: #7D12FF;
     font-size: 30pt;
     font-weight: bold;
     font-kerning: normal;
 }
 
-h2{
-    font-size: 30px;
+header #pagina{
+    float: left;
 }
 
-/* titulo nas conversas */
-h4{
-    font-size: 9px; 
-    font-weight: bold;  
+.bottomnav {
+    width: 100%;
+    background-color: #FAFAFF; 
+    overflow: hidden;
+    position: fixed;
+    bottom:0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #7D12FF;
   }
 
+  /* onde se escrevem coisas, pesquisa, estado */
+  textarea{
+    word-wrap: break-word;
+    font-size: 9pt;
+    line-height: 12pt;
+  }
