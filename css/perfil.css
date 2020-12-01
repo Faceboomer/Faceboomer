@@ -1,254 +1,259 @@
 /*css da página de perfil*/
 
-header{
-    float: left;
-    padding-top: 3vh;
-    font-size: 20pt;
-    align-self: initial;
-    width: 100%;
+header {
+  font-size: 20pt;
+  align-self: initial;
+  width: 100%;
 }
 
 i {
-    color:#7D12FF;
+  color: #7d12ff;
 }
 
-.fa-arrow-left{
-float: left;
-padding-right: 1.5vh;
-font-size: 12pt !important;
+.fa-arrow-left {
+  position: absolute;
+  display: inline-block;
+  margin-right: 1vh;
+  font-size: 12pt !important;
+  padding-top: 1vh;
 }
 
-.fa-search{
-float: right;
-font-size: 12pt !important;
-
+.fa-search {
+  position: absolute;
+  display: inline-block;
+  font-size: 12pt !important;
+  right: 7.5vw;
+  top: 6vh;
+  padding-top: 1vh;
 }
 
-#capa img{
-height: 100%;
-width: 100%;
-border-radius: 2vh;
-position: relative;
-z-index: 1;
+#capa img {
+  height: 100%;
+  width: 100%;
+  border-radius: 2vh;
+  position: relative;
+  z-index: 1;
 }
 
-#fotodeperfil{
-    display: flex;
-    justify-content: center;
+#fotodeperfil {
+  display: flex;
+  justify-content: center;
 }
 
-#fotodeperfil img{
-height: 40%;
-width: 40%;
-border-radius: 2vh;
-border: solid #F4EBFF 6px;
-z-index: 2;
-margin-top: -10vh;
+#fotodeperfil img {
+  height: 40%;
+  width: 40%;
+  border-radius: 2vh;
+  border: solid #f4ebff 6px;
+  z-index: 2;
+  margin-top: -10vh;
 }
 
-#maria{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5vh 0;
-    font-size: 30pt;
+#maria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 0;
+  font-size: 30pt;
 }
 
 /* INFOS PERFIL */
 
-#amigos{
-    padding-top: 1vh;
+#amigos {
+  padding-top: 1vh;
 }
 
-#amigos img{
-height: 30%;
-width: 30%;
-padding: 0.5vh;
-position: relative;
-border-radius: 1.5vh;
+#amigos img {
+  height: 30%;
+  width: 30%;
+  padding: 0.5vh;
+  position: relative;
+  border-radius: 1.5vh;
 }
 
-#ttlamigos{
-    position: relative;
-    display: block;
-    padding:2vh 0.5vh;
-    font-weight: 600;
+#ttlamigos {
+  position: relative;
+  display: block;
+  padding: 2vh 0.5vh;
+  font-weight: 600;
 }
 
-#fotos{
-    padding-top: 1vh;
+#fotos {
+  padding-top: 1vh;
 }
 
-#fotos img{
-height: 30%;
-width: 30%;
-padding: 0.5vh;
-position: relative;
-border-radius: 1.5vh;
+#fotos img {
+  height: 30%;
+  width: 30%;
+  padding: 0.5vh;
+  position: relative;
+  border-radius: 1.5vh;
 }
 
-#ttlfotos{
-    position: relative;
-    display: block;
-    padding:2vh 0.5vh;
-    font-weight: 600;
+#ttlfotos {
+  position: relative;
+  display: block;
+  padding: 2vh 0.5vh;
+  font-weight: 600;
 }
 
-#ttlpubs{
-    position: relative;
-    display: block;
-    padding:3vh 0.5vh;
-    font-weight: 600;
+#ttlpubs {
+  position: relative;
+  display: block;
+  padding: 3vh 0.5vh;
+  font-weight: 600;
+}
+
+.post:last-child {
+  margin-bottom: 100px;
 }
 
 /* STATUS BAR */
 
-#estado-wrapper{
-    background-color: #FAFAFF;
-    min-height: 50px; 
-    height: auto;
-    width: auto;
-    padding: 11px 1em;
+#estado-wrapper {
+  background-color: #fafaff;
+  min-height: 50px;
+  height: auto;
+  width: auto;
+  padding: 11px 1em;
 
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px #D8B7FF;
-    overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  overflow: hidden;
 }
 
 /* foto de perfil */
 #estado-wrapper .fotoPerfil {
-    position: absolute;
-    display: inline-block;
-    display: inline-block;
-    vertical-align: middle;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    overflow: hidden;
+  position: absolute;
+  display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-.fotoPerfil img{
-    height: 100%;
+.fotoPerfil img {
+  height: 100%;
 }
 
 /* typing... */
 #type-new-post {
-    display: inline-block;
-    position: relative;
-    margin-left: 17%;
-    width: 73%;
-    padding-bottom: 5px;
-    top: 7px;
+  display: inline-block;
+  position: relative;
+  margin-left: 17%;
+  width: 73%;
+  padding-bottom: 5px;
+  top: 7px;
 }
 
 /* botões */
-#estado button{
-    background-color: #7D12FF;
-    color: white;
-    border-radius: 5px;
-    height: 20px;
-    padding: 2px 10px;
-    font-size: 8pt;
+#estado button {
+  background-color: #7d12ff;
+  color: white;
+  border-radius: 5px;
+  height: 20px;
+  padding: 2px 10px;
+  font-size: 8pt;
 }
 
 #publish {
-    float: right;
+  float: right;
 }
 
 /*POSTS*/
 
 .post-wrapper {
-    background-color: #FAFAFF;
-    padding: 1em;
-    margin: 3vh 0;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px #D8B7FF;
-    overflow: hidden;
+  background-color: #fafaff;
+  padding: 1em;
+  margin: 3vh 0;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  overflow: hidden;
 }
 
 /* ultimo post */
 #antigos-posts article:last-child {
-    margin-bottom: 6vh;
+  margin-bottom: 6vh;
 }
 
 /* imagem perfil */
 .post-wrapper .iconePerfil {
-    display: inline-block;
-    vertical-align: middle;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .iconePerfil img {
-    height: 32px;
-    width: 32px;
+  height: 32px;
+  width: 32px;
 }
 
 /* nome */
 .nome {
-    display: inline;
-    font-size: 8px;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-left: 1.5vh;
+  display: inline;
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: 1.5vh;
 }
 
-/* conteudo da publicação */ 
+/* conteudo da publicação */
 .post-wrapper .publicacao {
-     text-align: center;
-     height: 200px;
-     margin: 2.5vh 0;
+  text-align: center;
+  height: 200px;
+  margin: 2.5vh 0;
 }
 
-
-.sharedpost-wrapper{
-    background-color: #FAFAFF;
-    padding: 2vh 5vh;
-    padding-bottom: 0;
-    border-radius: 15px;
-    overflow: hidden;
+.sharedpost-wrapper {
+  background-color: #fafaff;
+  padding: 2vh 5vh;
+  padding-bottom: 0;
+  border-radius: 15px;
+  overflow: hidden;
 }
-
 
 .publicacao img {
-    height: 100%;
+  height: 100%;
 }
-
 
 /* nº de gostos e comentários */
-.gostos{
-    display: inline;
-    font-size: 8px;
-    padding: 0.5em;
+.gostos {
+  display: inline;
+  font-size: 8px;
+  padding: 0.5em;
 }
 
-.comentarios{
-    display: inline;
-    font-size: 8px;
-    padding: 0.5em;
+.comentarios {
+  display: inline;
+  font-size: 8px;
+  padding: 0.5em;
 }
 
 /*icones dos posts*/
 
-.fa-thumbs-up, .fa-comment {
-    padding-right: .5vh;
+.fa-thumbs-up,
+.fa-comment {
+  padding-right: 0.5vh;
 }
 
 .fa-share-alt {
-    float: right;
+  float: right;
 }
 
 .fa-ellipsis-h {
-    float: right;
-    padding-top: 1vh;
+  float: right;
+  padding-top: 1vh;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-a:visited{
-    color: black;
+a:visited {
+  color: black;
 }

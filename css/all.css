@@ -110,7 +110,7 @@ header #back{
 }
 
   /* navbar */
-  .bottomnav {
+  #bottomnav {
     width: 100%;
     background-color: #FAFAFF; 
     overflow: hidden;

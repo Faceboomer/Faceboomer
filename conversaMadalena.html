@@ -10,9 +10,7 @@
   </head>
   <body>
     <header id="pagina">
-      <a href="index.html"
-        ><i id="back" class="fa fa-angle-left" aria-hidden="true"></i
-      ></a>
+      <a href="index.html"><i id="back" class="fa fa-angle-left" aria-hidden="true"></i></a>
       <div id="wrapper">
         <div id="header-img">
           <img
@@ -182,6 +180,18 @@
         </div>
       </div>
     </div>
+
+    <div class="recebida">
+      <div class="c-wrapper">
+        <div class="fotoPerfil">
+          <img src="data/utilizador/icone-madalena.jpeg" />
+        </div>
+        <div class="msg-recebida">
+          <p>Avó, faz uma publicação na página <strong>Rissóis da Avó Geninha</strong>!</p>
+        </div>
+      </div>
+    </div>
+
   </div>
   
     <!-- escrever a msg -->
@@ -211,7 +221,10 @@
 
     <script>
      //para que comece sempre com o scroll em baixo
-      $(window).on("beforeunload", function () {
+     $(window).on("beforeunload", function () {
+        $(window).scrollTop(10000);
+      });
+      $("#enviar").on("click", function () {
         $(window).scrollTop(10000);
       });
     </script>
