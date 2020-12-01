@@ -69,7 +69,7 @@
 
 /* ultimo post */
 #antigos-posts article:last-child {
-    margin-bottom: 5em;
+    margin-bottom: 10vh;
 }
 
 /* imagem perfil */
