@@ -84,7 +84,7 @@ function savePost(data) {
           </div>
           <p class="gostos">20</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
-          <p class="comentarios">5</p>
+          <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1,7)}</a></p>
           <i class="fa fa-comment"></i>
           <i class="fa fa-share-alt"></i>
         </div>

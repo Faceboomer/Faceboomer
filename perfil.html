@@ -13,7 +13,12 @@
     
   </head>
   <body>
-      <header> Maria</header>
+      <header> 
+        <a href="index.html"><i class="fa fa-arrow-left fa"></i></a>
+        <h2>Maria Eugénia</h2>
+        <i class="fa fa-search"></i>
+        </header>
+      
         <main>
             <div class="container">
                 <div id="capa">
@@ -22,20 +27,123 @@
                 <div id="fotodeperfil">
                     <img src="data/utilizador/foto-de-perfil.jpg">
                 </div>
-                <span id="maria"><strong>Maria</strong></span>    
+                <span id="maria"><strong>Maria Eugénia</strong></span>    
             </div>
+
+            <!--INFOS PERFIL --> 
 
             <div class="container">
                 <div id="amigos">
                     <span id="ttlamigos">Amigos</span> 
                     
-                    <img src="data/posts/icone-perfil1.jpg">
-                    <img src="data/posts/icone-perfil6.jpg">
-                    <img src="data/posts/icone-perfil8.jpg">
+                    <img src="data/perfil-geny/icone-amigo1.jpg">
+                    <img src="data/perfil-geny/icone-amigo2.jpg">
+                    <img src="data/perfil-geny/icone-amigo3.jpg">
+                    <img src="data/perfil-geny/icone-amigo4.jpg">
+                    <img src="data/perfil-geny/icone-amigo5.jpg">
+                    <img src="data/perfil-geny/icone-amigo6.jpg">
 
                 </div>
             </div>
+
+            <div class="container">
+                <div id="fotos">
+                    <span id="ttlfotos">Fotos</span> 
+                    
+                    <img src="data/perfil-geny/img-post3.jpg">
+                    <img src="data/perfil-geny/img-post4.jpg">
+                    <img src="data/perfil-geny/img-post6.jpg">
+                    <img src="data/perfil-geny/img-post2.jpg">
+                    <img src="data/perfil-geny/icone-foto1.jpg">
+                    <img src="data/perfil-geny/icone-foto5.jpg">
+
+                </div>
+            </div>
+
+           <!--STATUS BAR --> 
+
+            <section id="estado">
+                <span id="ttlpubs">Publicações</span> 
+                <div id="estado-wrapper">
+                  <div class="fotoPerfil">
+                    <img src="data/utilizador/foto-de-perfil.jpg" />
+                  </div>
+                  <textarea
+                    id="type-new-post"
+                    placeholder="Em que estás a pensar?"
+                    rows="1"
+                  ></textarea
+                  ><br />
+                </div>
+                <button class="gif">GIF</button>
+                <button class="foto">FOTO</button>
+                <button class="foto">Fotografia</button>
+                <button id="publish">Post</button>
+              </section>
+
+
+              <!--POSTS --> 
+              <div id="posts">
+              <article class="post">
+                <div class="post-wrapper">
+                  <div class="iconePerfil">
+                    <img src="data/utilizador/foto-de-perfil.jpg"/>
+                  </div>
+                  <h3 class="nome">
+                      Maria Eugénia
+                  </h3>
+                  <i class="fa fa-ellipsis-h"></i>
+                
+                <div class="sharedpost-wrapper">
+                  <div class="iconePerfil">
+                    <img src="data/grupos/rissol11.JPG"/>
+                  </div>
+                  <h3 class="nome">
+                    <a href="GrupoRissois.html"><strong>Rissóis da Avó Geninha</strong></a>
+                </div>
+                  </h3>
+                  <div class="publicacao">
+                    <img src="data/grupos/rissol3.jpg" />
+                  </div>
+                  <p class="gostos">6</p>
+                  <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+                  <p class="comentarios"></p>
+                  <i class="fa fa-comment"></i>
+                  <i class="fa fa-share-alt"></i>
+                </div>
+              </article>
+
+              <article class="post">
+                <div class="post-wrapper">
+                  <div class="iconePerfil">
+                    <img src="data/utilizador/foto-de-perfil.jpg" />
+                  </div>
+                  <h3 class="nome">
+                    <strong>Maria Eugénia</strong> >
+                    <a href="">Portugueses em Vichy</a>
+                  </h3>
+                  <i class="fa fa-ellipsis-h"></i>
+                  <div class="publicacao">
+                    <img src="data/posts/icone-perfil9.jpg" />
+                  </div>
+                  <p class="gostos">40</p>
+                  <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+                  <p class="comentarios"></p>
+                  <i class="fa fa-comment"></i>
+                  <i class="fa fa-share-alt"></i>
+                </div>
+              </article>
+            </div>
         </main>
+
+        <!--NAVBAR --> 
+        <div id="navbar">
+          <div id="bottomnav">
+            <button class="randomLoc"><i id="notifications" class="fa fa-bell" aria-hidden="true"></i></button>
+            <i id="groups" class="fa fa-users" aria-hidden="true"></i>
+            <a href="lista-chat.html"><i id="messages" class="fa fa-comment" aria-hidden="true"></i></a>
+          </div>
+        </div>
 
       <script src="https://use.fontawesome.com/b51a055151.js"></script>
   </body>

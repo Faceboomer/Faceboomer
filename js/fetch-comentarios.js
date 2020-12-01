@@ -16,7 +16,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/cells/1ouF6eqgwn9ZfvhakdIN8crQf
     /*     $.each(data.feed.entry, function (key, val) {
             // verificar se apenas a 1a col é que está a ser usada
             console.log('val: ' + val.gs$cell.col);
-        }); */
+        }); */ 
 
     // ir buscar 2 a 7 comentarios aleatórios
     for (i = 0; i < getRandomInt(2, 7); i++) {

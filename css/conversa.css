@@ -1,0 +1,187 @@
+/* header */
+main {
+  margin-top: 90px;
+  height: auto;
+  padding-top: 2vh;
+  margin-bottom: 150px;
+}
+header {
+  background-color: #f4ebff;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 1px 1px 10px #d8b7ff;
+}
+header #wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+header p {
+  padding-top: 2px;
+  font-size: 8px;
+  font-weight: normal;
+}
+
+#header-img {
+  position: absolute;
+  margin-left: 10%;
+
+  border-radius: 50%;
+  overflow: hidden;
+  height: 30px;
+  width: 30px;
+}
+
+#header-img img {
+  position: absolute;
+
+  height: 32px;
+  width: 32px;
+}
+
+header #titulo {
+  position: absolute;
+  width: 85%;
+  margin-left: 10%;
+  bottom: 40%;
+}
+
+/* mensagens */
+
+.mensagens {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.c-wrapper {
+  position: relative;
+  height: auto;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+/* recebida */
+.fotoPerfil {
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.fotoPerfil img {
+  width: 16px;
+  height: 16px;
+}
+
+.msg-recebida {
+  font-size: 9pt;
+  line-height: 12pt;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+
+  border: solid #7300ff 1px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  margin-left: 10%;
+  width: 80%;
+}
+
+/* enviada */
+.msg-enviada {
+  font-size: 9pt;
+  line-height: 12pt;
+  color: #fafaff;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+
+  background-color: #7300ff;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  width: 80%;
+  left: 20%;
+}
+/* msgs enviadas com anexo logo */
+.msg-enviada + .msg-enviada.anexo{
+  margin-top: 3px;
+}
+
+.msg-enviada.anexo {
+  position: relative;
+  border: solid #7300ff 1px;
+  overflow: hidden;
+  max-height: 220px;
+  padding: 0;
+  line-height: 0;
+}
+
+.msg-enviada.anexo img {
+  position: relative;
+  top: -1;
+  left: -1px;
+  max-width: 257px;
+  width: auto;
+  height: auto;
+}
+
+/* escrever msg */
+#escrever {
+  min-height: 50px;
+  height: auto;
+  width: 80%;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 7.5vh;
+  left: 7.5vw;
+}
+
+#type-container {
+  display: inline-block;
+  position: relative;
+  background-color: #fafaff;
+  min-height: 50px;
+  padding: 11px 7%;
+  width: 85%;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+}
+
+#enviar {
+  color: #7300ff;
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+}
+
+#anexo {
+    color: #7300ff;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+}
+
+textarea {
+  width: 100%;
+}
+
+#escrever-fixed {
+  min-height: 135px;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 7.5vh;
+  padding-top: 20px;
+  background-color: #f4ebff;
+}
