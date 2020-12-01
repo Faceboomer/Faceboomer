@@ -1,4 +1,5 @@
 /* Popups */
+
 #popups {
     margin: 20% 0 0 0;
     width: 95%;
@@ -51,27 +52,14 @@ align-items: center;
 
 /* Barra de Pesquisa */
 
-#procurar-wrapper {
+#searchbar{ 
+    border: none;
     background-color: #FAFAFF;
-    min-height: 50px;
-    height: auto;
-    width: auto;
-    padding: 11px 7%;
-    margin-bottom: 1em;
-    border-radius: 15px;
-}
-
-#search {
-    display: inline-block;
-    position: relative;
-    background-color: #FAFAFF;
-    font-size: 9pt;
-    line-height: 12pt;
-    top: 5px;
+    min-height: 7vh;
     width: 100%;
-    padding-bottom: 5px;
-    word-wrap: break-word;
-}
+    padding: 11px 7%;
+    border-radius: 15px;
+  } 
 
 /* Grupos */
 
@@ -80,10 +68,11 @@ align-items: center;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     grid-gap: 15px;
-    margin-bottom: 4em;
+    margin-bottom: 10vh;
+    margin-top: 3vh;
 }
 
-.grupo-wrapper, .grupo-wrapper1 {
+.itens-grupos, .itens-grupos1 {
     background-color: #FAFAFF;
     box-shadow: 1px 1px 10px #D8B7FF;
     border-radius: 15px;
