@@ -1,0 +1,57 @@
+/* Header */
+
+.cabecalho {
+    display: flex;
+    margin: 10% 7.5%;
+    }
+    
+    .seta { 
+    flex: 1;        
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    
+    .header-grupos { 
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12pt;
+    }
+    
+    .mais {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
+    
+    .fa {
+        color: #7D12FF;
+    }
+
+/* Grupos */
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    margin-bottom: 4em;
+    align-content: center;
+}
+
+.grupo-wrapper{
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+.grupo-wrapper img  {
+    border-radius: 15px;
+    width:  150px;
+    height: 150px;
+    object-fit: cover;
+}
