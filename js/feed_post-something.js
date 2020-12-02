@@ -14,6 +14,8 @@ let date = "";
 
 /* função para guardar os elementos quando se faz o clique */
 $('#publish').on("click", function () {
+
+  console.log("yay!");
     
     // ir buscar o que se escrever na textarea
     postText = $('#type-new-post').val();
