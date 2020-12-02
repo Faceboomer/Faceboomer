@@ -68,6 +68,7 @@ p{
 ul li label{
     font-size: 9pt;
     line-height: 11pt;
+    margin: 0;
 }
 
 li{
@@ -81,5 +82,9 @@ ul li:first-child{
 
 ul li input{
     margin: 1vh 0;
+    margin-right: 5%;
     width: auto;
+    
+    position: relative;
+    top: 2px;
 }
