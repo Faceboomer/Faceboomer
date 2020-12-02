@@ -1,188 +1,263 @@
 /* css para todas as páginas da app */
 
-
 /* ELEMENTOS */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 /* fundo */
-body{
-    background-color: #F4EBFF;
+body {
+  background-color: #f4ebff;
 }
 
 /* margens */
-main{
-    position: relative;
-    margin: 2vh 7.5vw 0;
-    /* para ir até a fim do viewport (retira a header) */
-    height: calc(96vh - 90px);
+main {
+  position: relative;
+  margin: 2vh 7.5vw 0;
+  /* para ir até a fim do viewport (retira a header) */
+  height: calc(96vh - 90px);
 }
 
 /* logo FACEBOOMER */
-header  {
-    position: relative;
-    padding: 0 7.5vw;
-    padding-top: 6vh;
-    height: 90px;
+header {
+  position: relative;
+  padding: 0 7.5vw;
+  padding-top: 6vh;
+  height: 90px;
 }
-header #logo{
-    /* para centrar o logo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header #logo {
+  /* para centrar o logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* titulos de pagina */
 header h2 {
-    position: relative;
-    width: 85%;
-    left: 15%;
+  position: relative;
+  width: 85%;
+  left: 15%;
 }
 
 /* icone voltar para tras */
 i {
-    color: #7D12FF;
- }
+  color: #7d12ff;
+}
 
-header #back{
-    position: absolute;
-    font-size: 30px;
-    color: #7300FF;
+header #back {
+  position: absolute;
+  font-size: 30px;
+  color: #7300ff;
 }
 
 /* POPUPS */
 #popups {
-    margin: 0 3%;
-    position: fixed;
-    z-index: 10;
+  margin: 0 3%;
+  position: fixed;
+  z-index: 10;
 }
 
 /*Popup grupo rissois*/
 #popups1 {
-    margin: 0 3%;
-    position: fixed;
-    z-index: 10;
+  margin: 0 3%;
+  position: fixed;
+  z-index: 10;
 }
 
-.popup{
-    position: relative;
-    background-color: #F4EBFF;
-    padding: 10vh 10vw;
-    margin-bottom: 1vh;
-    overflow: hidden;
+.popup {
+  position: relative;
+  background-color: #f4ebff;
+  padding: 10vh 10vw;
+  margin-bottom: 1vh;
+  overflow: hidden;
 
-    border: solid #7300FF 1px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px #D8B7FF;
-    
-    color: #7300FF;
-    font-size: 9px;
-    line-height: 12px;
+  border: solid #7300ff 1px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+
+  color: #7300ff;
+  font-size: 9px;
+  line-height: 12px;
 }
 
-.popup1{
-    position: relative;
-    background-color: #F4EBFF;
-    padding: 10vh 10vw;
-    margin-bottom: 1vh;
-    overflow: hidden;
+.popup1 {
+  position: relative;
+  background-color: #f4ebff;
+  padding: 10vh 10vw;
+  margin-bottom: 1vh;
+  overflow: hidden;
 
-    border: solid #7300FF 1px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px #D8B7FF;
-    
-    color: #7300FF;
-    font-size: 9px;
-    line-height: 12px;
+  border: solid #7300ff 1px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+
+  color: #7300ff;
+  font-size: 9px;
+  line-height: 12px;
 }
 
-.popup-button{
-    position: absolute;
-    top: 10px;
-    right: 11px;
+.popup-button {
+  position: absolute;
+  top: 10px;
+  right: 11px;
 }
 
-.popup-button1{
-    position: absolute;
-    top: 10px;
-    right: 11px;
+.popup-button1 {
+  position: absolute;
+  top: 10px;
+  right: 11px;
 }
 
-  /* navbar */
-  #bottomnav {
-    width: 100%;
-    background-color: #FAFAFF; 
-    overflow: hidden;
-    position: fixed;
-    bottom:0;
-    padding: 1em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #7D12FF;
-  }
+/* STATUS BAR */
+#estado-wrapper {
+  background-color: #fafaff;
+  min-height: 50px;
+  height: auto;
+  width: auto;
+  padding: 11px 1em;
 
-  /* onde se escrevem coisas, pesquisa, estado */
-  textarea{
-    word-wrap: break-word;
-    font-size: 9pt;
-    line-height: 12pt;
-  }
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  overflow: hidden;
+  margin-top: 3vh;
+}
 
+/* foto de perfil */
+#estado-wrapper .fotoPerfil {
+  position: absolute;
+  display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.fotoPerfil img {
+  height: 100%;
+}
+
+/* typing... */
+#type-new-post {
+  display: inline-block;
+  position: relative;
+  margin-left: 17%;
+  width: 73%;
+  padding-bottom: 5px;
+  top: 7px;
+}
+
+/* botões */
+#estado #botoes {
+  display: flex;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: -15px;
+  padding-bottom: 2px;
+}
+
+#estado .botao {
+  background-color: transparent;
+  color: white;
+  margin-top: 20px;
+  font-size: 8pt;
+  flex-grow: 4;
+  border-right: 1px solid white;
+  margin-bottom: 4px;
+}
+
+#estado .botao:last-child {
+  border: none;
+}
+
+.sep {
+  padding: 0 !important;
+  color: #f4ebff;
+}
+
+#botoes {
+  background-color: #7d12ff;
+  border-radius: 10px;
+  margin-top: -4.5vh;
+  position: relative;
+  z-index: -3;
+}
+
+/* NAVBAR */
+#bottomnav {
+  width: 100%;
+  background-color: #fafaff;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #7d12ff;
+}
+
+/* onde se escrevem coisas, pesquisa, estado */
+textarea {
+  word-wrap: break-word;
+  font-size: 9pt;
+  line-height: 12pt;
+}
 
 /* TIPOGRAFIA */
 @font-face {
-    font-family: myOpenSans;
-    src: url(../fonts/OpenSans-Regular.ttf);
-    font-weight: normal;
+  font-family: myOpenSans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: myOpenSans;
-    src: url(../fonts/OpenSans-Bold.ttf);
-    font-weight: bold;
+  font-family: myOpenSans;
+  src: url(../fonts/OpenSans-Bold.ttf);
+  font-weight: bold;
 }
 
-h2{
-    font-size: 30px;
+h2 {
+  font-size: 30px;
 }
 
-strong{
-    font-weight: bold;
+strong {
+  font-weight: bold;
 }
 
-body{
-    font-family: 'myOpenSans', Helvetica, Arial, sans-serif;
+body {
+  font-family: "myOpenSans", Helvetica, Arial, sans-serif;
 }
 
-header{
-    color: #7D12FF;
-    font-size: 30pt;
-    font-weight: bold;
-    font-kerning: normal;
+header {
+  color: #7d12ff;
+  font-size: 30pt;
+  font-weight: bold;
+  font-kerning: normal;
 }
 
-header #pagina{
-    float: left;
+header #pagina {
+  float: left;
 }
 
 .bottomnav {
-    width: 100%;
-    background-color: #FAFAFF; 
-    overflow: hidden;
-    position: fixed;
-    bottom:0;
-    padding: 1em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #7D12FF;
-  }
+  width: 100%;
+  background-color: #fafaff;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #7d12ff;
+}
 
-  /* onde se escrevem coisas, pesquisa, estado */
-  textarea{
-    word-wrap: break-word;
-    font-size: 9pt;
-    line-height: 12pt;
-  }
+/* onde se escrevem coisas, pesquisa, estado */
+textarea {
+  word-wrap: break-word;
+  font-size: 9pt;
+  line-height: 12pt;
+}

@@ -11,15 +11,15 @@ i {
   padding-right: 2vw;
 }
 
-li{
+li {
   padding: 0.5vh 2vw;
 }
 
-.fa-map-marker{
+.fa-map-marker {
   padding-left: 0.5vw;
 }
 
-.fa-arrow-left{
+.fa-arrow-left {
   position: absolute;
   display: inline-block;
   margin-right: 1vh;
@@ -66,45 +66,41 @@ li{
   font-size: 30pt;
 }
 
-
-
 /* INFOS PERFIL */
 
-#bio{
+#bio {
   display: flex;
   align-content: center;
   justify-content: center;
   margin-bottom: 3vh;
 }
 
-#infolista{
+#infolista {
   background-color: #fafaff;
   min-height: 50px;
   height: auto;
   width: auto;
-  padding: 1vh 2vw 1vh 4vw;  
+  padding: 1vh 2vw 1vh 4vw;
   line-height: 16pt;
 
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
   overflow: hidden;
   margin-bottom: 2.5vh;
-  
 }
 
-.nmrs{
+.nmrs {
   padding-top: 1vh;
   font-size: 12pt;
   font-weight: 200;
 }
 
-#amigos{
+#amigos {
   background-color: #fafaff;
   min-height: 50px;
   height: auto;
   width: auto;
   padding: 1vh 2vw 2vh 4vw;
-  
 
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
@@ -133,7 +129,6 @@ li{
   height: auto;
   width: auto;
   padding: 1vh 2vw 2vh 4vw;
-  
 
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
@@ -167,85 +162,6 @@ li{
 .post:last-child {
   margin-bottom: 100px;
 }
-
-
-
-/* STATUS BAR */
-
-#estado-wrapper {
-  background-color: #fafaff;
-  min-height: 50px;
-  height: auto;
-  width: auto;
-  padding: 11px 1em;
-
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px #d8b7ff;
-  overflow: hidden;
-  margin-top: 3vh;
-}
-
-/* foto de perfil */
-#estado-wrapper .fotoPerfil {
-  position: absolute;
-  display: inline-block;
-  display: inline-block;
-  vertical-align: middle;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.fotoPerfil img {
-  height: 100%;
-}
-
-/* typing... */
-#type-new-post {
-  display: inline-block;
-  position: relative;
-  margin-left: 17%;
-  width: 73%;
-  padding-bottom: 5px;
-  top: 7px;
-}
-
-/* botões */
-#estado #botoes{
-  display: flex;
-  flex-wrap: nowrap;
-  display: flex;
-    flex-wrap: nowrap;
-    margin-top: -15px;
-}
-
-#estado .botao {
-  background-color: transparent;
-  color: white;
-  height: 4vh;
-  padding-top: 5vh;
-  padding-left: 4vw;
-  padding-right: 2vw;
-  font-size: 8pt;
-}
-
-#publish{
-}
-
-.sep{
-  padding:0 !important;
-  color: #f4ebff;
-}
-
-#botoes{
-  background-color: #7d12ff;
-  border-radius: 10px;
-  margin-top: -4.5vh;
-  position: relative;
-  z-index: -3;
-}
-
 
 /*POSTS*/
 
