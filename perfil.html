@@ -30,11 +30,33 @@
                 <span id="maria"><strong>Maria Eugénia</strong></span>    
             </div>
 
+
+
             <!--INFOS PERFIL --> 
+
+            <section id="info">
+              <div class="infoperfil">
+                <span id="bio">GOSTO MUITO sinto - me em paz</span>
+                <ul id="infolista">
+                  <li><i class="fa fa-graduation-cap" aria-hidden="true"></i>Estudou em <strong>Escola do Magistério Primário de Lisboa</strong></li>
+                  <li><i class="fa fa-briefcase" aria-hidden="true"></i>Trabalhou em <strong> do Magistério Primário de Lisboa</strong></li>
+                  <li><i class="fa fa-briefcase" aria-hidden="true"></i>Cozinheira em <strong><a href="GrupoRissois.html">Rissóis da Avó Geninha</a></strong></li>
+                  <li><i class="fa fa-home" aria-hidden="true"></i>Vive em <strong>Porto</strong></li>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i>De <strong>Alijó</strong></li>
+                  <li><i class="fa fa-heart" aria-hidden="true"></i>Viúva</li>
+                  <li><i class="fa fa-check-square" aria-hidden="true"></i>Seguida por 57 pessoas</li>
+
+                </ul>
+              </div>
+            </section>
+
 
             <div class="container">
                 <div id="amigos">
-                    <span id="ttlamigos">Amigos</span> 
+                  <div id="ttlamigos">
+                    <strong>Amigos</strong> 
+                    <p class="nmrs">522 amigos</p>
+                  </div>
                     
                     <img src="data/perfil-geny/icone-amigo1.jpg">
                     <img src="data/perfil-geny/icone-amigo2.jpg">
@@ -48,7 +70,10 @@
 
             <div class="container">
                 <div id="fotos">
-                    <span id="ttlfotos">Fotos</span> 
+                  <div id="ttlfotos">
+                    <strong>Fotos</strong>
+                    <p class="nmrs">304 fotos</p>
+                   </div> 
                     
                     <img src="data/perfil-geny/img-post3.jpg">
                     <img src="data/perfil-geny/img-post4.jpg">
@@ -60,26 +85,31 @@
                 </div>
             </div>
 
-           <!--STATUS BAR --> 
+                 <!--STATUS BAR --> 
 
-            <section id="estado">
-                <span id="ttlpubs">Publicações</span> 
-                <div id="estado-wrapper">
-                  <div class="fotoPerfil">
-                    <img src="data/utilizador/foto-de-perfil.jpg" />
+                 <section id="estado">
+
+                  <div id="estado-wrapper">
+                    <div class="fotoPerfil">
+                      <img src="data/utilizador/foto-de-perfil.jpg" />
+                    </div>
+                    <textarea
+                      id="type-new-post"
+                      placeholder="Em que estás a pensar?"
+                      rows="1"
+                    ></textarea
+                    ><br />
                   </div>
-                  <textarea
-                    id="type-new-post"
-                    placeholder="Em que estás a pensar?"
-                    rows="1"
-                  ></textarea
-                  ><br />
-                </div>
-                <button class="gif">GIF</button>
-                <button class="foto">FOTO</button>
-                <button class="foto">Fotografia</button>
-                <button id="publish">Post</button>
-              </section>
+                  <div id="botoes">
+                    <button class="botao gif">GIF</button>
+                    <p class="botao sep"><strong>|</strong></p>
+                    <button class="botao foto">FOTO</button>
+                    <p class="botao sep"><strong>|</strong></p>
+                    <button class="botao foto">Fotografia</button>
+                    <p class="botao sep"><strong>|</strong></p>
+                    <button id="botao publish">Post</button>
+                    </div>
+                </section>
 
 
               <!--POSTS --> 
@@ -100,8 +130,8 @@
                   </div>
                   <h3 class="nome">
                     <a href="GrupoRissois.html"><strong>Rissóis da Avó Geninha</strong></a>
-                </div>
                   </h3>
+                </div>
                   <div class="publicacao">
                     <img src="data/grupos/rissol3.jpg" />
                   </div>
@@ -119,7 +149,7 @@
                     <img src="data/utilizador/foto-de-perfil.jpg" />
                   </div>
                   <h3 class="nome">
-                    <strong>Maria Eugénia</strong> >
+                    <strong>Maria Eugénia</strong>
                     <a href="">Portugueses em Vichy</a>
                   </h3>
                   <i class="fa fa-ellipsis-h"></i>
