@@ -40,14 +40,23 @@ header p {
   position: absolute;
 
   height: 32px;
-  width: 32px;
+  width: auto
 }
 
 header #titulo {
   position: absolute;
-  width: 85%;
-  margin-left: 10%;
-  bottom: 40%;
+  left: 25%;
+  top: 7.5%;
+}
+
+/* go back */
+#header a{
+  
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-height: 30px;
+  min-width: 11px;
 }
 
 /* mensagens */
@@ -77,7 +86,7 @@ header #titulo {
 }
 
 .fotoPerfil img {
-  width: 16px;
+  width: auto;
   height: 16px;
 }
 
