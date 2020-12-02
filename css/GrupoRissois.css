@@ -120,7 +120,7 @@
 
 /* POST */
 
-#post-wrapper {
+.post-wrapper {
     background-color: #FAFAFF;
     padding: 1em;
     margin: 3vh 0;
@@ -135,7 +135,7 @@
 }
 
 /* imagem perfil */
-#post-wrapper .iconePerfil {
+.post-wrapper .iconePerfil {
     display: inline-block;
     vertical-align: middle;
     height: 30px;
@@ -159,7 +159,7 @@
 }
 
 /* conteudo da publicação */ 
-#post-wrapper .publicacao {
+.post-wrapper .publicacao {
      text-align: center;
      height: 200px;
      margin: 3vh 0;
@@ -191,7 +191,7 @@
     text-align: left;
 }
 
-#post-wrapper .publicacao-texto {
+.post-wrapper .publicacao-texto {
     display: table;
     position: relative;
     height: 200px;
@@ -243,12 +243,12 @@ i {
 @media screen and (max-width: 350px) {
 
     /*Imagem Perfil*/
-    #post-wrapper .iconePerfil {
+    .post-wrapper .iconePerfil {
         height: 30px;
     }
 
     /*Imagem Post*/
-    #post-wrapper .publicacao {
+    .post-wrapper .publicacao {
         height: 150px;
     }
 }
