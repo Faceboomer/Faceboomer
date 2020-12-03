@@ -10,7 +10,7 @@ function procurar_conversa() {
             x[i].style.display="none"; 
         } 
         else { 
-            x[i].style.display="unordered-list-item";                  
+            x[i].style.display="list-item";                  
         } 
     } 
 } 
