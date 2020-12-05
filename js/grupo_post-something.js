@@ -42,7 +42,7 @@ $('#publish').on("click", function () {
 
 $(document).ready(function() {
 
-  let antigosPosts = localStorage.getItem('publicacoes');
+  let antigosPosts = localStorage.getItem('grupo_publicacoes');
 
   if (antigosPosts != null) {
     writePost(antigosPosts);
@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 /* GUARDAR O POST na Local Storage */
 function savePost(data) {
-    let posts = localStorage.getItem("publicacoes");
+    let posts = localStorage.getItem("grupo_publicacoes");
     
     // se já tiver objetos guardados na memória,
     if (posts != null) {
@@ -71,12 +71,12 @@ function savePost(data) {
     posts = JSON.stringify(posts);
     
     // guardar na variável do localStorage
-    localStorage.setItem("publicacoes", posts);
+    localStorage.setItem("grupo_publicacoes", posts);
   }
 
   /* PARA CONSTRUIR AS PUBLICAÇÕES */
   function writePost(data) {
-  let novosPosts = localStorage.getItem("publicacoes");
+  let novosPosts = localStorage.getItem("grupo_publicacoes");
 
   // se tiver o objeto na memória
   if (novosPosts != null) {
@@ -100,7 +100,7 @@ function savePost(data) {
             ${post.texto}
             </p>
           </div>
-          <p class="gostos">20</p>
+          <p class="gostos">${getRandomInt(1,40)}</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
           <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1,7)}</a></p>
           <i class="fa fa-comment"></i>

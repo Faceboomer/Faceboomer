@@ -42,7 +42,7 @@ $('#publish').on("click", function () {
 
 $(document).ready(function() {
 
-  let antigosPosts = localStorage.getItem('feed_publicacoes');
+  let antigosPosts = localStorage.getItem('perfil_publicacoes');
 
   if (antigosPosts != null) {
     writePost(antigosPosts);
@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 /* GUARDAR O POST na Local Storage */
 function savePost(data) {
-    let posts = localStorage.getItem("feed_publicacoes");
+    let posts = localStorage.getItem("perfil_publicacoes");
     
     // se já tiver objetos guardados na memória,
     if (posts != null) {
@@ -71,12 +71,12 @@ function savePost(data) {
     posts = JSON.stringify(posts);
     
     // guardar na variável do localStorage
-    localStorage.setItem("feed_publicacoes", posts);
+    localStorage.setItem("perfil_publicacoes", posts);
   }
 
   /* PARA CONSTRUIR AS PUBLICAÇÕES */
   function writePost(data) {
-  let novosPosts = localStorage.getItem("feed_publicacoes");
+  let novosPosts = localStorage.getItem("perfil_publicacoes");
 
   // se tiver o objeto na memória
   if (novosPosts != null) {
@@ -88,6 +88,7 @@ function savePost(data) {
 
         // escrever
         const p = `
+
         <article id="post-${i}" class="post">
         <div class="post-wrapper">
           <div class="iconePerfil">

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/perfil.css" />
+    <link rel="stylesheet" href="css/posts.css" />
 
     <script src="https://use.fontawesome.com/b51a055151.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -109,8 +110,10 @@
 
 
               <!--POSTS --> 
-              <div id="posts">
-              <article class="post">
+              <div id="novos-posts"></div>
+              <div id="antigos-posts">
+
+              <article class="shared post">
                 <div class="post-wrapper">
                   <div class="iconePerfil">
                     <img src="data/utilizador/foto-de-perfil.jpg"/>
@@ -120,6 +123,7 @@
                   </h3>
                   <i class="fa fa-ellipsis-h"></i>
                 
+                <div class="sharedpost">
                 <div class="sharedpost-wrapper">
                   <div class="iconePerfil">
                     <img src="data/grupos/rissol11.JPG"/>
@@ -131,6 +135,7 @@
                   <div class="publicacao">
                     <img src="data/grupos/rissol3.jpg" />
                   </div>
+                </div>
                   <p class="gostos">6</p>
                   <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
                   <p class="comentarios"></p>
@@ -142,17 +147,20 @@
               <article class="post">
                 <div class="post-wrapper">
                   <div class="iconePerfil">
-                    <img src="data/utilizador/foto-de-perfil.jpg" />
+                    <img src="data/utilizador/icone13.jpg" />
                   </div>
                   <h3 class="nome">
-                    <strong>Maria Eugénia</strong>
-                    <a href="">Portugueses em Vichy</a>
-                  </h3>
+                    <strong>Ana Cláudia Martins</strong> ‣
+                    <a href="GrupoRissois.html">Rissóis Da Avó Geninha</a>
+                  </h3> 
                   <i class="fa fa-ellipsis-h"></i>
-                  <div class="publicacao">
-                    <img src="data/utilizador/icone47.jpg" />
+                  <div class="publicacao-texto">
+                    <p class="post-texto">
+                      Cara Maria Eugénia, os rissóis estavam maravilhosos.., quero
+                      levar. Mais! Beijcas ;)
+                    </p>
                   </div>
-                  <p class="gostos">40</p>
+                  <p class="gostos">20</p>
                   <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
                   <p class="comentarios"></p>
                   <i class="fa fa-comment"></i>
@@ -171,4 +179,6 @@
           </div>
         </div>
   </body>
+  <script src="js\gostosComentarios.js"></script>
+  <script src="js\perfil_post-something.js"></script>
 </html>
