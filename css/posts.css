@@ -115,6 +115,10 @@ i {
     float: right;
 }
 
+button.edit{
+    float: right;
+}
+
 .fa-ellipsis-h {
     float: right;
     padding-top: 1vh;

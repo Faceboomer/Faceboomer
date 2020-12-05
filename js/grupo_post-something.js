@@ -94,7 +94,7 @@ function savePost(data) {
             <img src="data/utilizador/foto-de-perfil.jpg" />
           </div>
           <h3 class="nome">${post.nome}</h3>
-          <i class="fa fa-ellipsis-h"></i>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao-texto">
             <p class="post-texto">
             ${post.texto}
