@@ -50,6 +50,7 @@ table {
 textarea, button {
 	font-family: 'myOpenSans'; /* textarea altera para monospace */
 	border: none;
+	background-color: transparent;
 }
 
 textarea:active, textarea:focus, button:active, button:focus{

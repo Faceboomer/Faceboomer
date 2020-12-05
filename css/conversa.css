@@ -18,6 +18,7 @@ header #wrapper {
   position: relative;
   height: 100%;
   width: 100%;
+  left: 10%;
 }
 
 header p {
@@ -28,8 +29,6 @@ header p {
 
 #header-img {
   position: absolute;
-  margin-left: 10%;
-
   border-radius: 50%;
   overflow: hidden;
   height: 30px;
@@ -45,18 +44,20 @@ header p {
 
 header #titulo {
   position: absolute;
-  left: 25%;
+  left: 15%;
   top: 7.5%;
 }
 
 /* go back */
-#header a{
+#header .fa{
   
   position: absolute;
   width: auto;
   height: auto;
   min-height: 30px;
   min-width: 11px;
+
+  
 }
 
 /* mensagens */

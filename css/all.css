@@ -45,6 +45,7 @@ i {
 }
 
 header #back {
+  
   position: absolute;
   font-size: 30px;
   color: #7300ff;
@@ -110,6 +111,7 @@ header #back {
 
 /* STATUS BAR */
 #estado-wrapper {
+  position: relative;
   background-color: #fafaff;
   min-height: 50px;
   height: auto;
@@ -152,8 +154,6 @@ header #back {
 #estado #botoes {
   display: flex;
   flex-wrap: nowrap;
-  display: flex;
-  flex-wrap: nowrap;
   margin-top: -15px;
   padding-bottom: 2px;
 }
@@ -180,9 +180,6 @@ header #back {
 #botoes {
   background-color: #7d12ff;
   border-radius: 10px;
-  margin-top: -4.5vh;
-  position: relative;
-  z-index: -3;
 }
 
 /* NAVBAR */

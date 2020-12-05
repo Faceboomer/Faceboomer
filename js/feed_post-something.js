@@ -3,6 +3,10 @@ $(function () {
     console.log("post ready");
   });
 
+  $('#publish').click(function() {
+    console.log("slay");
+  });
+    
 
 /* GUARDAR O POST no click*/
 // post individual
@@ -14,8 +18,6 @@ let date = "";
 
 /* função para guardar os elementos quando se faz o clique */
 $('#publish').on("click", function () {
-
-  console.log("yay!");
     
     // ir buscar o que se escrever na textarea
     postText = $('#type-new-post').val();
@@ -29,10 +31,24 @@ $('#publish').on("click", function () {
       texto: postText,
     };
 
-  savePost(post);
-  writePost(post);
+    if (postText) {
+      savePost(post);
+      writePost(post);
+    };
+
   // apaga o que está escrito
   $("#type-new-post").val('');
+});
+
+$(document).ready(function() {
+
+  let antigosPosts = localStorage.getItem('publicacoes');
+
+  if (antigosPosts != null) {
+    writePost(antigosPosts);
+    console.log("$ -> antigosPosts", antigosPosts)
+  };
+  
 });
 
 /* GUARDAR O POST na Local Storage */
@@ -75,7 +91,7 @@ function savePost(data) {
         <article id="post-${i}" class="post">
         <div class="post-wrapper">
           <div class="iconePerfil">
-            <img src="data/posts/icone-perfil1.jpg" />
+            <img src="data/utilizador/foto-de-perfil.jpg" />
           </div>
           <h3 class="nome">${post.nome}</h3>
           <i class="fa fa-ellipsis-h"></i>
