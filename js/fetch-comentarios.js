@@ -29,7 +29,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/cells/1ouF6eqgwn9ZfvhakdIN8crQf
         <div class="container">
         <div class="c-wrapper">
         <div class="fotoPerfil">
-          <img src="data/posts/icone-perfil${getRandomInt(1, 20)}.jpg" />
+          <img src="data/utilizador/icone${getRandomInt(1, 59)}.jpg" />
         </div>
         <div class="comentario">
           <p>${conteudo}</p>

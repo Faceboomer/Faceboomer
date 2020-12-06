@@ -6,25 +6,12 @@ header {
   width: 100%;
 }
 
-i {
-  color: #7d12ff;
+li {
+  padding: 0.5vh 2vw;
 }
 
-.fa-arrow-left {
-  position: absolute;
-  display: inline-block;
-  margin-right: 1vh;
-  font-size: 12pt !important;
-  padding-top: 1vh;
-}
-
-.fa-search {
-  position: absolute;
-  display: inline-block;
-  font-size: 12pt !important;
-  right: 7.5vw;
-  top: 6vh;
-  padding-top: 1vh;
+li i.fa{
+  margin-right: 5px;
 }
 
 #capa img {
@@ -53,14 +40,49 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5vh 0;
   font-size: 30pt;
 }
 
 /* INFOS PERFIL */
 
-#amigos {
+#bio {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+#infolista {
+  background-color: #fafaff;
+  min-height: 50px;
+  height: auto;
+  width: auto;
+  padding: 1vh 2vw 1vh 4vw;
+  line-height: 16pt;
+
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  overflow: hidden;
+  margin-bottom: 2.5vh;
+}
+
+.nmrs {
   padding-top: 1vh;
+  font-size: 12pt;
+  font-weight: 200;
+}
+
+#amigos {
+  background-color: #fafaff;
+  min-height: 50px;
+  height: auto;
+  width: auto;
+  padding: 1vh 2vw 2vh 4vw;
+
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  overflow: hidden;
+  margin-bottom: 2.5vh;
 }
 
 #amigos img {
@@ -71,7 +93,7 @@ i {
   border-radius: 1.5vh;
 }
 
-#ttlamigos {
+.ttl {
   position: relative;
   display: block;
   padding: 2vh 0.5vh;
@@ -79,7 +101,15 @@ i {
 }
 
 #fotos {
-  padding-top: 1vh;
+  background-color: #fafaff;
+  min-height: 50px;
+  height: auto;
+  width: auto;
+  padding: 1vh 2vw 2vh 4vw;
+
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+  overflow: hidden;
 }
 
 #fotos img {
@@ -90,170 +120,11 @@ i {
   border-radius: 1.5vh;
 }
 
-#ttlfotos {
+#ttlpubs {
   position: relative;
   display: block;
   padding: 2vh 0.5vh;
   font-weight: 600;
-}
-
-#ttlpubs {
-  position: relative;
-  display: block;
-  padding: 3vh 0.5vh;
-  font-weight: 600;
-}
-
-.post:last-child {
-  margin-bottom: 100px;
-}
-
-/* STATUS BAR */
-
-#estado-wrapper {
-  background-color: #fafaff;
-  min-height: 50px;
-  height: auto;
-  width: auto;
-  padding: 11px 1em;
-
-  border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;
-  overflow: hidden;
-}
-
-/* foto de perfil */
-#estado-wrapper .fotoPerfil {
-  position: absolute;
-  display: inline-block;
-  display: inline-block;
-  vertical-align: middle;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.fotoPerfil img {
-  height: 100%;
-}
-
-/* typing... */
-#type-new-post {
-  display: inline-block;
-  position: relative;
-  margin-left: 17%;
-  width: 73%;
-  padding-bottom: 5px;
-  top: 7px;
-}
-
-/* botões */
-#estado button {
-  background-color: #7d12ff;
-  color: white;
-  border-radius: 5px;
-  height: 20px;
-  padding: 2px 10px;
-  font-size: 8pt;
-}
-
-#publish {
-  float: right;
-}
-
-/*POSTS*/
-
-.post-wrapper {
-  background-color: #fafaff;
-  padding: 1em;
-  margin: 3vh 0;
-  border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;
-  overflow: hidden;
-}
-
-/* ultimo post */
-#antigos-posts article:last-child {
-  margin-bottom: 6vh;
-}
-
-/* imagem perfil */
-.post-wrapper .iconePerfil {
-  display: inline-block;
-  vertical-align: middle;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.iconePerfil img {
-  height: 32px;
-  width: 32px;
-}
-
-/* nome */
-.nome {
-  display: inline;
-  font-size: 8px;
-  font-weight: bold;
-  text-transform: capitalize;
-  margin-left: 1.5vh;
-}
-
-/* conteudo da publicação */
-.post-wrapper .publicacao {
-  text-align: center;
-  height: 200px;
-  margin: 2.5vh 0;
-}
-
-.sharedpost-wrapper {
-  background-color: #fafaff;
-  padding: 2vh 5vh;
-  padding-bottom: 0;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.publicacao img {
-  height: 100%;
-}
-
-/* nº de gostos e comentários */
-.gostos {
-  display: inline;
-  font-size: 8px;
-  padding: 0.5em;
-}
-
-.comentarios {
-  display: inline;
-  font-size: 8px;
-  padding: 0.5em;
-}
-
-/*icones dos posts*/
-
-.fa-thumbs-up,
-.fa-comment {
-  padding-right: 0.5vh;
-}
-
-.fa-share-alt {
-  float: right;
-}
-
-.fa-ellipsis-h {
-  float: right;
-  padding-top: 1vh;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: black;
+  font-size: 16pt;
+  margin-top: 2vh;
 }

@@ -3,6 +3,10 @@ $(function () {
     console.log("post ready");
   });
 
+  $('#publish').click(function() {
+    console.log("slay");
+  });
+    
 
 /* GUARDAR O POST no click*/
 // post individual
@@ -27,15 +31,29 @@ $('#publish').on("click", function () {
       texto: postText,
     };
 
-  savePost(post);
-  writePost(post);
+    if (postText) {
+      savePost(post);
+      writePost(post);
+    };
+
   // apaga o que está escrito
   $("#type-new-post").val('');
 });
 
+$(document).ready(function() {
+
+  let antigosPosts = localStorage.getItem('feed_publicacoes');
+
+  if (antigosPosts != null) {
+    writePost(antigosPosts);
+    console.log("$ -> antigosPosts", antigosPosts)
+  };
+  
+});
+
 /* GUARDAR O POST na Local Storage */
 function savePost(data) {
-    let posts = localStorage.getItem("publicacoes");
+    let posts = localStorage.getItem("feed_publicacoes");
     
     // se já tiver objetos guardados na memória,
     if (posts != null) {
@@ -53,12 +71,12 @@ function savePost(data) {
     posts = JSON.stringify(posts);
     
     // guardar na variável do localStorage
-    localStorage.setItem("publicacoes", posts);
+    localStorage.setItem("feed_publicacoes", posts);
   }
 
   /* PARA CONSTRUIR AS PUBLICAÇÕES */
   function writePost(data) {
-  let novosPosts = localStorage.getItem("publicacoes");
+  let novosPosts = localStorage.getItem("feed_publicacoes");
 
   // se tiver o objeto na memória
   if (novosPosts != null) {
@@ -73,16 +91,16 @@ function savePost(data) {
         <article id="post-${i}" class="post">
         <div class="post-wrapper">
           <div class="iconePerfil">
-            <img src="data/posts/icone-perfil1.jpg" />
+            <img src="data/utilizador/foto-de-perfil.jpg" />
           </div>
           <h3 class="nome">${post.nome}</h3>
-          <i class="fa fa-ellipsis-h"></i>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao-texto">
             <p class="post-texto">
             ${post.texto}
             </p>
           </div>
-          <p class="gostos">20</p>
+          <p class="gostos">${getRandomInt(1,40)}</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
           <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1,7)}</a></p>
           <i class="fa fa-comment"></i>

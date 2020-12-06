@@ -18,10 +18,10 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 30pt;
     }
     
-    .mais {
+    .close {
     flex: 1;
     display: flex;
     justify-content: flex-end;

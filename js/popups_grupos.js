@@ -1,10 +1,10 @@
-/* verificar se JQuery está a funcionar */
+//verificar se JQuery está a funcionar
 
 $(function() {
     console.log ('Jquery funciona');
   });
 
-/* Fechar Popup */
+//fechar Popups
 
 $('.popup-button').each( function() {
     $(this).on('click', function(){
@@ -13,10 +13,10 @@ $('.popup-button').each( function() {
    })
 });
 
-/* Popup Grupo Rissois*/
+//popup grupo rissois - mostrar com clique
 
 $('#popups1').hide();
 
-$('.grupo-wrapper1').on('click', function(){
+$('.itens-grupos1').on('click', function(){
 $('#popups1').show(); 
 });

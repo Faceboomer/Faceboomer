@@ -10,7 +10,9 @@
   </head>
   <body>
     <header id="pagina">
-      <a href="index.html"><i id="back" class="fa fa-angle-left" aria-hidden="true"></i></a>
+      <a href="index.html"
+        ><i id="back" class="fa fa-angle-left" aria-hidden="true"></i
+      ></a>
       <div id="wrapper">
         <div id="header-img">
           <img
@@ -19,7 +21,7 @@
           />
         </div>
         <div id="titulo">
-          <h4>Nuno Gaspar</h4>
+          <p><strong>Nuno Gaspar</strong></p>
           <p>Online há 4 horas</p>
         </div>
       </div>
@@ -28,44 +30,44 @@
     <main>
       <div id="mensagens">
         <div class="enviada">
-            <div class="c-wrapper">
-              <div class="msg-enviada anexo">
-                <img src="data/mensagens/enviada11.jpg" alt="msg enviada" />
-              </div>
+          <div class="c-wrapper">
+            <div class="msg-enviada anexo">
+              <img src="data/mensagens/enviada11.jpg" alt="msg enviada" />
             </div>
           </div>
+        </div>
 
-          <div class="enviada">
-            <div class="c-wrapper">
-              <div class="msg-enviada anexo">
-                <img src="data/mensagens/enviada12.jpg" alt="msg enviada" />
-              </div>
+        <div class="enviada">
+          <div class="c-wrapper">
+            <div class="msg-enviada anexo">
+              <img src="data/mensagens/enviada12.jpg" alt="msg enviada" />
             </div>
           </div>
+        </div>
 
-          <div class="enviada">
-            <div class="c-wrapper">
-              <div class="msg-enviada anexo">
-                <img src="data/mensagens/enviada13.jpg" alt="msg enviada" />
-              </div>
+        <div class="enviada">
+          <div class="c-wrapper">
+            <div class="msg-enviada anexo">
+              <img src="data/mensagens/enviada13.jpg" alt="msg enviada" />
             </div>
           </div>
+        </div>
 
-          <div class="enviada">
-            <div class="c-wrapper">
-              <div class="msg-enviada anexo">
-                <img src="data/mensagens/enviada14.jpg" alt="msg enviada" />
-              </div>
+        <div class="enviada">
+          <div class="c-wrapper">
+            <div class="msg-enviada anexo">
+              <img src="data/mensagens/enviada14.jpg" alt="msg enviada" />
             </div>
           </div>
+        </div>
 
-          <div class="enviada">
-            <div class="c-wrapper">
-              <div class="msg-enviada anexo">
-                <img src="data/mensagens/enviada2.jpg" alt="msg enviada" />
-              </div>
+        <div class="enviada">
+          <div class="c-wrapper">
+            <div class="msg-enviada anexo">
+              <img src="data/mensagens/enviada2.jpg" alt="msg enviada" />
             </div>
           </div>
+        </div>
 
         <div class="recebida">
           <div class="c-wrapper">
@@ -74,16 +76,14 @@
             </div>
             <div class="msg-recebida">
               <p>Avó!! O pai avisou-me, está tudo bem?</p>
-            </div>  
+            </div>
           </div>
         </div>
 
         <div class="enviada">
           <div class="c-wrapper">
             <div class="msg-enviada">
-              <p>
-                Olá, filho troqueii só um implante. Obrigada
-              </p>
+              <p>Olá, filho troqueii só um implante. Obrigada</p>
             </div>
           </div>
         </div>
@@ -141,6 +141,20 @@
         </div>
       </div>
 
+      <div class="recebida">
+        <div class="c-wrapper">
+          <div class="fotoPerfil">
+            <img src="data/utilizador/icone-nuno.jpg" />
+          </div>
+          <div class="msg-recebida">
+            <p>
+              Olá avó, podes enviar-me a tal fotografia dos teus tempos em
+              <strong>Vichy</strong>?
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div id="escrever-fixed">
         <div id="escrever">
           <div id="type-container">
@@ -151,7 +165,9 @@
             ></textarea>
           </div>
           <div id="anexo">
-            <i class="fa fa-paperclip" aria-hidden="true"></i>
+            <a href="GaleriadeImagens.html">
+              <i class="fa fa-paperclip" aria-hidden="true"></i>
+            </a>
           </div>
           <div id="enviar">
             <i class="fa fa-paper-plane" aria-hidden="true"></i>
@@ -166,7 +182,7 @@
     <script src="js/conversa_enviar-Nuno.js"></script>
 
     <script>
-     //para que comece sempre com o scroll em baixo
+      //para que comece sempre com o scroll em baixo
       $(window).on("beforeunload", function () {
         $(window).scrollTop(10000);
       });

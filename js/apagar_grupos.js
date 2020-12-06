@@ -1,11 +1,11 @@
-/* verificar se JQuery está a funcionar */
+//verificar se JQuery está a funcionar
 
 $(function() {
     console.log ('Jquery funciona');
   });
   
-/* Apagar grupos */
+//Apagar grupos
   
-$(".grupo-wrapper").on('click', function(){
+$(".itens-grupos").on('click', function(){
   $(this).remove();
 });

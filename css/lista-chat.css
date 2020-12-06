@@ -1,0 +1,44 @@
+/* Barra de Pesquisa */
+
+#searchbar{ 
+    border: none;
+    background-color: #FAFAFF;
+    width: 100%;
+    padding: 11px 7%;
+    border-radius: 15px;
+  } 
+
+.conversas-wrapper {
+    position: relative;
+    margin-top: 3em;
+    list-style-type: none;
+}
+
+.conversas-wrapper .iconePerfil-chat {
+    position: absolute;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.iconePerfil-chat img{
+    height: 100%;
+}
+
+.texto-wrapper {
+    position: relative;
+    display: inline-block;
+    top: -3px;
+    left: 15%;
+}
+
+.texto-mensagem {
+    font-size: 9px;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}

@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/perfil.css" />
+    <link rel="stylesheet" href="css/posts.css" />
 
-    
+    <script src="https://use.fontawesome.com/b51a055151.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
   </head>
   <body>
       <header> 
-        <a href="index.html"><i class="fa fa-arrow-left fa"></i></a>
+        <a href="index.html"><i id="back" class="fa fa-arrow-left fa"></i></a>
         <h2>Maria Eugénia</h2>
         <i class="fa fa-search"></i>
         </header>
@@ -22,7 +24,7 @@
         <main>
             <div class="container">
                 <div id="capa">
-                    <img src="data/posts/foto-capa1.jpg">
+                    <img src="data/perfil-geny/foto-capa1.jpg">
                 </div>
                 <div id="fotodeperfil">
                     <img src="data/utilizador/foto-de-perfil.jpg">
@@ -30,11 +32,32 @@
                 <span id="maria"><strong>Maria Eugénia</strong></span>    
             </div>
 
+
+
             <!--INFOS PERFIL --> 
+
+            <section id="info">
+              <div class="infoperfil">
+                <span id="bio">GOSTO MUITO sinto - me em paz</span>
+                <ul id="infolista">
+                  <li><i class="fa fa-graduation-cap" aria-hidden="true"></i>Estudou em <strong>Escola do Magistério Primário de Lisboa</strong></li>
+                  <li><i class="fa fa-briefcase" aria-hidden="true"></i>Trabalhou em <strong> do Magistério Primário de Lisboa</strong></li>
+                  <li><i class="fa fa-briefcase" aria-hidden="true"></i>Cozinheira em <strong><a href="GrupoRissois.html">Rissóis da Avó Geninha</a></strong></li>
+                  <li><i class="fa fa-home" aria-hidden="true"></i>Vive em <strong>Porto</strong></li>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i>De <strong>Portugal</strong></li>
+                  <li><i class="fa fa-heart" aria-hidden="true"></i>Viúva</li>
+                  <li><i class="fa fa-check-square" aria-hidden="true"></i>Seguida por 57 pessoas</li>
+
+                </ul>
+              </div>
+            </section>
+
 
             <div class="container">
                 <div id="amigos">
-                    <span id="ttlamigos">Amigos</span> 
+                  <div class="ttl amigos">
+                    <p class="nmrs">522 amigos</p>
+                  </div>
                     
                     <img src="data/perfil-geny/icone-amigo1.jpg">
                     <img src="data/perfil-geny/icone-amigo2.jpg">
@@ -48,7 +71,9 @@
 
             <div class="container">
                 <div id="fotos">
-                    <span id="ttlfotos">Fotos</span> 
+                  <div class="ttl fotos">
+                    <p class="nmrs">304 fotos</p>
+                   </div> 
                     
                     <img src="data/perfil-geny/img-post3.jpg">
                     <img src="data/perfil-geny/img-post4.jpg">
@@ -60,51 +85,53 @@
                 </div>
             </div>
 
-           <!--STATUS BAR --> 
-
-            <section id="estado">
-                <span id="ttlpubs">Publicações</span> 
-                <div id="estado-wrapper">
-                  <div class="fotoPerfil">
-                    <img src="data/utilizador/foto-de-perfil.jpg" />
+                 <!--STATUS BAR --> 
+                 <div id="estado">
+                  <div id="estado-wrapper">
+                    <div class="fotoPerfil">
+                      <img src="data/utilizador/foto-de-perfil.jpg" />
+                    </div>
+                    <textarea
+                      id="type-new-post"
+                      placeholder="Em que estás a pensar?"
+                      rows="1"
+                    ></textarea
+                    ><br />
                   </div>
-                  <textarea
-                    id="type-new-post"
-                    placeholder="Em que estás a pensar?"
-                    rows="1"
-                  ></textarea
-                  ><br />
-                </div>
-                <button class="gif">GIF</button>
-                <button class="foto">FOTO</button>
-                <button class="foto">Fotografia</button>
-                <button id="publish">Post</button>
-              </section>
+                  <div id="botoes">
+                    <button class="botao gif">GIF</button>
+                    <button class="botao foto">FOTO</button>
+                    <button class="botao foto">Fotografia</button>
+                    <button class="botao" id="publish">Post</button>
+                    </div>
+                  </div>
 
 
               <!--POSTS --> 
-              <div id="posts">
+              <div id="novos-posts"></div>
+              
+              <div id="antigos-posts">
               <article class="post">
                 <div class="post-wrapper">
                   <div class="iconePerfil">
-                    <img src="data/utilizador/foto-de-perfil.jpg"/>
+                    <img src="data/utilizador/icone13.jpg" />
                   </div>
                   <h3 class="nome">
-                      Maria Eugénia
-                  </h3>
-                  <i class="fa fa-ellipsis-h"></i>
-                
-                <div class="sharedpost-wrapper">
-                  <div class="iconePerfil">
-                    <img src="data/grupos/rissol11.JPG"/>
-                  </div>
-                  <h3 class="nome">
-                    <a href="GrupoRissois.html"><strong>Rissóis da Avó Geninha</strong></a>
-                </div>
-                  </h3>
-                  <div class="publicacao">
-                    <img src="data/grupos/rissol3.jpg" />
-                  </div>
+                    <strong>Maria Eugénia Godinho</strong></h3> 
+                  <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+                  <div class="sharedpost">
+                    <div class="sharedpost-wrapper">
+                      <div class="iconePerfil">
+                        <img src="data/grupos/rissol11.JPG"/>
+                      </div>
+                      <h3 class="nome">
+                        <a href="GrupoRissois.html"><strong>Rissóis da Avó Geninha</strong></a>
+                      </h3>
+                    </div>
+                      <div class="publicacao">
+                        <img src="data/grupos/rissol3.jpg" />
+                      </div>
+                    </div>
                   <p class="gostos">6</p>
                   <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
                   <p class="comentarios"></p>
@@ -116,17 +143,38 @@
               <article class="post">
                 <div class="post-wrapper">
                   <div class="iconePerfil">
-                    <img src="data/utilizador/foto-de-perfil.jpg" />
+                    <img src="data/utilizador/icone13.jpg" />
                   </div>
                   <h3 class="nome">
-                    <strong>Maria Eugénia</strong> >
-                    <a href="">Portugueses em Vichy</a>
-                  </h3>
-                  <i class="fa fa-ellipsis-h"></i>
-                  <div class="publicacao">
-                    <img src="data/posts/icone-perfil9.jpg" />
+                    <strong>Ana Cláudia Martins</strong> ‣
+                    <a href="GrupoRissois.html">Rissóis Da Avó Geninha</a>
+                  </h3> 
+                  <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+                  <div class="publicacao-texto">
+                    <p class="post-texto">
+                      Cara Maria Eugénia, os rissóis estavam maravilhosos.., quero
+                      levar. Mais! Beijcas ;)
+                    </p>
                   </div>
-                  <p class="gostos">40</p>
+                  <p class="gostos">20</p>
+                  <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+                  <p class="comentarios"></p>
+                  <i class="fa fa-comment"></i>
+                  <i class="fa fa-share-alt"></i>
+                </div>
+              </article>
+
+              <article class="post">
+                <div class="post-wrapper">
+                  <div class="iconePerfil">
+                    <img src="data/utilizador/icone38.jpg" />
+                  </div>
+                  <h3 class="nome">Maria Albertina Linda</h3>
+                  <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+                  <div class="publicacao">
+                    <img src="data/posts/post44.jpg" />
+                  </div>
+                  <p class="gostos">4</p>
                   <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
                   <p class="comentarios"></p>
                   <i class="fa fa-comment"></i>
@@ -145,6 +193,8 @@
           </div>
         </div>
 
-      <script src="https://use.fontawesome.com/b51a055151.js"></script>
+        <script src="js\gostosComentarios.js"></script>
+        <script src="js\perfil_post-something.js"></script>
+        <script src="js\editar-post.js"></script>
   </body>
 </html>

@@ -1,0 +1,90 @@
+
+/* pag login */
+header {
+    position: absolute;
+    top: 0;
+    padding: 0 15vw;
+    padding-top: 6vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    position: static !important;
+    width: 100% !important;
+    text-align: center;
+}
+
+main{
+    margin: 30vh 15vw;
+    height: calc(100vh - 60vh);
+    position: relative;
+}
+label{
+    font-size: 30px;
+    line-height: 20pt;
+    margin-left: 8px;
+    width: 100%;
+}
+
+input{
+    background-color: #F4EBFF;
+    font-size: 9pt;
+    line-height: 12pt;
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+  
+    border: solid #7300ff 1px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #d8b7ff;
+    
+    width: 100%;
+    margin: 2vh 0;
+}
+
+#email{
+    margin-bottom: 40px;
+}
+
+
+/* próxima página */
+#next{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* verificacao */
+p{
+    padding-top: 5px;
+    font-size: 9pt;
+    line-height: 11pt;
+}
+
+ul li label{
+    font-size: 9pt;
+    line-height: 11pt;
+    margin: 0;
+}
+
+li{
+    font-size: 9pt;
+    line-height: 11pt;
+}
+
+ul li:first-child{
+    margin-top: 2vh;
+}
+
+ul li input{
+    margin: 1vh 0;
+    margin-right: 5%;
+    width: auto;
+    
+    position: relative;
+    top: 2px;
+}
