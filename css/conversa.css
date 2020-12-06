@@ -106,10 +106,13 @@ header #titulo {
   background-color: #7300ff;
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
-  color: #d8b7ff !important;
-  text-shadow: 0 0 2px #d8b7ff !important;
   width: 80%;
   left: 20%;
+}
+
+.msg-enviada p {
+  color: #ab71f3 !important;
+  text-shadow: 0 0 2px #d8b7ff !important;
 }
 /* msgs enviadas com anexo logo */
 .msg-enviada + .msg-enviada.anexo{
