@@ -19,33 +19,25 @@ header #wrapper {
   height: 100%;
   width: 100%;
   left: 10%;
-}
-
-header p {
-  padding-top: 2px;
-  font-size: 8px;
-  font-weight: normal;
+  top: -6px;
 }
 
 #header-img {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
 }
 
 #header-img img {
-  position: absolute;
-
-  height: 32px;
-  width: auto
+  height: 100%
 }
 
 header #titulo {
   position: absolute;
-  left: 15%;
-  top: 7.5%;
+  left: 10%;
+  top: -3px;
 }
 
 /* go back */
@@ -107,9 +99,6 @@ header #titulo {
 
 /* enviada */
 .msg-enviada {
-  font-size: 9pt;
-  line-height: 12pt;
-  color: #fafaff;
   position: relative;
   display: inline-block;
   padding: 10px 10px;
@@ -117,6 +106,8 @@ header #titulo {
   background-color: #7300ff;
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
+  color: #d8b7ff !important;
+  text-shadow: 0 0 2px #d8b7ff !important;
   width: 80%;
   left: 20%;
 }

@@ -6,34 +6,12 @@ header {
   width: 100%;
 }
 
-i {
-  color: #7d12ff;
-  padding-right: 2vw;
-}
-
 li {
   padding: 0.5vh 2vw;
 }
 
-.fa-map-marker {
-  padding-left: 0.5vw;
-}
-
-.fa-arrow-left {
-  position: absolute;
-  display: inline-block;
-  margin-right: 1vh;
-  font-size: 12pt !important;
-  padding-top: 1vh;
-}
-
-.fa-search {
-  position: absolute;
-  display: inline-block;
-  font-size: 12pt !important;
-  right: 7.5vw;
-  top: 6vh;
-  padding-top: 1vh;
+li i.fa{
+  margin-right: 5px;
 }
 
 #capa img {
@@ -62,7 +40,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5vh 0;
   font-size: 30pt;
 }
 
@@ -116,7 +93,7 @@ li {
   border-radius: 1.5vh;
 }
 
-#ttlamigos {
+.ttl {
   position: relative;
   display: block;
   padding: 2vh 0.5vh;
@@ -141,13 +118,6 @@ li {
   padding: 0.5vh;
   position: relative;
   border-radius: 1.5vh;
-}
-
-#ttlfotos {
-  position: relative;
-  display: block;
-  padding: 1vh 0.5vh 2vh 0.5vh;
-  font-size: 14pt;
 }
 
 #ttlpubs {

@@ -3,48 +3,35 @@
 #searchbar{ 
     border: none;
     background-color: #FAFAFF;
-    min-height: 7vh;
     width: 100%;
     padding: 11px 7%;
     border-radius: 15px;
   } 
 
 .conversas-wrapper {
-    margin: 2em 0;
+    position: relative;
+    margin-top: 3em;
     list-style-type: none;
 }
 
 .conversas-wrapper .iconePerfil-chat {
-    height: 40px;
-    width: 40px;
+    position: absolute;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     overflow: hidden;
-    float: left;
-    margin-right: 5%;
 }
 
 .iconePerfil-chat img{
     height: 100%;
 }
 
-.fa-bell {
-    color: #7D12FF;
-}
-
-.fa-comment {
-    color: #7D12FF;
-}
-
 .texto-wrapper {
-    vertical-align: middle;
     position: relative;
-    top: 8px;
-}
-
-.nome {
-    font-weight: bold;
-    font-size: 11px;
-    margin-bottom: 4px;
+    display: inline-block;
+    top: -3px;
+    left: 15%;
 }
 
 .texto-mensagem {

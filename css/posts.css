@@ -34,12 +34,11 @@
 }
 
 /* nome */
-.nome {
+h3.nome {
     display: inline;
     font-size: 8px;
     font-weight: bold;
-    text-transform: capitalize;
-    margin-left: 1.5vh;
+    margin-left: 3vw;
 }
 
 /* conteudo da publicação */ 
@@ -54,15 +53,8 @@
 }
 
 /* nº de gostos e comentários */
-.gostos{
+.gostos, .comentarios{
     display: inline;
-    font-size: 8px;
-    padding: 0.5em;
-}
-
-.comentarios{
-    display: inline;
-    font-size: 8px;
     padding: 0.5em;
 }
 
@@ -108,15 +100,12 @@ i {
 }
 
 .fa-thumbs-up, .fa-comment {
-    padding-right: .5vh;
+    padding-right: .5vw;
 }
 
-.fa-share-alt {
+.fa-share-alt, button.edit {
     float: right;
-}
-
-button.edit{
-    float: right;
+    margin-right: 1vw;
 }
 
 .fa-ellipsis-h {
@@ -126,11 +115,10 @@ button.edit{
 
 a {
     text-decoration: none;
-    color: black;
   }
   
   a:visited {
-    color: black;
+    color: gray;
   }
 
 /*VERSÕES COM WIDTH MENOR QUE IMPLICAM IMAGENS MENORES*/

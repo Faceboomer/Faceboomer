@@ -35,8 +35,43 @@ header #logo {
 /* titulos de pagina */
 header h2 {
   position: relative;
-  width: 85%;
-  left: 15%;
+  display: inline-block;
+  left: calc(15% - 5px);
+  top: 25%;
+}
+
+header {
+  color: #7d12ff;
+}
+
+/* de comentários */
+header #pagina {
+  float: left;
+}
+
+header a #back, header i.fa{
+  position: relative;
+  display: inline-block;
+  top: 20%;
+}
+
+/* de perfil, grupo */
+.fa-map-marker {
+  padding-left: 0.5vw;
+}
+
+.fa-arrow-left {
+  padding-top: 1vh;
+}
+
+header i.fa-search, header i.fa-times{
+  float: right;
+  padding-top: 1vh;
+}
+
+/* galeria */
+header i.fa-times{
+  padding-top: 3px;
 }
 
 /* icone voltar para tras */
@@ -75,26 +110,6 @@ header #back {
   border: solid #7300ff 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
-
-  color: #7300ff;
-  font-size: 9px;
-  line-height: 12px;
-}
-
-.popup1 {
-  position: relative;
-  background-color: #f4ebff;
-  padding: 10vh 10vw;
-  margin-bottom: 1vh;
-  overflow: hidden;
-
-  border: solid #7300ff 1px;
-  border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;
-
-  color: #7300ff;
-  font-size: 9px;
-  line-height: 12px;
 }
 
 .popup-button {
@@ -103,10 +118,8 @@ header #back {
   right: 11px;
 }
 
-.popup-button1 {
-  position: absolute;
-  top: 10px;
-  right: 11px;
+i.fa-times{
+  font-size: 5px;
 }
 
 /* STATUS BAR */
@@ -160,12 +173,11 @@ header #back {
 
 #estado .botao {
   background-color: transparent;
-  color: white;
   margin-top: 20px;
-  font-size: 8pt;
   flex-grow: 4;
   border-right: 1px solid white;
   margin-bottom: 4px;
+
 }
 
 #estado .botao:last-child {
@@ -199,11 +211,9 @@ header #back {
 /* onde se escrevem coisas, pesquisa, estado */
 textarea {
   word-wrap: break-word;
-  font-size: 9pt;
-  line-height: 12pt;
 }
 
-/* TIPOGRAFIA */
+/* TIPOGRAFIA E DESFOCAGEM */
 @font-face {
   font-family: myOpenSans;
   src: url(../fonts/OpenSans-Regular.ttf);
@@ -216,45 +226,52 @@ textarea {
   font-weight: bold;
 }
 
-h2 {
-  font-size: 30px;
-}
-
 strong {
   font-weight: bold;
+  color: grey !important;
 }
 
-body {
+ body {
   font-family: "myOpenSans", Helvetica, Arial, sans-serif;
+  font-size: 9px !important;
+  line-height: 10pt !important;
 }
 
-header {
-  color: #7d12ff;
-  font-size: 30pt;
+/* todo o texto */
+body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li label, form label, form input {
+  font-family: "myOpenSans", Helvetica, Arial, sans-serif;
+  font-size: 9px !important;
+  line-height: 10pt !important;
+  color: grey;
+  text-shadow: 0 0 2px grey;
+}
+
+/* icones */
+i.fa{
+  text-shadow: 0 0 2px #7d12ff;
+  font-size: 9px !important;
+}
+
+/* titulos de pagina */
+h1, h2 {
+  font-size: 11pt !important;
   font-weight: bold;
-  font-kerning: normal;
+  text-shadow: 0 0 2px #7d12ff !important;
 }
 
-header #pagina {
-  float: left;
+/* titulos de posts */
+h3, h3 a{
+  font-size: 9px !important;
+  line-height: 10pt !important;
+  color: grey !important;
+  text-shadow: 0 0 2px grey;
+  font-weight: bold !important;
 }
 
-.bottomnav {
-  width: 100%;
-  background-color: #fafaff;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  padding: 1em;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: #7d12ff;
-}
-
-/* onde se escrevem coisas, pesquisa, estado */
-textarea {
-  word-wrap: break-word;
-  font-size: 9pt;
-  line-height: 12pt;
+/* estado botoes */
+#estado .botao{
+  font-weight: bold;
+  font-size: 9px;
+  color: #d8b7ff;
+  text-shadow: 0 0 2px #d8b7ff;
 }
