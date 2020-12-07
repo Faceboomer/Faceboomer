@@ -16,6 +16,23 @@
   <body>
     <header><h1 id="logo">faceboomer</h1></header>
 
+    <!--alertas pedidos de amizade-->
+    <div class="alerta-container">
+      <button class="alerta-button"><i class="fa fa-times"></i></button>
+      <p><strong><span class="place-nome"></span></strong> enviou-te um pedido de amizade <span style="float: right">há <label id="seconds">0</label>s</span></p>
+      <div class="respond">
+      <button class="button-respond">Confirmar</button>
+      <button class="button-respond1">Eliminar</button>
+    </div>
+    </div>
+
+
+    <!--Pedido Aceite-->
+      <div class="aceite">
+        <button class="aceite-button"><i class="fa fa-times"></i></button>
+        <p>Pedido de amizade aceite!</p>
+      </div>
+
     <!-- POP-UPS -->
     <div id="popups">
       <div class="popup">
@@ -277,6 +294,7 @@
     <script type="text/javascript" src="js/feed_resize-textarea.js"></script>
     <script type="text/javascript" src="js/feed_popups.js"></script>
     <script type="text/javascript" src="js/gostosComentarios.js"></script>
+    <script type="text/javascript" src="js/pedidos-amizade.js"></script>
     <script src="js\editar-post.js"></script>
   </body>
 </html>
