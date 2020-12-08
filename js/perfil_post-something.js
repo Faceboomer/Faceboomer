@@ -33,22 +33,23 @@ $('#publish').on("click", function () {
 
     if (postText) {
       savePost(post);
-      writePost(post);
+      writeLastPost(post);
     };
 
   // apaga o que está escrito
   $("#type-new-post").val('');
 });
 
-$(document).ready(function() {
-
-  let antigosPosts = localStorage.getItem('perfil_publicacoes');
+/* ESCREVER ANTIGOS POSTS */
+$(document).ready(function () {
+  // buscar a LS
+  let antigosPosts = localStorage.getItem('feed_publicacoes');
 
   if (antigosPosts != null) {
+    // escrever
     writePost(antigosPosts);
-    console.log("$ -> antigosPosts", antigosPosts)
   };
-  
+
 });
 
 /* GUARDAR O POST na Local Storage */
@@ -115,4 +116,45 @@ function savePost(data) {
         $("#novos-posts").prepend(p);
     });
   }
+}
+
+/* ESCREVER ÚLTIMO POST */
+function writeLastPost(data) {
+  let posts = localStorage.getItem("perfil_publicacoes");
+
+  if (posts != null) {
+    // converter para objeto JS
+    posts = JSON.parse(posts);
+
+    // buscar o último
+    let post = posts.length - 1;
+  }
+
+  const pp = `
+      <article id="post-${post.key}" class="post">
+          <div class="post-wrapper">
+            <a href="GrupoRissois.html">
+              <div class="iconePerfil">
+                <img src="data/utilizador/foto-de-perfil.jpg" />
+              </div>
+            </a>
+            <h3 class="nome">${post.nome}</h3>
+            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+            <div class="publicacao-texto">
+              <p class="post-texto">
+                ${post.texto}
+              </p>
+            </div>
+            <p class="gostos">${getRandomInt(1, 40)}</p>
+            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+            <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1, 7)}</a></p>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </article>
+        `;
+
+  // na div que está acima dos posts já publicados
+  // (o post mais recente em cima)
+  $("#novos-posts").prepend(pp);
 }

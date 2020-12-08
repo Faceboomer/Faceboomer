@@ -29,7 +29,7 @@ $('#publish').on("click", function () {
 
   if (postText) {
     savePost(post);
-    writeLastPost(post)
+    writeLastPost(post);
   };
 
   // apaga o que está escrito
@@ -37,12 +37,14 @@ $('#publish').on("click", function () {
 });
 
 
-// escrever posts que já estavam no local storage
+/* ESCREVER ANTIGOS POSTS */
 $(document).ready(function () {
 
+  // buscar a LS
   let antigosPosts = localStorage.getItem('feed_publicacoes');
 
   if (antigosPosts != null) {
+    // escrever
     writePosts(antigosPosts);
   };
 
@@ -151,7 +153,7 @@ function writeLastPost(data) {
         </article>
         `;
 
-      // na div que está acima dos posts já publicados
-      // (o post mais recente em cima)
-      $("#novos-posts").prepend(pp);
+  // na div que está acima dos posts já publicados
+  // (o post mais recente em cima)
+  $("#novos-posts").prepend(pp);
 }
