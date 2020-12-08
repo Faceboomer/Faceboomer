@@ -29,20 +29,21 @@ $('#publish').on("click", function () {
 
   if (postText) {
     savePost(post);
-    writePost(post);
+    writeLastPost(post)
   };
 
   // apaga o que está escrito
   $("#type-new-post").val('');
 });
 
+
+// escrever posts que já estavam no local storage
 $(document).ready(function () {
 
   let antigosPosts = localStorage.getItem('feed_publicacoes');
 
   if (antigosPosts != null) {
-    writePost(antigosPosts);
-    console.log("$ -> antigosPosts", antigosPosts)
+    writePosts(antigosPosts);
   };
 
 });
@@ -71,7 +72,7 @@ function savePost(data) {
 }
 
 /* PARA CONSTRUIR AS PUBLICAÇÕES */
-function writePost(data) {
+function writePosts(data) {
   let novosPosts = localStorage.getItem("feed_publicacoes");
 
   // se tiver o objeto na memória
@@ -109,11 +110,48 @@ function writePost(data) {
 
       // na div que está acima dos posts já publicados
       // (o post mais recente em cima)
-      $("#antigos-posts").prepend(p);
+      $("#novos-posts").prepend(p);
     });
   }
 }
 
-$("gostos-btn").on("click", function() {
-  console.log("yay csa");
-});
+/* ESCREVER ÚLTIMO POST */
+function writeLastPost(data) {
+  let posts = localStorage.getItem("feed_publicacoes");
+
+  if (posts != null) {
+    // converter para objeto JS
+    posts = JSON.parse(posts);
+
+    // buscar o último
+    let post = posts.length - 1;
+  }
+
+  const pp = `
+      <article id="post-${post.key}" class="post">
+          <div class="post-wrapper">
+            <a href="GrupoRissois.html">
+              <div class="iconePerfil">
+                <img src="data/utilizador/foto-de-perfil.jpg" />
+              </div>
+            </a>
+            <h3 class="nome">${post.nome}</h3>
+            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+            <div class="publicacao-texto">
+              <p class="post-texto">
+                ${post.texto}
+              </p>
+            </div>
+            <p class="gostos">${getRandomInt(1, 40)}</p>
+            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+            <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1, 7)}</a></p>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </article>
+        `;
+
+      // na div que está acima dos posts já publicados
+      // (o post mais recente em cima)
+      $("#novos-posts").prepend(pp);
+}
