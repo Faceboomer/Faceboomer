@@ -84,7 +84,19 @@ ul li input{
     margin: 1vh 0;
     margin-right: 5%;
     width: auto;
-    
     position: relative;
     top: 2px;
+}
+
+.final {
+    margin-top: 10vh;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    display:inline-block;
+    background-color:#F4EBFF; 
+    color: #7300ff; 
+    border: solid #7300ff 1px;
+    box-shadow: 1px 1px 10px #d8b7ff;
 }
