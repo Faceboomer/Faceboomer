@@ -187,8 +187,8 @@ header #back {
   right: 11px;
 }
 
-i.fa-times{
-  font-size: 5px;
+i.fa.fa-times{
+  font-size: 5px !important;
 }
 
 /* STATUS BAR */
@@ -307,7 +307,7 @@ strong {
 }
 
 /* todo o texto */
-body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li label, form label, form input {
+body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li label, form label, form input, .respond button {
   font-family: "myOpenSans", Helvetica, Arial, sans-serif;
   font-size: 9px !important;
   line-height: 10pt !important;
