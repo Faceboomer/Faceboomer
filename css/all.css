@@ -7,7 +7,7 @@
 
 /* fundo */
 body {
-  background-color: #f4ebff;
+  background-color: #ffffff;
 }
 
 /* margens */
@@ -41,7 +41,7 @@ header h2 {
 }
 
 header {
-  color: #7d12ff;
+  color: #af7dfd;
 }
 
 /* de comentários */
@@ -76,14 +76,14 @@ header i.fa-times{
 
 /* icone voltar para tras */
 i {
-  color: #7d12ff;
+  color: #af7dfd;
 }
 
 header #back {
   
   position: absolute;
   font-size: 30px;
-  color: #7300ff;
+  color: #af7dfd;
 }
 
 /* ALERTA PEDIDO DE AMIZADE */
@@ -96,13 +96,13 @@ header #back {
   transform: translateX(-50%);
   width: 95%;
   padding: 10vh 10vw;
-  color: #7300ff;
-  background-color: #f4ebff;
+  color: #af7dfd;
+  background-color: #ffffff;
   font-size: 9px;
   line-height: 12px;
-  border: solid #7300ff 1px;
+  border: solid #af7dfd 1px;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;
+  box-shadow: 1px 1px 5px #d8b7ff;
 }
 
 .aceite {
@@ -113,13 +113,13 @@ header #back {
   transform: translateX(-50%);
   width: 95%;
   padding: 10vh 10vw;
-  color: #7300ff;
-  background-color: #f4ebff;
+  color: #af7dfd;
+  background-color: #ffffff;
   font-size: 9px;
   line-height: 12px;
-  border: solid #7300ff 1px;
+  border: solid #af7dfd 1px;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;
+  box-shadow: 1px 1px 5px #d8b7ff;
 }
 
 .alerta-button {
@@ -140,7 +140,7 @@ header #back {
 
 .button-respond {
   font-weight: bold;
-  background-color: #FAFAFF;
+  background-color: #FFFFFF;
   width: 48%;
   padding: 1vh 0;
   border-radius: 5px;
@@ -148,7 +148,7 @@ header #back {
 
 .button-respond1 {
   font-weight: bold;
-  background-color: #FAFAFF;
+  background-color: #FFFFFF;
   width: 48%;
   padding: 1vh 0;
   border-radius: 5px;
@@ -171,14 +171,14 @@ header #back {
 
 .popup {
   position: relative;
-  background-color: #f4ebff;
+  background-color: #ffffff;
   padding: 10vh 10vw;
   margin-bottom: 1vh;
   overflow: hidden;
 
-  border: solid #7300ff 1px;
+  border: solid #af7dfd 1px;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;
+  box-shadow: 1px 1px 5px #d8b7ff;
 }
 
 .popup-button {
@@ -187,21 +187,22 @@ header #back {
   right: 11px;
 }
 
-i.fa.fa-times{
-  font-size: 5px !important;
+i.fa-times{
+  font-size: 5px;
 }
 
 /* STATUS BAR */
 #estado-wrapper {
   position: relative;
-  background-color: #fafaff;
+  background-color: #ffffff;
   min-height: 50px;
   height: auto;
   width: auto;
   padding: 11px 1em;
 
+  border: solid #af7dfd 1px;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px #d8b7ff;
+  box-shadow: 1px 1px 5px #d8b7ff;
   overflow: hidden;
   margin-top: 3vh;
 }
@@ -255,18 +256,21 @@ i.fa.fa-times{
 
 .sep {
   padding: 0 !important;
-  color: #f4ebff;
+  color: #ffffff;
 }
 
 #botoes {
-  background-color: #7d12ff;
+  background-color: #af7dfd;
   border-radius: 10px;
 }
 
 /* NAVBAR */
 #bottomnav {
   width: 100%;
-  background-color: #fafaff;
+  background-color: #ffffff;
+  border: solid #af7dfd 1px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px #d8b7ff;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -274,7 +278,7 @@ i.fa.fa-times{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #7d12ff;
+  color: #af7dfd;
 }
 
 /* onde se escrevem coisas, pesquisa, estado */
@@ -307,7 +311,7 @@ strong {
 }
 
 /* todo o texto */
-body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li label, form label, form input, .respond button {
+body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li label, form label, form input {
   font-family: "myOpenSans", Helvetica, Arial, sans-serif;
   font-size: 9px !important;
   line-height: 10pt !important;
@@ -317,7 +321,7 @@ body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li
 
 /* icones */
 i.fa{
-  text-shadow: 0 0 2px #7d12ff;
+  text-shadow: 0 0 2px #af7dfd;
   font-size: 9px !important;
 }
 
@@ -325,7 +329,7 @@ i.fa{
 h1, h2 {
   font-size: 11pt !important;
   font-weight: bold;
-  text-shadow: 0 0 2px #7d12ff !important;
+  text-shadow: 0 0 2px #af7dfd !important;
 }
 
 /* titulos de posts */
