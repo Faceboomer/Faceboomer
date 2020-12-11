@@ -1,0 +1,317 @@
+<!-- FEED do FaceBoomer -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FaceBoomer</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/posts.css" />
+
+    <script src="https://use.fontawesome.com/b51a055151.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <header><h1 id="logo">faceboomer</h1></header>
+
+    <!--alertas pedidos de amizade-->
+    <div class="alerta-container">
+      <button class="alerta-button"><i class="fa fa-times"></i></button>
+      <p><strong><span class="place-nome"></span></strong> enviou-te um pedido de amizade <span style="float: right">há <label id="seconds">0</label>s</span></p>
+      <div class="respond">
+      <button class="button-respond">Confirmar</button>
+      <button class="button-respond1">Eliminar</button>
+    </div>
+    </div>
+
+
+    <!--Pedido Aceite-->
+      <div class="aceite">
+        <button class="aceite-button"><i class="fa fa-times"></i></button>
+        <p>Pedido de amizade aceite!</p>
+      </div>
+
+    <!-- POP-UPS -->
+    <div id="popups">
+      <div class="popup">
+        <button class="popup-button"><i class="fa fa-times"></i></button>
+        <p class="popuptext">Bem-vinda de novo, <strong>Maria Eugénia!</strong>
+        </p>
+        <p class="popuptext">
+          A previsão do tempo hoje para <strong id="city"></strong>
+          <!-- FALTA API DE METEREOLOGIA -->
+          é de 17ºC máx. e 8ºC min.
+        </p>
+      </div>
+
+      <div class="popup">
+        <button class="popup-button"><i class="fa fa-times"></i></button>
+        <p class="popuptext">Tem <strong>duas novas mensagens</strong> de:</p>
+        <p class="popuptext">
+          <strong>Madalena Gaspar:</strong> Avó, faz a
+          publicação do rissole de camarão...
+        </p>
+        <p class="popuptext">
+          <strong>Nuno Gaspar:</strong> Olá avó, podes enviar-me a tal fotografia dos...
+        </p>
+      </div>
+
+      <div class="popup">
+        <button class="popup-button"><i class="fa fa-times"></i></button>
+        <p class="popuptext">
+          Tem <strong>5 notificações</strong> em Grupos:
+        </p>
+        <p class="popuptext">
+          <strong>(3)</strong> GRUPO DE LEITURA - LER É VIVER!
+        </p>
+        <p class="popuptext">
+          <strong>(2)</strong> Terceira Idade Amizade -EU PARTICIPO.(OFICIAL)
+        </p>
+      </div>
+
+      <div class="popup">
+        <button class="popup-button"><i class="fa fa-times"></i></button>
+        <p class="popuptext">
+          <strong>Não esquecer!</strong>
+        </p>
+        <p class="popuptext">
+          <strong>Alberto Plasse</strong> convidou-a para gostar de
+          <strong>Catequese 2021.</strong>
+        </p> <p class="popuptext">
+          <strong>BINGO DA TRINDADE</strong> adicionou um evento que pode ser do
+          seu interesse!
+        </p>
+      </div>
+    </div>
+
+    <main>
+                 <!--STATUS BAR --> 
+                 <div id="estado">
+                  <div id="estado-wrapper">
+                    <div class="fotoPerfil">
+                      <a href="perfil.html"><img src="data/utilizador/foto-de-perfil.jpg" /></a>
+                    </div>
+                    <textarea
+                      id="type-new-post"
+                      placeholder="Em que estás a pensar?"
+                      rows="1"
+                    ></textarea
+                    ><br />
+                  </div>
+                  <div id="botoes">
+                    <button class="botao gif">GIF</button>
+                    <button class="botao foto">FOTO</button>
+                    <button class="botao foto">Fotografia</button>
+                    <button class="botao" id="publish">Post</button>
+                    </div>
+                  </div>
+
+      <!--POSTS-->
+      <!-- onde vão ficar os novos posts, post-something.js -->
+      <div id="novos-posts"></div>
+
+      <!-- posts já publicados -->
+      <div id="antigos-posts">
+      <article class="post">
+        <div class="post-wrapper">
+          <a href="GrupoRissois.html">
+            <div class="iconePerfil">
+              <img src="data/utilizador/icone13.jpg" />
+            </div>
+          </a>
+          <h3 class="nome">
+            <strong>Ana Cláudia Martins</strong> ‣
+            <a href="GrupoRissois.html">Rissóis Da Avó Geninha</a>
+          </h3> 
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao-texto">
+            <p class="post-texto">
+              Cara Maria Eugénia, os rissóis estavam maravilhosos.., quero
+              levar. Mais! Beijcas ;)
+            </p>
+          </div>
+          <p class="gostos">20</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <a href="GrupoRissois.html">
+            <div class="iconePerfil">
+              <img src="data/utilizador/icone44.jpg" />
+            </div>
+          </a>
+          <h3 class="nome">
+            <strong>Carla Santos Rubiães</strong> ‣
+            <a href="GrupoRissois.html">Portugueses em Vichy</a>
+          </h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/posts/post11.jpg" />
+          </div>
+          <p class="gostos">40</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <a href="GrupoRissois.html">
+            <div class="iconePerfil">
+              <img src="data/utilizador/icone42.jpg" />
+            </div>
+          </a>
+          <h3 class="nome">Maria Eduarda Couto</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/posts/post1.jpg" />
+          </div>
+          <p class="gostos">20</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <div class="antigos-posts">
+        <article class="post">
+          <div class="post-wrapper">
+            <a href="GrupoRissois.html">
+              <div class="iconePerfil">
+                <img src="data/utilizador/icone41.jpg" />
+              </div>
+            </a>
+            <h3 class="nome">
+              <strong>José Manuel Ferreira</strong>
+            </h3>
+            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+            <div class="publicacao-texto">
+              <p class="post-texto">
+                ESTE VIG BRODER REVOLUCAM E SO PARA ARRECADAR DINHEIRO DOS
+                PORTUGUESAS QJE TANTO CUSTA A GANHAR QUEM ESPOLSSA E QUEM ESTA A
+                FEENTE DO PROGRAMA AINDA AGORA FOI ESPOLSSO O MELHOR MENINO QUE
+                LA ESTAVA OS PIORES FICAM LA E UMA VERGONHA ESTE PROGRAMA
+                REVOLUCAO VERGONHOSO
+              </p>
+            </div>
+            <p class="gostos">10</p>
+            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+            <p class="comentarios"></p>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post-wrapper">
+            <a href="GrupoRissois.html">
+              <div class="iconePerfil">
+                <img src="data/utilizador/icone4.jpg" />
+              </div>
+            </a>
+            <h3 class="nome">
+              <strong>António Carlos Loureiro</strong> ‣ <a href="GrupoRissois.html">Catequese</a>
+            </h3>
+            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+            <div class="publicacao">
+              <img src="data/posts/post15.jpg" />
+            </div>
+            <p class="gostos">40</p>
+            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+            <p class="comentarios"></p>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post-wrapper">
+            <a href="GrupoRissois.html">
+              <div class="iconePerfil">
+                <img src="data/utilizador/foto-de-perfil.jpg" />
+              </div>
+            </a>
+            <h3 class="nome">Maria Eugénia Godinho</h3>
+            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+            <div class="publicacao">
+              <img src="data/grupos/rissol10.jpg" />
+            </div>
+            <p class="gostos">6</p>
+            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+            <p class="comentarios"></p>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post-wrapper">
+            <a href="GrupoRissois.html">
+              <div class="iconePerfil">
+                <img src="data/utilizador/icone38.jpg" />
+              </div>
+            </a>
+            <h3 class="nome">Maria Lurdes Sousa</h3>
+            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+            <div class="publicacao">
+              <img src="data/posts/post16.jpg" />
+            </div>
+            <p class="gostos">4</p>
+            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+            <p class="comentarios"></p>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </article>
+
+        <article id="last-post">
+          <div class="post-wrapper">
+            <a href="GrupoRissois.html">
+              <div class="iconePerfil">
+                <img src="data/utilizador/icone39.jpg" />
+              </div>
+            </a>
+            <h3 class="nome">Clara Pereira Silva</h3>
+            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+            <div class="publicacao">
+              <img src="data/posts/post19.jpg" />
+            </div>
+            <p class="gostos">3</p>
+            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+            <p class="comentarios"></p>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <div id="navbar">
+      <div id="bottomnav">
+        <button class="randomLoc"><i id="notifications" class="fa fa-bell" aria-hidden="true"></i></button>
+        <i id="groups" class="fa fa-users" aria-hidden="true"></i>
+        <a href="lista-chat.html"><i id="messages" class="fa fa-comment" aria-hidden="true"></i></a>
+        <a href="perfil.html"><i id="termometro" class="fa fa-thermometer-half" aria-hidden="true"></i>
+        <a href="comentarios-random.html"><i id="camera" class="fa fa-video-camera" aria-hidden="true"></i></a>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/gostosComentarios.js"></script>
+    <script type="text/javascript" src="js/feed_post-something.js"></script>
+    <script type="text/javascript" src="js/feed_resize-textarea.js"></script>
+    <script type="text/javascript" src="js/feed_popups.js"></script>
+    <script type="text/javascript" src="js/pedidos-amizade.js"></script>
+    <script src="js\editar-post.js"></script>
+  </body>
+</html>
