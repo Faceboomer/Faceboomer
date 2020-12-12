@@ -6,7 +6,7 @@ var modalImg = document.getElementById("imgVichy");
 var legendaText = document.getElementById("legenda");
 img.onclick = function(){
   modal.style.display = "block";
-  modalImg.src = "data/GaleriaDesafio/Imagens-galeria (1).jpg";
+  modalImg.src = "data/GaleriaDesafio/VICHY.jpg";
 }
 
 // Ir buscar a span com o botão para fechar

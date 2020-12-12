@@ -2,96 +2,109 @@
 
 /* HEADER */
 
-
-#cabecalho img{
-    position: relative;
-    overflow: auto;
-    width: 100%;
-    height: auto;
-    padding-top: 5%;
-    padding-bottom: 7.5%;
-   
+#cabecalho img {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+  padding-top: 5%;
+  padding-bottom: 7.5%;
 }
 
 /*Imagem capa a abrir*/
 
 #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  #myImg:hover {
-      opacity: 0.7;
-    }
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.9);
-  }
-  
-  /*Conteudo*/
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-  }
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
 
-  #legenda {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
+/*Conteudo*/
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
 
-  /*Animação*/
-.modal-content, #caption {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-  }
+#legenda {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
 
-  /*Botão para fechar*/
+/*Animação*/
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/*Botão para fechar*/
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Ecrãs mais pequenos*/
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
   }
 
 
@@ -194,57 +207,55 @@ h3.nome {
     }
 
 .tituloGrupo {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-
 #cabecalho {
-    text-align: center;
+  text-align: center;
 }
 
 #infogrupo {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    font-size: 12px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 12px;
 }
 
-
+.botao.foto a:visited {
+  color: #d8b7ff;
+}
 
 /* icones */
 
 .fa-arrow-left {
-    float: left;
-    padding-top: 7.5%;
-    margin: 2% 7.5%;
-
+  float: left;
+  padding-top: 7.5%;
+  margin: 2% 7.5%;
 }
 
 .fa-search {
-    float: right;
-    padding-top: 7.5%;
-    margin: 2% 7.5%;
-
+  float: right;
+  padding-top: 7.5%;
+  margin: 2% 7.5%;
 }
 
 #popups1 {
-    margin: 20% 0 0 0;
-    width: 95%;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+  margin: 20% 0 0 0;
+  width: 95%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*VERSÕES COM WIDTH MENOR QUE IMPLICAM IMAGENS MENORES*/
 @media screen and (max-width: 350px) {
+  /*Imagem Perfil*/
+  .post-wrapper .iconePerfil {
+    height: 30px;
+  }
 
-    /*Imagem Perfil*/
-    .post-wrapper .iconePerfil {
-        height: 30px;
-    }
-
-    /*Imagem Post*/
-    .post-wrapper .publicacao {
-        height: 150px;
-    }
+  /*Imagem Post*/
+  .post-wrapper .publicacao {
+    height: 150px;
+  }
 }
