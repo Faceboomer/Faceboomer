@@ -1,4 +1,4 @@
-<!-- Página Grupo Rissóis -->
+<!-- Página Grupo Rissóis PARA COMPLETAR DESAFIO -->
 <!DOCTYPE html>
 <html lang="en" class="animated fadeIn">
 
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/posts.css" />
   <link rel="stylesheet" href="css/GrupoRissois.css" />
   <link rel="stylesheet" href="css/pagetransitions.css" />
+
 
   <script src="https://use.fontawesome.com/b51a055151.js"></script>
   <script src="js/jquery-3.5.1.min.js"></script>
@@ -67,6 +68,7 @@
   <main>
 
     <!--STATUS BAR -->
+    <!-- falta a foto para publicar -->
     <div id="estado">
       <div id="estado-wrapper">
         <div class="fotoPerfil">
@@ -78,7 +80,7 @@
         <button class="botao gif">GIF</button>
         <button class="botao foto">FOTO</button>
         <button class="botao foto"><a href="galeriagrupo.html">Fotografia</a></button>
-        <button class="botao" id="publish">Post</button>
+        <button class="botao" id="publishDesafio">Post</button>
       </div>
     </div>
 
@@ -86,28 +88,29 @@
 
 
     <!--POSTS-->
+    <article class="post">
+      <div class="post-wrapper">
+        <div class="iconePerfil">
+          <a href="feed.html">
+            <img src="data/utilizador/foto-de-perfil.jpg" />
+          </a>
+        </div>
+        <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+        <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+        <div class="publicacao">
+          <img src="data/GaleriaDesafio/CAMARAO.jpg" />
+        </div>
+        <p class="gostos">5</p>
+        <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+        <p class="comentarios"></p>
+        <i class="fa fa-comment"></i>
+        <i class="fa fa-share-alt"></i>
+      </div>
+    </article>
+
     <div id="novos-posts"></div>
     <div id="antigos-posts">
 
-      <article class="post">
-        <div class="post-wrapper">
-          <div class="iconePerfil">
-            <a href="feed.html">
-              <img src="data/utilizador/foto-de-perfil.jpg" />
-            </a>
-          </div>
-          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
-          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
-          <div class="publicacao">
-            <img src="data/grupos/rissol1.jpg" />
-          </div>
-          <p class="gostos">5</p>
-          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
-          <p class="comentarios"></p>
-          <i class="fa fa-comment"></i>
-          <i class="fa fa-share-alt"></i>
-        </div>
-      </article>
 
       <article class="post">
         <div class="post-wrapper">
@@ -160,7 +163,7 @@
           <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao">
-            <img src="data/grupos/rissol2.jpg" />
+            <img src="data/grupos/rissol8.jpg" />
           </div>
           <p class="gostos">20</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
@@ -200,7 +203,7 @@
           <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao">
-            <img src="data/grupos/rissol4.jpg" />
+            <img src="data/grupos/rissol6.jpg" />
           </div>
           <p class="gostos">8</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
@@ -242,7 +245,7 @@
           <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao">
-            <img src="data/grupos/rissol5.jpg" />
+            <img src="data/grupos/rissol4.jpg" />
           </div>
           <p class="gostos">5</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
@@ -282,7 +285,7 @@
           <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao">
-            <img src="data/grupos/rissol7.jpg" />
+            <img src="data/grupos/rissol5.jpg" />
           </div>
           <p class="gostos">5</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
@@ -438,8 +441,9 @@
   <script type="text/javascript" src="js/gostosComentarios.js"></script>
   <script type="text/javascript" src="js/abrir-imagem.js"></script>
   <script src="js/grupo_post-something.js"></script>
-  <script src="js/editar-post.js"></script>
+  <script src="js\editar-post.js"></script>
   <script src="js/navbar.js"></script>
+  <script src="DESAFIO.js"></script>
 
 </body>
 

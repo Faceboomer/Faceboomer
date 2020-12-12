@@ -268,7 +268,7 @@ i.fa-times{
 #bottomnav {
   width: 100%;
   background-color: #ffffff;
-  border: solid #af7dfd 1px;
+  border-top: solid #af7dfd 0.5px;
   border-radius: 2px;
   box-shadow: 1px 1px 5px #d8b7ff;
   overflow: hidden;
