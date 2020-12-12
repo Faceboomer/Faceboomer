@@ -7,7 +7,7 @@ function getRandomInt(min, max) {
 }
 
 $(".randomLoc").on("click", function () {
-    switch (getRandomInt(0, 8)) {
+    switch (getRandomInt(0, 7)) {
         case 0:
             window.location.href = '../conversaMadalena.html';
             break;
@@ -24,15 +24,12 @@ $(".randomLoc").on("click", function () {
             window.location.href = '../perfil.html';
             break;
         case 5:
-            window.location.href = '../galeriagrupo.html';
-            break;
-        case 6:
             window.location.href = '../lista-grupos.html';
             break;
-        case 7:
+        case 6:
             window.location.href = '../GaleriadeImagens.html';
             break;
-        case 8:
+        case 7:
             window.location.href = '../GrupoRissois.html';
             break;
 
