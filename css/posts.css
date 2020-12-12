@@ -5,11 +5,11 @@
 /* POST */
 
 .post-wrapper {
-    background-color: #FAFAFF;
+    background-color: #ffffff;
     padding: 1em;
     margin: 3vh 0;
     border-radius: 15px;
-    box-shadow: 1px 1px 10px #D8B7FF;
+    box-shadow: 1px 1px 5px #af7dfd;
     overflow: hidden;
 }
 
@@ -44,7 +44,7 @@ h3.nome {
 /* conteudo da publicação */ 
 .post-wrapper .publicacao {
      text-align: center;
-     height: 200px;
+     height: 300px;
      margin: 3vh 0;
 }
 
@@ -83,7 +83,7 @@ h3.nome {
   }
   
   .sharedpost .sharedpost-wrapper {
-    background-color: #fafaff;
+    background-color: #ffffff;
     padding: 2vh 5vh;
     padding-bottom: 0;
     border-radius: 15px;
@@ -96,7 +96,7 @@ h3.nome {
 
 /* icones */
 i {
-   color: #7D12FF;
+   color: #af7dfd;
 }
 
 .fa-thumbs-up, .fa-comment {

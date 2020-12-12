@@ -1,5 +1,32 @@
 /* Barra de Pesquisa */
 
+#alerta-msg {
+    margin: 0 3%;
+    position: fixed;
+    z-index: 10;
+    margin: 20% 0 0 0;
+    width: 95%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .msg-enviada {
+    position: relative;
+    background-color: #f4ebff;
+    padding: 10vh 10vw;
+    overflow: hidden;
+  
+    border: solid #7300ff 1px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #d8b7ff;
+    margin: 20% 0 0 0;
+    width: 95%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 #searchbar{ 
     border: none;
     background-color: #FAFAFF;
