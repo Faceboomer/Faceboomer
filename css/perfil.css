@@ -53,7 +53,7 @@ li i.fa{
 }
 
 #infolista {
-  background-color: #fafaff;
+  background-color: #ffffff;
   min-height: 50px;
   height: auto;
   width: auto;
@@ -64,6 +64,8 @@ li i.fa{
   box-shadow: 1px 1px 10px #d8b7ff;
   overflow: hidden;
   margin-bottom: 2.5vh;
+  
+  animation: cor linear 20s;
 }
 
 .nmrs {
@@ -72,8 +74,9 @@ li i.fa{
   font-weight: 200;
 }
 
+
 #amigos {
-  background-color: #fafaff;
+  background-color: #ffffff;
   min-height: 50px;
   height: auto;
   width: auto;
@@ -83,6 +86,8 @@ li i.fa{
   box-shadow: 1px 1px 10px #d8b7ff;
   overflow: hidden;
   margin-bottom: 2.5vh;
+
+  animation: cor linear 20s;
 }
 
 #amigos img {
@@ -101,7 +106,7 @@ li i.fa{
 }
 
 #fotos {
-  background-color: #fafaff;
+  background-color: #ffffff;
   min-height: 50px;
   height: auto;
   width: auto;
@@ -110,6 +115,8 @@ li i.fa{
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
   overflow: hidden;
+
+  animation: cor linear 20s;
 }
 
 #fotos img {
