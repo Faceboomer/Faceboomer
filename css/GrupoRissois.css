@@ -17,8 +17,6 @@
 }
 
 #estado #botoes.desafio {
-  position: relative;
-  z-index: -1;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
