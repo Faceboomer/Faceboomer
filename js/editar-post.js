@@ -18,4 +18,13 @@ console.log("clicked to edit")
     $(this).parent().parent().remove();
     }
 
-})
+});
+
+$('.apagar').on('click', function() {
+    console.log("oops!")
+
+        // remove essa img
+        $(this).remove();
+        
+    
+    });
