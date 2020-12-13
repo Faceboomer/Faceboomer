@@ -1,5 +1,35 @@
 /* ELEMENTOS */
 
+#imgPublicar {
+  position: relative;
+  top: -10px;
+  z-index: 0;
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+
+  border-left: #af7dfd solid 1px;
+  border-right: #af7dfd solid 1px;
+}
+
+#imgPublicar img{
+  height: 100%;
+}
+
+#estado #botoes.desafio {
+  position: relative;
+  z-index: -1;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#estado .desafio .botao{
+  margin-top: 10px;
+  position: relative;
+  z-index: 10;
+  display: block;
+}
+
 /* HEADER */
 
 #cabecalho img {

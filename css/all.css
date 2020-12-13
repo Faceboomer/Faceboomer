@@ -194,6 +194,7 @@ i.fa-times{
 /* STATUS BAR */
 #estado-wrapper {
   position: relative;
+  z-index: 1;
   background-color: #ffffff;
   min-height: 50px;
   height: auto;
@@ -239,6 +240,9 @@ i.fa-times{
   flex-wrap: nowrap;
   margin-top: -15px;
   padding-bottom: 2px;
+  
+  background-color: #af7dfd;
+  border-radius: 10px;
 }
 
 #estado .botao {
@@ -252,16 +256,6 @@ i.fa-times{
 
 #estado .botao:last-child {
   border: none;
-}
-
-.sep {
-  padding: 0 !important;
-  color: #ffffff;
-}
-
-#botoes {
-  background-color: #af7dfd;
-  border-radius: 10px;
 }
 
 /* NAVBAR */
@@ -343,6 +337,14 @@ h3, h3 a{
 
 /* estado botoes */
 #estado .botao{
+  display: block;
+  font-weight: bold;
+  font-size: 9px;
+  color: #d8b7ff;
+  text-shadow: 0 0 2px #d8b7ff;
+}
+
+#estado .botao a, #estado .botao a:visited, #estado .botao a:focus{
   font-weight: bold;
   font-size: 9px;
   color: #d8b7ff;
