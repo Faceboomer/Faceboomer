@@ -132,6 +132,7 @@ header #titulo {
   position: relative;
   top: -1;
   left: -1px;
+  min-width: 255px;
   max-width: 257px;
   width: auto;
   height: auto;
