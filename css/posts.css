@@ -15,7 +15,7 @@
 
 /* ultimo post */
 #antigos-posts article:last-child {
-  margin-bottom: 10vh;
+  padding-bottom: 3vh;
 }
 
 /* imagem perfil */

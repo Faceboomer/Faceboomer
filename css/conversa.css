@@ -146,10 +146,10 @@ header #titulo {
 #escrever {
   min-height: 50px;
   height: auto;
-  width: 80%;
+  width: 85%;
   position: fixed;
   bottom: 0;
-  margin-bottom: 7.5vh;
+  margin-bottom: 2.5vh;
   left: 7.5vw;
 }
 
@@ -186,7 +186,7 @@ textarea {
 }
 
 #escrever-fixed {
-  min-height: 135px;
+  min-height: 110px;
   height: auto;
   width: 100%;
   position: fixed;
