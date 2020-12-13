@@ -99,4 +99,11 @@ ul li input{
     color: #7300ff; 
     border: solid #7300ff 1px;
     box-shadow: 1px 1px 10px #d8b7ff;
+    border-radius: 10px;
+}
+
+main p#finalP, main p#finalP2{
+    font-size: 12px !important;
+    text-shadow: none !important;
+    line-height: 11.5pt !important;
 }
