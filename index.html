@@ -5,10 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- faz redirect para o login após 5s -->
-    <!-- <meta http-equiv = "refresh" content = " 5 ; url = login.html"/> -->
+    <meta http-equiv = "refresh" content = " 5 ; url = login.html"/>
     <title>Faceboomer</title>
+    
+    <link rel="stylesheet" href="all.css">
+
+    <style>
+        div{
+            text-align: center;
+            margin:0 auto;
+            width: 100px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -170px -50px;
+            opacity: 100;
+            animation: op ease 2s;
+        }
+
+        @keyframes op {
+            from {opacity: 0;}
+            to {opacity: 100;}
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div>
+        <img src="data/logo.svg" alt="faceboomer logo" />
+    </div>
 </body>
 </html>
+
+
