@@ -228,10 +228,10 @@
     <script>
      //para que comece sempre com o scroll em baixo
      $(window).on("beforeunload", function () {
-        $(window).scrollTop(10000);
+      window.scroll(0, document.documentElement.scrollHeight)
       });
       $("#enviar").on("click", function () {
-        $(window).scrollTop(10000);
+        window.scroll(0, document.documentElement.scrollHeight)
       });
     </script>
   </body>

@@ -13,8 +13,9 @@ body {
 
 /* fundo muda de cor */
 @keyframes cor {
-  from {background-color: #fff;}
-  to {background-color:#d4cae2;}
+  0% {background-color: #fff;}
+  50% {background-color:#e1d9eb;}
+  100% {background-color: #fff;}
 }
 
 /* margens */
