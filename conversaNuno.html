@@ -185,11 +185,11 @@
     <script>
       //para que comece sempre com o scroll em baixo
       $(window).on("beforeunload", function () {
-        $(window).scrollTop(10000);
-      });
-      $("#enviar").on("click", function () {
-        $(window).scrollTop(10000);
-      });
-    </script>
+       window.scroll(0, document.documentElement.scrollHeight)
+       });
+       $("#enviar").on("click", function () {
+         window.scroll(0, document.documentElement.scrollHeight)
+       });
+     </script>
   </body>
 </html>
