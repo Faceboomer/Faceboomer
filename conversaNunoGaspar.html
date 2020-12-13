@@ -12,7 +12,7 @@
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="https://use.fontawesome.com/b51a055151.js"></script>
-  
+
 </head>
 
 <body onload="paraBaixo()">
@@ -191,6 +191,22 @@
     function paraBaixo() {
       window.scroll(0, document.documentElement.scrollHeight)
     };
+
+    /* FINAL DESAFIO */
+    /* verificar o estado dos desafios */
+    let desafio1 = localStorage.getItem("desafio1");
+    // tornar string da consoleLog em boolean (true)
+    desafio1 = JSON.parse(desafio1)
+
+    let desafio2 = localStorage.getItem("desafio2");
+    // tornar string da consoleLog em boolean (true)
+    desafio2 = JSON.parse(desafio2);
+
+    // SE ESTIVEREM AMBOS OS DESAFIOS CUMPRIDOS
+    if (desafio1 && desafio2) {
+      console.log("yay")
+      setInterval(window.location.replace("Final.html"), 5000);
+    }
   </script>
 </body>
 
