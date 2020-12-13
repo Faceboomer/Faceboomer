@@ -8,6 +8,13 @@
 /* fundo */
 body {
   background-color: #ffffff;
+  animation: cor linear 20s;
+}
+
+/* fundo muda de cor */
+@keyframes cor {
+  from {background-color: #fff;}
+  to {background-color:#d4cae2;}
 }
 
 /* margens */
@@ -103,6 +110,8 @@ header #back {
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
+
+  animation: cor linear 20s;
 }
 
 .aceite {
@@ -120,6 +129,8 @@ header #back {
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
+
+  animation: cor linear 20s;
 }
 
 .alerta-button {
@@ -144,6 +155,8 @@ header #back {
   width: 48%;
   padding: 1vh 0;
   border-radius: 5px;
+
+  animation: cor linear 20s;
 }
 
 .button-respond1 {
@@ -153,6 +166,8 @@ header #back {
   padding: 1vh 0;
   border-radius: 5px;
   float: right;
+
+  animation: cor linear 20s;
 }
 
 /* POPUPS */
@@ -179,6 +194,8 @@ header #back {
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
+
+  animation: cor linear 20s;
 }
 
 .popup-button {
@@ -206,6 +223,8 @@ i.fa-times{
   box-shadow: 1px 1px 5px #d8b7ff;
   overflow: hidden;
   margin-top: 3vh;
+
+  animation: cor linear 20s;
 }
 
 /* foto de perfil */
@@ -273,6 +292,8 @@ i.fa-times{
   justify-content: space-around;
   align-items: center;
   color: #af7dfd;
+
+  animation: cor linear 20s;
 }
 
 /* onde se escrevem coisas, pesquisa, estado */
@@ -317,6 +338,10 @@ body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li
 i.fa{
   text-shadow: 0 0 2px #af7dfd;
   font-size: 9px !important;
+}
+
+i.fa:active{
+  text-shadow: 0 0 5px #7e41e0;
 }
 
 /* titulos de pagina */
