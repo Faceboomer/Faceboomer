@@ -156,7 +156,6 @@ header #back {
   width: 48%;
   padding: 1vh 0;
   border-radius: 5px;
-
   animation: cor linear 20s;
 }
 
@@ -379,4 +378,27 @@ h3, h3 a{
   font-size: 9px;
   color: #d8b7ff;
   text-shadow: 0 0 2px #d8b7ff;
+}
+
+.desafios {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20% 0 0 0;
+  padding: 10vh 10vw;
+  text-align: center;   
+  background-color: #ffffff;  
+  border: solid #7300ff 1px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;  
+  animation: cor linear 20s;
+}
+
+.desafios-button {
+  position: absolute;
+  top: 10px;
+  right: 11px;
 }

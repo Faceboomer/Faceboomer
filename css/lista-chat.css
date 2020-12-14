@@ -16,15 +16,25 @@
     background-color: #f4ebff;
     padding: 10vh 10vw;
     overflow: hidden;
-  
     border: solid #7300ff 1px;
     border-radius: 15px;
     box-shadow: 1px 1px 10px #d8b7ff;
-    margin: 20% 0 0 0;
-    width: 95%;
     text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+    animation: cor linear 20s;
+  }
+  
+  .responder-nuno {
+  font-weight: bold;
+  color: grey;
+  text-shadow: 0 0 2px grey;
+  background-color: #FFFFFF;
+  width: 48%;
+  margin-top: 1.5em;
+  padding: 1vh 0;
+  border: solid #af7dfd 1px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #d8b7ff;
+  animation: cor linear 20s;
   }
 
 #searchbar{ 
