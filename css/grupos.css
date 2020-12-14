@@ -16,51 +16,15 @@
     transform: translateX(-50%);
 }
 
-/* Header */
-
-.cabecalho {
-display: flex;
-margin: 10% 7.5%;
-}
-
-.seta {
-flex: 1;        
-display: flex;
-justify-content: flex-start;
-align-items: center;
-}
-
-.header-grupos {
-flex: 1;
-display: flex;
-justify-content: center;
-align-items: center;
-font-weight: bold;
-font-size: 30pt;
-}
-
-.mais {
-flex: 1;
-display: flex;
-justify-content: flex-end;
-align-items: center;
-}
-
-.fa {
-    color: #af7dfd;
-}
-
 /* Barra de Pesquisa */
 
 #searchbar{ 
     border: none;
-    background-color: #ffffff;
-    min-height: 7vh;
+    background-color: #FAFAFF;
     width: 100%;
     padding: 11px 7%;
     border-radius: 15px;
-
-    animation: cor linear 20s;
+    box-shadow: 1px 1px 10px #D8B7FF;
   } 
 
 /* Grupos */

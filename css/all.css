@@ -79,6 +79,11 @@ header i.fa-search, header i.fa-times{
   padding-top: 1vh;
 }
 
+.fa-plus {
+  float: right;
+  padding-top: 1vh;
+}
+
 /* galeria */
 header i.fa-times{
   padding-top: 3px;

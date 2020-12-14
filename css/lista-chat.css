@@ -43,6 +43,7 @@
     width: 100%;
     padding: 11px 7%;
     border-radius: 15px;
+    box-shadow: 1px 1px 10px #D8B7FF;
   } 
 
 .conversas-wrapper {
