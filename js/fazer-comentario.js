@@ -38,7 +38,7 @@ function publicar(data) {
       <p>${data}</p>
     </div>
     </div>
-    <div class="interação">
+    <div class="interacao">
       <span>Há ${getRandomInt(2, 24)} segundos</span>
       <span class="likes">Gosto</span>
       <span class="comments">Responder...</span>

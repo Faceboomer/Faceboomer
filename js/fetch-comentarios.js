@@ -35,7 +35,7 @@ $.getJSON("https://spreadsheets.google.com/feeds/cells/1ouF6eqgwn9ZfvhakdIN8crQf
           <p>${conteudo}</p>
         </div>
         </div>
-        <div class="interação">
+        <div class="interacao">
           <span>Há ${getRandomInt(2, 24)} dias</span>
           <span class="likes">Gosto</span>
           <span class="comments">Responder...</span>
