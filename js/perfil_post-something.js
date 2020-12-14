@@ -89,22 +89,23 @@ function savePost(data) {
 
         // escrever
         const p = `
-
-        <article id="post-${i}" class="post">
+        <article id="post-${post.key}" class="post">
         <div class="post-wrapper">
-          <div class="iconePerfil">
-            <img src="data/utilizador/foto-de-perfil.jpg" />
-          </div>
+          <a class="linkGrupo" href="GrupoRissois.html">
+            <div class="iconePerfil">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </div>
+          </a>
           <h3 class="nome">${post.nome}</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao-texto">
             <p class="post-texto">
-            ${post.texto}
+              ${post.texto}
             </p>
           </div>
-          <p class="gostos">${getRandomInt(1,40)}</p>
+          <p class="gostos">${getRandomInt(1, 40)}</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
-          <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1,7)}</a></p>
+          <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1, 7)}</a></p>
           <a href="comentarios-random.html">
           <i class="fa fa-comment"></i></a>
           <i class="fa fa-share-alt"></i>
@@ -134,7 +135,7 @@ function writeLastPost(data) {
   const pp = `
       <article id="post-${post.key}" class="post">
           <div class="post-wrapper">
-            <a href="GrupoRissois.html">
+            <a class="linkGrupo" href="GrupoRissois.html">
               <div class="iconePerfil">
                 <img src="data/utilizador/foto-de-perfil.jpg" />
               </div>

@@ -115,7 +115,7 @@ header #titulo {
   width: 80%;
   left: 20%;
 
-  animation: cor linear 15s;
+  animation: cor linear 20s;
 }
 
 /* msgs enviadas com anexo logo */
@@ -135,7 +135,7 @@ header #titulo {
 .msg-enviada.anexo img {
   position: relative;
   min-width: 255px;
-  max-width: 290px;
+  max-width: 400px;
   width: 100%;
   height: auto;
 }
@@ -162,7 +162,7 @@ header #titulo {
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
 
-  animation: cor linear 15s;
+  animation: cor linear 20s;
 }
 
 #enviar {
@@ -192,5 +192,5 @@ textarea {
   bottom: 0;
   background-color: #fff;
 
-  animation: cor linear 15s;
+  animation: cor linear 20s;
 }

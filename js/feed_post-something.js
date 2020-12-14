@@ -89,7 +89,7 @@ function writePosts(data) {
       const p = `
       <article id="post-${i}" class="post">
           <div class="post-wrapper">
-            <a href="GrupoRissois.html">
+            <a class="linkGrupo" href="GrupoRissois.html">
               <div class="iconePerfil">
                 <img src="data/utilizador/foto-de-perfil.jpg" />
               </div>
@@ -133,7 +133,7 @@ function writeLastPost(data) {
   const pp = `
       <article id="post-${post.key}" class="post">
           <div class="post-wrapper">
-            <a href="GrupoRissois.html">
+            <a class="linkGrupo" href="GrupoRissois.html">
               <div class="iconePerfil">
                 <img src="data/utilizador/foto-de-perfil.jpg" />
               </div>
