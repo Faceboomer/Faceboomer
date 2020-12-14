@@ -35,3 +35,21 @@ $(".randomLoc").on("click", function () {
 
     }
 });
+
+let linkChat = $('#messages').parent();
+linkChat = linkChat.attr("href");
+
+
+// verificar desafio da mensagem
+// para redirecionar para a lista de chat certa
+
+let desafio2 = localStorage.getItem("desafio2");
+// tornar string da consoleLog em boolean (true)
+desafio2 = JSON.parse(desafio2);
+
+// SE ESTIVER CUMPRIDO
+if (desafio2) {
+
+    linkChat = "lista-chat-vichy.html";
+    console.log("🚀 ~ file: navbar.js ~ line 55 ~ desafio ~ linkChat", linkChat)
+}
