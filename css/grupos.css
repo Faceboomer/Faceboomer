@@ -47,18 +47,20 @@ align-items: center;
 }
 
 .fa {
-    color: #7D12FF;
+    color: #af7dfd;
 }
 
 /* Barra de Pesquisa */
 
 #searchbar{ 
     border: none;
-    background-color: #FAFAFF;
+    background-color: #ffffff;
     min-height: 7vh;
     width: 100%;
     padding: 11px 7%;
     border-radius: 15px;
+
+    animation: cor linear 20s;
   } 
 
 /* Grupos */
@@ -73,11 +75,13 @@ align-items: center;
 }
 
 .itens-grupos, .itens-grupos1 {
-    background-color: #FAFAFF;
+    background-color: #ffffff;
     box-shadow: 1px 1px 10px #D8B7FF;
     border-radius: 15px;
     overflow: hidden;
     list-style-type: none;
+
+    animation: cor linear 20s;
 }
 
 .imagem-grupo img {
