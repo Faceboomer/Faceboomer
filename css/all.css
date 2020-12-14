@@ -307,6 +307,7 @@ i.fa-times{
   box-shadow: 1px 1px 5px #d8b7ff;
   overflow: hidden;
   position: fixed;
+  z-index: 100;
   bottom: 0;
   padding: 1em;
   display: flex;
