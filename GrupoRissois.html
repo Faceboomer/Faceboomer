@@ -47,18 +47,19 @@
   <!--alertas pedidos de amizade-->
   <div class="alerta-container">
     <div class="alerta-container1">
-    <button class="alerta-button"><i class="fa fa-times"></i></button>
-    <p><strong><span class="place-nome"></span></strong> enviou-te um pedido de amizade <span style="float: right">há <label id="seconds">0</label>s</span></p>
-    <div class="respond">
-    <button class="button-respond">Confirmar</button>
-    <button class="button-respond1">Eliminar</button>
-  </div>
-  </div>
+      <button class="alerta-button"><i class="fa fa-times"></i></button>
+      <p><strong><span class="place-nome"></span></strong> enviou-te um pedido de amizade <span style="float: right">há
+          <label id="seconds">0</label>s</span></p>
+      <div class="respond">
+        <button class="button-respond">Confirmar</button>
+        <button class="button-respond1">Eliminar</button>
+      </div>
+    </div>
   </div>
 
   <!--Pedido Aceite-->
-    <div class="aceite">
-      <div class="aceite1">
+  <div class="aceite">
+    <div class="aceite1">
       <button class="aceite-button"><i class="fa fa-times"></i></button>
       <p>Pedido de amizade aceite!</p>
     </div>
@@ -66,10 +67,10 @@
 
   <div class="desafios">
     <div class="desafios1">
-    <button class="desafios-button"><i class="fa fa-times"></i></button>
-    <p class="desafio-text"><strong>Madalena Gaspar:</strong> Avó, faz a publicação do rissole de camarão...</p>
+      <button class="desafios-button"><i class="fa fa-times"></i></button>
+      <p class="desafio-text"><strong>Madalena Gaspar:</strong> Avó, faz a publicação do rissole de camarão...</p>
+    </div>
   </div>
-</div>
 
   <!--Header-->
   <div id="cabecalho">
@@ -89,40 +90,56 @@
     <img class="modal-content" id="img-capa" />
   </div>
 
-  </div>
+  <main>
 
-  
+    <!--STATUS BAR -->
+    <div id="estado">
+      <div id="estado-wrapper">
+        <div class="fotoPerfil">
+          <img src="data/utilizador/foto-de-perfil.jpg" />
+        </div>
+        <textarea id="type-new-post" placeholder="Em que estás a pensar?" rows="1"></textarea><br />
+      </div>
+      <div id="imgPublicar">
+        <img src="data/GaleriaDesafio/CAMARAO.jpg" alt="imagem rissol de camarao">
+      </div>
+      <div id="botoes" class="botoes desafio">
+        <button class="botao gif">GIF</button>
+        <button class="botao foto">FOTO</button>
+        <button class="botao foto"><a href="GaleriadeImagens_Publicar.html">Fotografia</a></button>
+        <button class="botao" id="publishDesafio"><a href="gruporRissois.html">Post</a></button>
+      </div>
+    </div>
+
+
     <!--POSTS-->
-
-
     <div id="novos-posts"></div>
     <div id="antigos-posts">
 
-        <article class="post">
-          <div class="post-wrapper">
-            <div class="iconePerfil">
-              <a href="feed.html">
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
               <img src="data/utilizador/foto-de-perfil.jpg" />
-              </a>
-            </div>
-            <h3 class="nome">Maria Eugénia</h3>
-            <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
-            <div class="publicacao">
-              <img src="data/grupos/rissol15.png" />
-            </div>
-            <p class="gostos">5</p>
-            <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
-            <p class="comentarios"></p>
-            <i class="fa fa-comment"></i>
-            <i class="fa fa-share-alt"></i>
+            </a>
           </div>
-        </article>
+          <h3 class="nome">Maria Eugénia</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol15.png" />
+          </div>
+          <p class="gostos">5</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
 
-
-        <article class="post">
-          <div class="post-wrapper">
-            <div class="iconePerfil">
-              <a href="feed.html">
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
               <img src="data/utilizador/foto-de-perfil.jpg" />
             </a>
           </div>
@@ -153,6 +170,46 @@
             </p>
           </div>
           <p class="gostos">21</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol16.png" />
+          </div>
+          <p class="gostos">5</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol17.png" />
+          </div>
+          <p class="gostos">5</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
           <p class="comentarios"></p>
           <i class="fa fa-comment"></i>
@@ -207,17 +264,17 @@
               <img src="data/utilizador/foto-de-perfil.jpg" />
             </a>
           </div>
-              <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
-              <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
-              <div class="publicacao">
-                <img src="data/grupos/rissol8.jpg" />
-              </div>
-              <p class="gostos">20</p>
-              <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
-              <p class="comentarios"></p>
-              <i class="fa fa-comment"></i>
-              <i class="fa fa-share-alt"></i>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol8.jpg" />
           </div>
+          <p class="gostos">20</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
       </article>
 
       <article class="post">
@@ -331,6 +388,47 @@
           </div>
           <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao-texto">
+            <p class="post-texto">
+              Rissóis de pizza - 3,50€ duzia duzia 🍕<br>
+              Rissois de delicias do mar- 3.50€ duzia 🐟<br>
+              Rissois de frango - 3.50€ duzia🐓🐓<br>
+              Coxinhas de frango- 3.50€ duzia 🍗🍗<br>
+              Rissóis de pescada- 3.50€ duzia 🐬<br>
+              Almofadinhas de queijo e bacon - 3,50€ duzia🥓<br>
+              Almofadinhas de queijo e fiambre- 3,50€ duzia🧀<br>
+              Almofadinhas de salsicha - 3,50€ duzia 🌭🌭<br>
+              Almofadinhas miniatura- 3,00€ duzia🥯🥯<br>
+              Rissois de carne grandes - 3,50€ duzia 🥩🥩<br>
+              Rissois de carne miniatura - 3,00€ duzia 🥩🥩<br>
+              Rissois de atum - 3,70€ duzia🦈🦈<br>
+              Rissois de atum miniatura - 3,20€ duzia 🦈🦈<br>
+              Bolinhos de bacalhau - 3,80€ duzia 🦈🦈<br>
+              Bolinhos bacalhau miniatura - 3,30€ duzia 🦈🦈<br>
+              Panadinhos de porco - 5€ o kg 🐖🐖<br>
+              Panadinhos de frango - 7€ o kg 🐓🐓<br>
+              Panadinhos de peru- 7€ o kg 🦃🦃<br>
+              Se nao quiser fritar , nos fritamos acrescentado 1€ a cada duzia 👩‍🍳👩‍🍳<br>
+              Provem , vão gostar 😊
+            </p>
+          </div>
+          <p class="gostos">21</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao">
             <img src="data/grupos/rissol5.jpg" />
           </div>
@@ -372,8 +470,30 @@
           </div>
           <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao-texto">
+            <p class="post-texto">
+              A preparar as vosas encumendas....delicioso .S
+            </p>
+          </div>
+          <p class="gostos">0</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao">
-            <img src="data/grupos/rissol5.jpg" />
+            <img src="data/grupos/rissol7.jpg" />
           </div>
           <p class="gostos">5</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
@@ -398,6 +518,89 @@
             </p>
           </div>
           <p class="gostos">0</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/icone-madalena.jpeg" />
+            </a>
+          </div>
+          <h3 class="nome">Madalena Gaspar ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao-texto">
+            <p class="post-texto">
+              Avó, os meus rissóis já estão prontos? :)
+            </p>
+          </div>
+          <p class="gostos">6</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao-texto">
+            <p class="post-texto">
+              Rissóis de pizza - 3,50€ duzia duzia 🍕<br>
+              Rissois de delicias do mar- 3.50€ duzia 🐟<br>
+              Rissois de frango - 3.50€ duzia🐓🐓<br>
+              Coxinhas de frango- 3.50€ duzia 🍗🍗<br>
+              Rissóis de pescada- 3.50€ duzia 🐬<br>
+              Almofadinhas de queijo e bacon - 3,50€ duzia🥓<br>
+              Almofadinhas de queijo e fiambre- 3,50€ duzia🧀<br>
+              Almofadinhas de salsicha - 3,50€ duzia 🌭🌭<br>
+              Almofadinhas miniatura- 3,00€ duzia🥯🥯<br>
+              Rissois de carne grandes - 3,50€ duzia 🥩🥩<br>
+              Rissois de carne miniatura - 3,00€ duzia 🥩🥩<br>
+              Rissois de atum - 3,70€ duzia🦈🦈<br>
+              Rissois de atum miniatura - 3,20€ duzia 🦈🦈<br>
+              Bolinhos de bacalhau - 3,80€ duzia 🦈🦈<br>
+              Bolinhos bacalhau miniatura - 3,30€ duzia 🦈🦈<br>
+              Panadinhos de porco - 5€ o kg 🐖🐖<br>
+              Panadinhos de frango - 7€ o kg 🐓🐓<br>
+              Panadinhos de peru- 7€ o kg 🦃🦃<br>
+              Se nao quiser fritar , nos fritamos acrescentado 1€ a cada duzia 👩‍🍳👩‍🍳<br>
+              Provem , vão gostar 😊
+            </p>
+          </div>
+          <p class="gostos">21</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol20.png" />
+          </div>
+          <p class="gostos">5</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
           <p class="comentarios"></p>
           <i class="fa fa-comment"></i>
@@ -435,6 +638,26 @@
           </div>
           <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
           <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol21.png" />
+          </div>
+          <p class="gostos">8</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
           <div class="publicacao-texto">
             <p class="post-texto">
               EM BREVE PUBLCIUO AS IGUARIAS! DESTE FIM DE SEMANA 😜 😜
@@ -443,6 +666,7 @@
               🤡💌❤❤❤❤❤ ENCOMENDAM OS VOSOS , MUITO GSOTO
             </p>
           </div>
+        </div>
       </article>
 
       <article class="post">
@@ -488,6 +712,27 @@
         </div>
       </article>
 
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol23.png" />
+          </div>
+          <p class="gostos">5</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
       <article class="post">
         <div class="post-wrapper">
           <div class="iconePerfil">
@@ -500,7 +745,87 @@
           <div class="publicacao">
             <img src="data/grupos/rissol1.jpg" />
           </div>
-          <p class="gostos"></p>
+          <p class="gostos">10</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol25.png" />
+          </div>
+          <p class="gostos">2</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol26.png" />
+          </div>
+          <p class="gostos">5</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol27.png" />
+          </div>
+          <p class="gostos">15</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-wrapper">
+          <div class="iconePerfil">
+            <a href="feed.html">
+              <img src="data/utilizador/foto-de-perfil.jpg" />
+            </a>
+          </div>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol24.png" />
+          </div>
+          <p class="gostos">5</p>
           <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
           <p class="comentarios"></p>
           <i class="fa fa-comment"></i>
@@ -1439,17 +1764,14 @@
     </div>
   </main>
 
-
-
-
   <!--Navigation bar-->
   <div id="navbar">
     <div id="bottomnav">
       <button class="randomLoc"><i id="notifications" class="fa fa-bell" aria-hidden="true"></i></button>
       <button class="randomLoc"><i id="groups" class="fa fa-users" aria-hidden="true"></i></button>
       <a href="lista-chat.html"><i id="messages" class="fa fa-comment" aria-hidden="true"></i></a>
-      <a href="perfil.html"><i id="termometro" class="fa fa-thermometer-half" aria-hidden="true"></i>
-        <a href="comentarios.html"><i id="camera" class="fa fa-video-camera" aria-hidden="true"></i>
+      <a href="perfil.html"><i id="termometro" class="fa fa-thermometer-half" aria-hidden="true"></i></a>
+      <a href="comentarios.html"><i id="camera" class="fa fa-video-camera" aria-hidden="true"></i></a>
 
     </div>
   </div>

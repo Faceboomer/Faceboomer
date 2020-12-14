@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/GrupoRissois.css" />
   <link rel="stylesheet" href="css/pagetransitions.css" />
 
-
   <script src="https://use.fontawesome.com/b51a055151.js"></script>
   <script src="js/jquery-3.5.1.min.js"></script>
 </head>
@@ -61,8 +60,6 @@
 
     <!--Conteúdo-->
     <img class="modal-content" id="img-capa" />
-  </div>
-
   </div>
 
   <main>
@@ -258,17 +255,17 @@
               <img src="data/utilizador/foto-de-perfil.jpg" />
             </a>
           </div>
-              <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
-              <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
-              <div class="publicacao">
-                <img src="data/grupos/rissol8.jpg" />
-              </div>
-              <p class="gostos">20</p>
-              <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
-              <p class="comentarios"></p>
-              <i class="fa fa-comment"></i>
-              <i class="fa fa-share-alt"></i>
+          <h3 class="nome">Maria Eugénia ‣ Rissóis da Avó Geninha</h3>
+          <button class="edit"><i class="fa fa-ellipsis-h"></i></button>
+          <div class="publicacao">
+            <img src="data/grupos/rissol8.jpg" />
           </div>
+          <p class="gostos">20</p>
+          <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
+          <p class="comentarios"></p>
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-share-alt"></i>
+        </div>
       </article>
 
       <article class="post">
@@ -660,6 +657,7 @@
               🤡💌❤❤❤❤❤ ENCOMENDAM OS VOSOS , MUITO GSOTO
             </p>
           </div>
+        </div>
       </article>
 
       <article class="post">
@@ -1763,8 +1761,8 @@
       <button class="randomLoc"><i id="notifications" class="fa fa-bell" aria-hidden="true"></i></button>
       <button class="randomLoc"><i id="groups" class="fa fa-users" aria-hidden="true"></i></button>
       <a href="lista-chat.html"><i id="messages" class="fa fa-comment" aria-hidden="true"></i></a>
-      <a href="perfil.html"><i id="termometro" class="fa fa-thermometer-half" aria-hidden="true"></i>
-        <a href="comentarios.html"><i id="camera" class="fa fa-video-camera" aria-hidden="true"></i>
+      <a href="perfil.html"><i id="termometro" class="fa fa-thermometer-half" aria-hidden="true"></i></a>
+      <a href="comentarios.html"><i id="camera" class="fa fa-video-camera" aria-hidden="true"></i></a>
 
     </div>
   </div>
@@ -1778,8 +1776,8 @@
   <script src="js/navbar.js"></script>
 
   <script>
-    setTimeout(window.onload=desafio, 7000);
-    
+    setTimeout(window.onload = desafio, 7000);
+
 
     function desafio() {
       console.log("loaded")
@@ -1794,9 +1792,10 @@
 
       // SE ESTIVEREM AMBOS OS DESAFIOS CUMPRIDOS
       if (desafio1 && desafio2) {
-        
+
         setTimeout(window.location.replace("Final.html"), 3000);
       }
+    }
   </script>
 
 </body>
