@@ -182,26 +182,33 @@ header #back {
 }
 
 /* POPUPS */
+
 #popups {
-  margin: 0 3%;
   position: fixed;
   z-index: 10;
+  margin: 20% 0 0 0;
+  width: 95%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*Popup grupo rissois*/
 #popups1 {
-  margin: 0 3%;
   position: fixed;
   z-index: 10;
+  margin: 20% 0 0 0;
+  width: 95%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .popup {
   position: relative;
   background-color: #ffffff;
   padding: 10vh 10vw;
-  margin-bottom: 1vh;
   overflow: hidden;
-
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
