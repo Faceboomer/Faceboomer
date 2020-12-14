@@ -1,136 +1,143 @@
 /* ELEMENTOS */
 
-
-
 /* POST */
 
 .post-wrapper {
-    background-color: #ffffff;
-    padding: 1em;
-    margin: 3vh 0;
-    border-radius: 15px;
-    box-shadow: 1px 1px 5px #af7dfd;
-    overflow: hidden;
+  background-color: #ffffff;
+  padding: 7px;
+  margin: 3vh 0;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px #af7dfd;
+  overflow: hidden;
+
+  animation: cor linear 20s;
 }
 
 /* ultimo post */
 #antigos-posts article:last-child {
-    margin-bottom: 10vh;
+  padding-bottom: 3vh;
 }
 
 /* imagem perfil */
 .post-wrapper .iconePerfil {
-    display: inline-block;
-    vertical-align: middle;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .iconePerfil img {
-    height: 32px;
-    min-width: 32px;
+  height: 32px;
+  min-width: 32px;
 }
 
 /* nome */
 h3.nome {
-    display: inline;
-    font-size: 8px;
-    font-weight: bold;
-    margin-left: 3vw;
+  display: inline;
+  font-size: 8px;
+  font-weight: bold;
+  margin-left: 3vw;
 }
 
-/* conteudo da publicação */ 
+/* conteudo da publicação */
 .post-wrapper .publicacao {
-     text-align: center;
-     height: 300px;
-     margin: 3vh 0;
+    position: relative;
+    left: -7px;
+  height: 300px;
+  width: 330px;
+  margin: 10px 0;
 }
 
 .publicacao img {
-    height: 100%;
+    min-width: 330px;
+  height: 100%;
 }
 
 /* nº de gostos e comentários */
-.gostos, .comentarios{
-    display: inline;
-    padding: 0.5em;
+.gostos,
+.comentarios {
+  display: inline;
+  padding: 0.5em;
 }
 
 /* publicações com texto */
 .publicacao-texto .post-texto {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 9px;
-    line-height: 11px;
-    text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: left;
 }
 
 .post-wrapper .publicacao-texto {
-    display: table;
-    position: relative;
-    height: 200px;
-    margin: 2vh 0;
-    text-align: center; 
+  display: table;
+  position: relative;
+  height: 200px;
+  margin: 2vh 0;
+  text-align: center;
 }
 
 /* conteudo da publicação partilhada */
 .sharedpost .publicacao {
-    text-align: center;
-    height: 200px;
-    margin: 2.5vh 0;
-  }
-  
-  .sharedpost .sharedpost-wrapper {
-    background-color: #ffffff;
-    padding: 2vh 5vh;
-    padding-bottom: 0;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  
-  .sharedpost .publicacao img {
-    height: 100%;
-  }
+  text-align: center;
+  height: 200px;
+  margin: 2.5vh 0;
+}
+
+.sharedpost .sharedpost-wrapper {
+  background-color: #ffffff;
+  padding: 2vh 5vh;
+  padding-bottom: 0;
+  border-radius: 15px;
+  overflow: hidden;
+
+  animation: cor linear 20s;
+}
+
+.sharedpost .publicacao img {
+  height: 100%;
+}
 
 /* icones */
 i {
-   color: #af7dfd;
+  color: #af7dfd;
 }
 
-.fa-thumbs-up, .fa-comment {
-    padding-right: .5vw;
+.fa-thumbs-up,
+.fa-comment {
+  padding-right: 0.5vw;
 }
 
-.fa-share-alt, button.edit {
-    float: right;
-    margin-right: 1vw;
+.fa-share-alt,
+button.edit {
+  float: right;
+  margin-right: 1vw;
 }
 
 .fa-ellipsis-h {
-    float: right;
-    padding-top: 1vh;
+  float: right;
+  padding-top: 1vh;
 }
 
 a {
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: gray;
-  }
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+}
 
 /*VERSÕES COM WIDTH MENOR QUE IMPLICAM IMAGENS MENORES*/
 @media screen and (max-width: 350px) {
+  /*Imagem Perfil*/
+  #post-wrapper .iconePerfil {
+    height: 30px;
+  }
 
-    /*Imagem Perfil*/
-    #post-wrapper .iconePerfil {
-        height: 30px;
-    }
-
-    /*Imagem Post*/
-    #post-wrapper .publicacao {
-        height: 150px;
-    }
+  /*Imagem Post*/
+  #post-wrapper .publicacao {
+    height: 150px;
+  }
 }

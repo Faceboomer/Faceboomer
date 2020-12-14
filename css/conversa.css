@@ -6,13 +6,15 @@ main {
   padding-bottom: 150px;
 }
 header {
-  background-color: #f4ebff;
+  background-color: #ffffff;
   height: 90px;
   width: 100%;
   top: 0;
   position: fixed;
   z-index: 1;
-  box-shadow: 1px 1px 10px #d8b7ff;
+  
+
+  animation: cor linear 15s;
 }
 header #wrapper {
   position: relative;
@@ -74,8 +76,10 @@ header #titulo {
   height: 15px;
   bottom: 2px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #fff;
   overflow: hidden;
+
+  animation: cor linear 15s;
 }
 
 .fotoPerfil img {
@@ -90,7 +94,7 @@ header #titulo {
   display: inline-block;
   padding: 10px 10px;
 
-  border: solid #7300ff 1px;
+  background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
   margin-left: 10%;
@@ -103,15 +107,15 @@ header #titulo {
   display: inline-block;
   padding: 10px 10px;
 
-  background-color: #7300ff;
+  background-color: #FFFFFF;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;
+  box-shadow: 1px 1px 10px #d8b7ff ;
   width: 80%;
   left: 20%;
 }
 
 .msg-enviada p {
-  color: #ab71f3 !important;
+  color: grey;
   text-shadow: 0 0 2px #d8b7ff !important;
 }
 /* msgs enviadas com anexo logo */
@@ -132,6 +136,7 @@ header #titulo {
   position: relative;
   top: -1;
   left: -1px;
+  min-width: 255px;
   max-width: 257px;
   width: auto;
   height: auto;
@@ -141,23 +146,25 @@ header #titulo {
 #escrever {
   min-height: 50px;
   height: auto;
-  width: 80%;
+  width: 85%;
   position: fixed;
   bottom: 0;
-  margin-bottom: 7.5vh;
+  margin-bottom: 2.5vh;
   left: 7.5vw;
 }
 
 #type-container {
   display: inline-block;
   position: relative;
-  background-color: #fafaff;
+  background-color: #fff;
   min-height: 50px;
   padding: 11px 7%;
   width: 85%;
   padding-bottom: 5px;
   border-radius: 15px;
   box-shadow: 1px 1px 10px #d8b7ff;
+
+  animation: cor linear 15s;
 }
 
 #enviar {
@@ -179,7 +186,7 @@ textarea {
 }
 
 #escrever-fixed {
-  min-height: 135px;
+  min-height: 110px;
   height: auto;
   width: 100%;
   position: fixed;
@@ -187,5 +194,6 @@ textarea {
   bottom: 0;
   padding-bottom: 7.5vh;
   padding-top: 20px;
-  background-color: #f4ebff;
+  background-color: #fff;
+  animation: cor linear 15s;
 }

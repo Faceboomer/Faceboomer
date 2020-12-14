@@ -12,7 +12,7 @@
     <script src="https://use.fontawesome.com/b51a055151.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
   </head>
-  <body>
+  <body onload="paraBaixo()">
     <header id="pagina">
       <a href="feed.html"><i id="back" class="fa fa-arrow-left" aria-hidden="true"></i></a>
       <div id="wrapper">
@@ -215,7 +215,7 @@
             <i class="fa fa-paperclip" aria-hidden="true"></i>
           </a>
           </div>
-          <div id="enviar">
+          <div id="enviar" onclick="paraBaixo()">
             <i class="fa fa-paper-plane" aria-hidden="true"></i>
           </div>
         </div>
@@ -227,12 +227,9 @@
 
     <script>
      //para que comece sempre com o scroll em baixo
-     $(window).on("beforeunload", function () {
-        $(window).scrollTop(10000);
-      });
-      $("#enviar").on("click", function () {
-        $(window).scrollTop(10000);
-      });
+     function paraBaixo() {
+       window.scroll(0, document.documentElement.scrollHeight)
+       };
     </script>
   </body>
 </html>

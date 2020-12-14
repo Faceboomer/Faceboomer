@@ -1,37 +1,15 @@
-let desafio1 = false;
+/* desafio publicar imagem */
+// se clicar botao enviar
+// em grupoRisssois.html
+$("#publishDesafio").on("click", function () {
 
-$("#publishDesafio").on("click", function() {
-
-    desafio1 = true;
-    estadoDesafio(desafio1)
+  let desafio1 = true;
+  localStorage.setItem("desafio1", desafio1);
 });
 
-
-/* guardar estado desafio */
-function estadoDesafio(data) {
-let desafios = localStorage.getItem("desafio");
-
-// se já tiver objetos guardados na memória,
-if (desafios != null) {
-  // converte a string JSON em objeto JS
-  desafios = JSON.parse(desafios);
-} else {
-  // se não, posts são uma lista (de posts)
-  desafios = [];
-}
-
-// adiciona
-desafios.push(data);
-
-// converter em "texto", string, JSON
-desafios = JSON.stringify(posts);
-
-// guardar na variável do localStorage
-localStorage.setItem("desafio", desafios);
-}
-
-/* se os dois estiverem verdadeiros */
-if (desafio == 2) {
-
-
-};
+/* desafio enviar msg */
+// se clicar em enviar em GaleriadeImagens.html
+$("#publishDesafio2").on("click", function () {
+  let desafio2 = true;
+  localStorage.setItem("desafio2", desafio2);
+});

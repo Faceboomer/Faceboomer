@@ -8,6 +8,14 @@
 /* fundo */
 body {
   background-color: #ffffff;
+  animation: cor linear 20s;
+}
+
+/* fundo muda de cor */
+@keyframes cor {
+  0% {background-color: #fff;}
+  50% {background-color:#e1d9eb;}
+  100% {background-color: #fff;}
 }
 
 /* margens */
@@ -103,6 +111,8 @@ header #back {
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
+
+  animation: cor linear 20s;
 }
 
 .aceite {
@@ -120,6 +130,8 @@ header #back {
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
+
+  animation: cor linear 20s;
 }
 
 .alerta-button {
@@ -144,6 +156,7 @@ header #back {
   width: 48%;
   padding: 1vh 0;
   border-radius: 5px;
+  animation: cor linear 20s;
 }
 
 .button-respond1 {
@@ -153,6 +166,8 @@ header #back {
   padding: 1vh 0;
   border-radius: 5px;
   float: right;
+
+  animation: cor linear 20s;
 }
 
 /* POPUPS */
@@ -179,6 +194,8 @@ header #back {
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
+
+  animation: cor linear 20s;
 }
 
 .popup-button {
@@ -194,6 +211,7 @@ i.fa-times{
 /* STATUS BAR */
 #estado-wrapper {
   position: relative;
+  z-index: 1;
   background-color: #ffffff;
   min-height: 50px;
   height: auto;
@@ -205,6 +223,8 @@ i.fa-times{
   box-shadow: 1px 1px 5px #d8b7ff;
   overflow: hidden;
   margin-top: 3vh;
+
+  animation: cor linear 20s;
 }
 
 /* foto de perfil */
@@ -239,6 +259,9 @@ i.fa-times{
   flex-wrap: nowrap;
   margin-top: -15px;
   padding-bottom: 2px;
+  
+  background-color: #af7dfd;
+  border-radius: 10px;
 }
 
 #estado .botao {
@@ -252,16 +275,6 @@ i.fa-times{
 
 #estado .botao:last-child {
   border: none;
-}
-
-.sep {
-  padding: 0 !important;
-  color: #ffffff;
-}
-
-#botoes {
-  background-color: #af7dfd;
-  border-radius: 10px;
 }
 
 /* NAVBAR */
@@ -279,6 +292,8 @@ i.fa-times{
   justify-content: space-around;
   align-items: center;
   color: #af7dfd;
+
+  animation: cor linear 20s;
 }
 
 /* onde se escrevem coisas, pesquisa, estado */
@@ -325,6 +340,10 @@ i.fa{
   font-size: 9px !important;
 }
 
+i.fa:active{
+  text-shadow: 0 0 5px #7e41e0;
+}
+
 /* titulos de pagina */
 h1, h2 {
   font-size: 11pt !important;
@@ -343,8 +362,43 @@ h3, h3 a{
 
 /* estado botoes */
 #estado .botao{
+  display: block;
   font-weight: bold;
   font-size: 9px;
   color: #d8b7ff;
   text-shadow: 0 0 2px #d8b7ff;
+}
+
+#estado .botao:active{
+  text-shadow: 0 0 25px #e7d5fc;;
+}
+
+#estado .botao a, #estado .botao a:visited, #estado .botao a:focus{
+  font-weight: bold;
+  font-size: 9px;
+  color: #d8b7ff;
+  text-shadow: 0 0 2px #d8b7ff;
+}
+
+.desafios {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20% 0 0 0;
+  padding: 10vh 10vw;
+  text-align: center;   
+  background-color: #ffffff;  
+  border: solid #7300ff 1px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;  
+  animation: cor linear 20s;
+}
+
+.desafios-button {
+  position: absolute;
+  top: 10px;
+  right: 11px;
 }
