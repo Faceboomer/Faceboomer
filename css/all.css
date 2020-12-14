@@ -344,8 +344,8 @@ body p, body span, body textarea, p.comentarios a, input#searchbar, li, li a, li
   font-family: "myOpenSans", Helvetica, Arial, sans-serif;
   font-size: 9px !important;
   line-height: 10pt !important;
-  color: grey;
-  text-shadow: 0 0 2px grey;
+  color: rgb(158, 158, 158);
+  text-shadow: 0 0 2px rgb(97, 97, 97);
 }
 
 /* icones */

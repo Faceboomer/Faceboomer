@@ -3,7 +3,7 @@ main {
   margin-top: 90px;
   height: auto;
   padding-top: 2vh;
-  padding-bottom: 150px;
+  padding-bottom: 110px;
 }
 header {
   background-color: #ffffff;
@@ -99,6 +99,8 @@ header #titulo {
   box-shadow: 1px 1px 10px #d8b7ff;
   margin-left: 10%;
   width: 80%;
+
+  animation: cor linear 15s;
 }
 
 /* enviada */
@@ -112,12 +114,10 @@ header #titulo {
   box-shadow: 1px 1px 10px #d8b7ff ;
   width: 80%;
   left: 20%;
+
+  animation: cor linear 15s;
 }
 
-.msg-enviada p {
-  color: grey;
-  text-shadow: 0 0 2px #d8b7ff !important;
-}
 /* msgs enviadas com anexo logo */
 .msg-enviada + .msg-enviada.anexo{
   margin-top: 3px;
@@ -134,11 +134,9 @@ header #titulo {
 
 .msg-enviada.anexo img {
   position: relative;
-  top: -1;
-  left: -1px;
   min-width: 255px;
-  max-width: 257px;
-  width: auto;
+  max-width: 290px;
+  width: 100%;
   height: auto;
 }
 
@@ -192,8 +190,7 @@ textarea {
   position: fixed;
   left: 0;
   bottom: 0;
-  padding-bottom: 7.5vh;
-  padding-top: 20px;
   background-color: #fff;
+
   animation: cor linear 15s;
 }
