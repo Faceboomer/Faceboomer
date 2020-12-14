@@ -39,7 +39,7 @@
   align-content: center;
 }
 
-.grupo-wrapper {
+.grupo-wrapper, #camarao {
   border-radius: 15px;
   overflow: hidden;
   width: 100%;
@@ -47,7 +47,7 @@
   max-height: 110px;
 }
 
-.grupo-wrapper img {
+.grupo-wrapper img, #camarao a img {
   width: 100%;
   height: 100%;
   max-height: 110px;
