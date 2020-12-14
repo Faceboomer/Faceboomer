@@ -30,5 +30,7 @@ $('.apagar').on('click', function () {
 });
 
 $('.grupo-wrapper').on('click', function() {
-    $(this).clone().appendTo(this).parent();
+    let par = $(this).parent();
+    console.log("🚀 ~ file: editar-post.js ~ line 34 ~ $ ~ par", par)
+    $(this).clone().prependTo(par);
 });
