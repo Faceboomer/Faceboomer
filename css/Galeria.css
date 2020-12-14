@@ -94,7 +94,8 @@
   width: 50%;
   max-width: 700px;
   text-align: center;
-  text-shadow: 0 0 2px #7d12ff;
+  text-shadow: 0 0 2px #af7dfd
+  ;
   color: grey;
   padding: 10px 0;
   height: 150px;
@@ -106,7 +107,8 @@
 
 #legenda a {
   text-decoration: none;
-  text-shadow: 0 0 2px #7d12ff;
+  text-shadow: 0 0 2px #af7dfd
+  ;
   color: grey;
 }
 
