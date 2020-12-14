@@ -67,7 +67,7 @@ if (desafio2) {
 // muda para o grupo final com o desafio cumprido
 let linkGrupo = $('.linkGrupo');
 
-if (desafio2) {
+if (desafio1) {
     // alterar o atributo
     linkGrupo.attr("href", "gruporRissois.html")
     console.log("desafio do rissol completo", linkGrupo)
