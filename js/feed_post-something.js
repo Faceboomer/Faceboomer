@@ -104,7 +104,8 @@ function writePosts(data) {
             <p class="gostos">${getRandomInt(1, 40)}</p>
             <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
             <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1, 7)}</a></p>
-            <i class="fa fa-comment"></i>
+            <a href="comentarios-random.html">
+            <i class="fa fa-comment"></i></a>
             <i class="fa fa-share-alt"></i>
           </div>
         </article>
@@ -147,7 +148,8 @@ function writeLastPost(data) {
             <p class="gostos">${getRandomInt(1, 40)}</p>
             <button class="gostos-btn"><i class="fa fa-thumbs-up"></i></button>
             <p class="comentarios"><a href="comentarios-random.html">${getRandomInt(1, 7)}</a></p>
-            <i class="fa fa-comment"></i>
+            <a href="comentarios-random.html">
+            <i class="fa fa-comment"></i></a>
             <i class="fa fa-share-alt"></i>
           </div>
         </article>

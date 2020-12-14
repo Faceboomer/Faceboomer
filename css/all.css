@@ -35,6 +35,8 @@ header {
 }
 header #logo {
   /* para centrar o logo */
+  width: 40%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,39 +101,43 @@ header #back {
 .alerta-container {
   position: fixed;
   z-index: 10;
-  overflow: hidden;
+  margin: 20% 0 0 0;
+  width: 95%;
+  text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%;
-  padding: 10vh 10vw;
-  color: #af7dfd;
+}
+
+.alerta-container1 {
+  position: relative;
   background-color: #ffffff;
-  font-size: 9px;
-  line-height: 12px;
+  padding: 10vh 10vw;
+  overflow: hidden;
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
-
-  animation: cor linear 20s;
+  animation: pop 0.3s linear 1, cor linear 20s;
 }
 
 .aceite {
   position: fixed;
   z-index: 10;
-  overflow: hidden;
+  margin: 20% 0 0 0;
+  width: 95%;
+  text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%;
-  padding: 10vh 10vw;
-  color: #af7dfd;
+}
+
+.aceite1 {
+  position: relative;
   background-color: #ffffff;
-  font-size: 9px;
-  line-height: 12px;
+  padding: 10vh 10vw;
+  overflow: hidden;
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
-
-  animation: cor linear 20s;
+  animation: pop 0.3s linear 1, cor linear 20s;
 }
 
 .alerta-button {
@@ -152,10 +158,14 @@ header #back {
 
 .button-respond {
   font-weight: bold;
+  color: grey;
+  text-shadow: 0 0 2px grey;
   background-color: #FFFFFF;
   width: 48%;
   padding: 1vh 0;
-  border-radius: 5px;
+  border: solid #af7dfd 1px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #d8b7ff;
   animation: cor linear 20s;
 }
 
@@ -164,9 +174,10 @@ header #back {
   background-color: #FFFFFF;
   width: 48%;
   padding: 1vh 0;
-  border-radius: 5px;
   float: right;
-
+  border: solid #af7dfd 1px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #d8b7ff;
   animation: cor linear 20s;
 }
 
@@ -194,8 +205,11 @@ header #back {
   border: solid #af7dfd 1px;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #d8b7ff;
+  animation: pop 0.3s linear 1, cor linear 20s;
+}
 
-  animation: cor linear 20s;
+@keyframes pop{
+  50%  {transform: scale(1.05);}
 }
 
 .popup-button {
@@ -382,19 +396,23 @@ h3, h3 a{
 
 .desafios {
   position: fixed;
-  overflow: hidden;
-  z-index: 1000;
+  z-index: 10;
+  margin: 20% 0 0 0;
   width: 95%;
+  text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  margin: 20% 0 0 0;
+}
+
+.desafios1 {
+  position: relative;
+  background-color: #ffffff;
   padding: 10vh 10vw;
-  text-align: center;   
-  background-color: #ffffff;  
-  border: solid #7300ff 1px;
+  overflow: hidden;
+  border: solid #af7dfd 1px;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px #d8b7ff;  
-  animation: cor linear 20s;
+  box-shadow: 1px 1px 5px #d8b7ff;
+  animation: pop 0.3s linear 1, cor linear 20s;
 }
 
 .desafios-button {

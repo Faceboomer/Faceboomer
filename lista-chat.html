@@ -22,6 +22,26 @@
       <h2>Conversas</h2>
     </header>
 
+     <!--alertas pedidos de amizade-->
+  <div class="alerta-container">
+    <div class="alerta-container1">
+    <button class="alerta-button"><i class="fa fa-times"></i></button>
+    <p><strong><span class="place-nome"></span></strong> enviou-te um pedido de amizade <span style="float: right">há <label id="seconds">0</label>s</span></p>
+    <div class="respond">
+    <button class="button-respond">Confirmar</button>
+    <button class="button-respond1">Eliminar</button>
+  </div>
+  </div>
+  </div>
+
+  <!--Pedido Aceite-->
+    <div class="aceite">
+      <div class="aceite1">
+      <button class="aceite-button"><i class="fa fa-times"></i></button>
+      <p>Pedido de amizade aceite!</p>
+    </div>
+  </div>
+
     <!--Alerta mensagem enviada-->
     <div id="alerta-msg">
       <div class="msg-enviada">
@@ -31,10 +51,12 @@
     </div>
 
     <div class="desafios">
+      <div class="desafios1">
       <button class="desafios-button"><i class="fa fa-times"></i></button>
       <p class="desafio-text"><strong>Nuno Gaspar:</strong> Olá avó, podes enviar-me a tal fotografia dos...</p>
       <a href="conversaNuno.html"><button class="responder-nuno">Responder</button></a>
     </div>
+  </div>
 
     <main>
       <!--Barra de pesquisa-->
@@ -207,6 +229,7 @@
     <script type="text/javascript" src="js/search-bar-chat.js"></script>
     <script type="text/javascript" src="js/ordem-random-chat.js"></script>
     <script type="text/javascript" src="js/conversas-lista.js"></script>
+    <script type="text/javascript" src="js/pedidos-amizade.js"></script>
     <script src="js/navbar.js"></script>
   </body>
 </html>
