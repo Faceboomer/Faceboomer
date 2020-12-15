@@ -176,6 +176,8 @@ header #back {
 
 .button-respond1 {
   font-weight: bold;
+  color: grey;
+  text-shadow: 0 0 2px grey;
   background-color: #FFFFFF;
   width: 48%;
   padding: 1vh 0;
