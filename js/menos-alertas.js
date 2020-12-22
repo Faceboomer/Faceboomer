@@ -6,10 +6,12 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// gerar três nr aleatórios
 var i = getRandomInt(0, 1);
 var ii = getRandomInt(0, 1);
 var iii = getRandomInt(0, 1);
 
+// mostrar ou não aleatóriamente os alertas
 switch(i) {
   case 1:
     document.getElementById('aparecer').remove();
