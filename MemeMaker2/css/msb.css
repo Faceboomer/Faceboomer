@@ -1,0 +1,106 @@
+/*HEADER*/
+
+header {
+  text-align: center;
+}
+
+header p {
+  display: inline-block;
+  padding-top: 14px;
+  font-size: 14px;
+  padding-left: 46px;
+}
+
+/*FOOTER*/
+footer {
+  background-color: white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 90px 0 90px;
+  box-shadow: 0px -1px 10px #d8b7ff;
+  text-align: center;
+}
+
+footer h2 {
+  margin: 2vh 0;
+  font-size: 12px;
+}
+
+/*LINHA VERTICAL*/
+.vl {
+  border-left: 1px solid #d8b7ff;
+}
+
+/*WRAPPER MOLDURAS E FORMAS*/
+.wrapper,
+.wrapper-formas {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 13.5%;
+  padding: 0 2vh;
+}
+
+/*WRAPPER STICKERS E GLITTER*/
+.wrapper-stickers,
+.wrapper-glitter {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 15%;
+  padding: 0 2vh;
+}
+
+.molduras,
+.stickers,
+.glitter,
+.formas {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+}
+
+.moldura,
+.sticker,
+.glitter1,
+.forma {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/*TAB COR E TAMANHO*/
+.options {
+  background-color: white;
+  position: fixed;
+  width: 50%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 90px 0 90px 0;
+  box-shadow: 0px 0px 10px #d8b7ff;
+  text-align: center;
+  padding-right: 50%;
+}
+
+.options h2 {
+  margin: 2vh 0;
+  font-size: 12px;
+}
+
+/*FORMAS*/
+
+.forma img {
+  width: 48px;
+  height: 48px;
+}
