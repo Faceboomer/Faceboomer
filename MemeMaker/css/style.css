@@ -1,8 +1,13 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
     color: #AF7DFD;
     background-color: white;
     margin: 0;
     font-family: "myOpenSans", Helvetica, Arial, sans-serif;
+    position: relative;
 }
 
 @font-face {
@@ -28,12 +33,22 @@ body {
     box-shadow: 1px 1px 10px #d8b7ff;
   }
 
-  .placeImg {
-    height: 65vh;
+  #placeImg {
+    position: relative;
+    top: 56.8px;
+    width: 100%;
     -moz-box-shadow: inset 0 -10px 10px -10px  #d8b7ff;
     -webkit-box-shadow: inset 0 -10px 10px -10px  #d8b7ff;
     box-shadow: inset 0 -10px 10px -10px #d8b7ff;
   }
+
+/*   /* para ser sempre quadrado.
+  truque encontrado em: https://spin.atomicobject.com/2015/07/14/css-responsive-square/ 
+  #placeImg:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  } */
 
   a {
       text-decoration: none;
