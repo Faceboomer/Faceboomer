@@ -61,20 +61,6 @@ function setup() {
         cor[i].style('border-radius', '50%');
         cor[i].style('border', 'solid 0.5px #af7dfd');
     }
-    cor[0].mousePressed(preto);
-    cor[0].style('background-color', '#000');
-    cor[1].mousePressed(branco);
-    cor[1].style('background-color', '#fff');
-    cor[2].mousePressed(roxo);
-    cor[2].style('background-color', '#9b2fff');
-    cor[3].mousePressed(vermelho);
-    cor[3].style('background-color', '#FF241A');
-    cor[4].mousePressed(azul);
-    cor[4].style('background-color', '#3CB2FF');
-    cor[5].mousePressed(verde);
-    cor[5].style('background-color', '#7ED24B');
-    cor[6].mousePressed(amarelo);
-    cor[6].style('background-color', '#FFD22C');
 
     // IMAGEM DE FUNDO
     for (var i = 0; i < 13; i++) {
@@ -109,12 +95,31 @@ function draw() {
     fill(r, g, b);
     rect(0, 0, windowWidth, windowWidth);
 
-    var fundo = [];
+    cor[0].mousePressed(preto);
+    cor[0].style('background-color', '#000');
+    cor[1].mousePressed(branco);
+    cor[1].style('background-color', '#fff');
+    cor[2].mousePressed(roxo);
+    cor[2].style('background-color', '#9b2fff');
+    cor[3].mousePressed(vermelho);
+    cor[3].style('background-color', '#FF241A');
+    cor[4].mousePressed(azul);
+    cor[4].style('background-color', '#3CB2FF');
+    cor[5].mousePressed(verde);
+    cor[5].style('background-color', '#7ED24B');
+    cor[6].mousePressed(amarelo);
+    cor[6].style('background-color', '#FFD22C');
+
+    bgBtn[0].mousePressed(bg0);
+    
+
+
+/*     var fundo = [];
     for (var i = 0; i < 13; i++) {
         if (bgBtn[i].mousePressed()) {
             image(backgrounds[i], 100, 100, 200, 200);
          }
-    }
+    } */
 }
 
 
@@ -149,6 +154,10 @@ function amarelo() {
     r = 255;
     g = 210;
     b = 44;
+}
+
+function bg0(){
+    
 }
 
 
