@@ -10,8 +10,8 @@ const Actions = {
   SNOW: 1,
   BACKGROUND: 2,
 };
-let CANVASX = 600;
-let CANVASY = 600;
+let CANVASX = 360;
+let CANVASY = 360;
 
 function preload() {
   backgroundFiles = [
