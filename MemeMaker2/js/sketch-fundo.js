@@ -1,26 +1,25 @@
-// inicialização
-// tamanho do canvas
-let CANVASX = 320; // a ser usado o windowWidth
-let CANVASY = 568;
-
+// INICIALIZAÇÃO
 // altura da footer
 let footer = 35;
 // altura da header
 let header = 56.8;
 
-// botoes cor de fundo
+// BOTOES cor de fundo (lista)
 let cor = [];
+// posição dos botoes
 btnPosY = 420;
 btnPosX = 30;
 
 // cor de fundo
 r = 255; g = 255; b = 255; a = 255;
 
-// fundos
+// BOTOES fundos (lista)
 let bgBtn = [];
-let backgrounds = [];
 
 // load das imagens
+// lista de imagens
+let backgrounds = [];
+
 function preload() {
     backgroundFiles = [
         'inverno2.jpg',
@@ -39,7 +38,7 @@ function preload() {
         'flor2.jpg'
     ];
 
-    // Background import
+    // "empurrar" cada ficheiro para a lista backgrounds
     for (let file of backgroundFiles) {
         backgrounds.push(loadImage('data/Fundos/' + file));
     }
@@ -53,8 +52,12 @@ function setup() {
     // posicionar o sketch dentro desta div no html
     c.parent('sketch-holder');
 
-    var margem = (windowWidth - (btnPosX * 6 +20))/2;
-    // CRIAR BOTÕES COR DO FUNDO
+    // CRIAÇÃO DOS BOTOES
+    // margem dos botoes para estar centrado
+    // margem = (largura - largura de todos os botões) /2
+    var margem = (windowWidth - (btnPosX * 6 + 20)) / 2;
+
+    // COR DO FUNDO
     for (var i = 0; i < 7; i++) {
         cor[i] = createButton('');
         cor[i].position(btnPosX * i + margem, btnPosY);
@@ -76,6 +79,8 @@ function setup() {
         bgBtn[i].style('border', 'solid 0.5px #af7dfd');
         bgBtn[i].style('background-size', 'cover');
     }
+
+    // divido em 2 para estarem alinhados
     for (var i = 7; i < 14; i++) {
         bgBtn[i] = createButton('');
 
@@ -87,6 +92,16 @@ function setup() {
         bgBtn[i].style('background-size', 'cover');
     }
 
+    // cores sólidas dos botoes
+    cor[0].style('background-color', '#000');
+    cor[1].style('background-color', '#fff');
+    cor[2].style('background-color', '#9b2fff');
+    cor[3].style('background-color', '#FF241A');
+    cor[4].style('background-color', '#3CB2FF');
+    cor[5].style('background-color', '#7ED24B');
+    cor[6].style('background-color', '#FFD22C');
+
+    // colocar imagens de fundo nos botoes
     bgBtn[0].style('background-image', 'url("data/Fundos/inverno2.jpg")');
     bgBtn[1].style('background-image', 'url("data/Fundos/inverno3.jpg")');
     bgBtn[2].style('background-image', 'url("data/Fundos/jesus3.jpg")');
@@ -107,6 +122,7 @@ function setup() {
 function draw() {
     background(0, 0, 0, 0);
 
+    // funções dos botoes para mudar a imagem
     bgBtn[0].mousePressed(showBg0);
     bgBtn[1].mousePressed(showBg1);
     bgBtn[2].mousePressed(showBg2);
@@ -122,25 +138,21 @@ function draw() {
     bgBtn[12].mousePressed(showBg12);
     bgBtn[13].mousePressed(showBg13);
 
+    // desenhar retangulo sólido
     fill(r, g, b, a);
     rect(0, 0, windowWidth, windowWidth);
 
+    // funções para mudar a cor sólida
     cor[0].mousePressed(preto);
-    cor[0].style('background-color', '#000');
     cor[1].mousePressed(branco);
-    cor[1].style('background-color', '#fff');
     cor[2].mousePressed(roxo);
-    cor[2].style('background-color', '#9b2fff');
     cor[3].mousePressed(vermelho);
-    cor[3].style('background-color', '#FF241A');
     cor[4].mousePressed(azul);
-    cor[4].style('background-color', '#3CB2FF');
     cor[5].mousePressed(verde);
-    cor[5].style('background-color', '#7ED24B');
     cor[6].mousePressed(amarelo);
-    cor[6].style('background-color', '#FFD22C');
 }
 
+// FUNÇOES
 // cores de fundo
 function preto() {
     r = 0;
@@ -167,19 +179,18 @@ function preto() {
     g = 178;
     b = 255;
     a = 255;
-}
-function verde() {
+} function verde() {
     r = 126;
     g = 210;
     b = 75;
     a = 255;
-}
-function amarelo() {
+} function amarelo() {
     r = 255;
     g = 210;
     b = 44;
     a = 255;
 }
+
 function showBg0() {
     a = 0;
     image(backgrounds[0], 0, 0, windowWidth, windowWidth);
