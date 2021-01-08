@@ -14,13 +14,11 @@ btnPosY = 420;
 btnPosX = 30;
 
 // cor de fundo
-r = 0; g = 0; b = 0;
+r = 255; g = 255; b = 255; a = 255;
 
 // fundos
 let bgBtn = [];
 let backgrounds = [];
-img = 0;
-a = 255; // alpha da cor sólida
 
 // load das imagens
 function preload() {
@@ -109,9 +107,6 @@ function setup() {
 function draw() {
     background(0, 0, 0, 0);
 
-    fill(0, 0, 0, a);
-    rect(0, 0, windowWidth, windowWidth);
-
     bgBtn[0].mousePressed(showBg0);
     bgBtn[1].mousePressed(showBg1);
     bgBtn[2].mousePressed(showBg2);
@@ -127,6 +122,9 @@ function draw() {
     bgBtn[12].mousePressed(showBg12);
     bgBtn[13].mousePressed(showBg13);
 
+    fill(r, g, b, a);
+    rect(0, 0, windowWidth, windowWidth);
+
     cor[0].mousePressed(preto);
     cor[0].style('background-color', '#000');
     cor[1].mousePressed(branco);
@@ -141,11 +139,7 @@ function draw() {
     cor[5].style('background-color', '#7ED24B');
     cor[6].mousePressed(amarelo);
     cor[6].style('background-color', '#FFD22C');
-
-
 }
-
-
 
 // cores de fundo
 function preto() {
