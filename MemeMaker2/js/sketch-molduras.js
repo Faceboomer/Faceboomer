@@ -1,24 +1,24 @@
 // INICIALIZAÇÃO
 // altura da footer
-let footer = 35;
+//let footer = 35;
 // altura da header
-let header = 56.8;
+let header2 = 56.8;
 
 // BOTOES cor de fundo (lista)
-let cor = [];
+//let cor = [];
 // posição dos botoes
-btnPosY = 420;
-btnPosX = 65;
+btnPosY2 = 420;
+btnPosX2 = 65;
 
 // cor de fundo
 r = 255; g = 255; b = 255; a = 255;
 
 // BOTOES fundos (lista)
-let bgBtn = [];
+let bgBtn2 = [];
 
 // load das imagens
 // lista de imagens
-let backgrounds = [];
+let backgrounds2 = [];
 
 function preload() {
     backgroundFiles = [
@@ -35,7 +35,7 @@ function preload() {
 
     // "empurrar" cada ficheiro para a lista backgrounds
     for (let file of backgroundFiles) {
-        backgrounds.push(loadImage('data/' + file));
+        backgrounds2.push(loadImage('data/' + file));
     }
 }
 
@@ -50,7 +50,7 @@ function setup() {
     // CRIAÇÃO DOS BOTOES
     // margem dos botoes para estar centrado
     // margem = (largura - largura de todos os botões) /2
-    var margem = (windowWidth - (btnPosX * 4 + 8)) / 2;
+    var margem = (windowWidth - (btnPosX2 * 4 + 8)) / 2;
 
     // COR DO FUNDO
     /*for (var i = 0; i < 7; i++) {
@@ -64,26 +64,26 @@ function setup() {
 
     // IMAGEM DE FUNDO
     for (var i = 0; i < 4; i++) {
-        bgBtn[i] = createButton('');
+        bgBtn2[i] = createButton('');
 
-        bgBtn[i].position(btnPosX * i + margem, btnPosY + 170);
-        bgBtn[i].style('width', '60px');
-        bgBtn[i].style('height', '60px');
-        bgBtn[i].style('border', 'none');
-        bgBtn[i].style('background-size', '60px 60px');
-        bgBtn[i].style('background-repeat', 'no-repeat');
+        bgBtn2[i].position(btnPosX2 * i + margem, btnPosY2 + 170);
+        bgBtn2[i].style('width', '60px');
+        bgBtn2[i].style('height', '60px');
+        bgBtn2[i].style('border', 'none');
+        bgBtn2[i].style('background-size', '60px 60px');
+        bgBtn2[i].style('background-repeat', 'no-repeat');
     }
 
     // divido em 2 para estarem alinhados
     for (var i = 4; i < 8; i++) {
-        bgBtn[i] = createButton('');
+        bgBtn2[i] = createButton('');
 
-        bgBtn[i].position(btnPosX * i + + margem - (btnPosX * 4), btnPosY + 235);
-        bgBtn[i].style('width', '60px');
-        bgBtn[i].style('height', '60px');
-        bgBtn[i].style('border', 'none');
-        bgBtn[i].style('background-size', '60px 60px');
-        bgBtn[i].style('background-repeat', 'no-repeat');
+        bgBtn2[i].position(btnPosX2 * i + + margem - (btnPosX2 * 4), btnPosY2 + 235);
+        bgBtn2[i].style('width', '60px');
+        bgBtn2[i].style('height', '60px');
+        bgBtn2[i].style('border', 'none');
+        bgBtn2[i].style('background-size', '60px 60px');
+        bgBtn2[i].style('background-repeat', 'no-repeat');
     }
 
     /*// cores sólidas dos botoes
@@ -96,14 +96,14 @@ function setup() {
     cor[6].style('background-color', '#FFD22C');*/
 
     // colocar imagens de fundo nos botoes
-    bgBtn[0].style('background-image', 'url("data/moldura1.png")');
-    bgBtn[1].style('background-image', 'url("data/moldura2.png")');
-    bgBtn[2].style('background-image', 'url("data/moldura3.png")');
-    bgBtn[3].style('background-image', 'url("data/moldura4.png")');
-    bgBtn[4].style('background-image', 'url("data/moldura5.png")');
-    bgBtn[5].style('background-image', 'url("data/moldura6.png")');
-    bgBtn[6].style('background-image', 'url("data/moldura7.png")');
-    bgBtn[7].style('background-image', 'url("data/moldura8.png")');
+    bgBtn2[0].style('background-image', 'url("data/moldura1.png")');
+    bgBtn2[1].style('background-image', 'url("data/moldura2.png")');
+    bgBtn2[2].style('background-image', 'url("data/moldura3.png")');
+    bgBtn2[3].style('background-image', 'url("data/moldura4.png")');
+    bgBtn2[4].style('background-image', 'url("data/moldura5.png")');
+    bgBtn2[5].style('background-image', 'url("data/moldura6.png")');
+    bgBtn2[6].style('background-image', 'url("data/moldura7.png")');
+    bgBtn2[7].style('background-image', 'url("data/moldura8.png")');
    // bgBtn[8].style('background-image', 'url("data/moldura9.png")');
 
 }
@@ -112,20 +112,20 @@ function draw() {
     background(0, 0, 0, 0);
 
     // funções dos botoes para mudar a imagem
-    bgBtn[0].mousePressed(showBg0);
-    bgBtn[1].mousePressed(showBg1);
-    bgBtn[2].mousePressed(showBg2);
-    bgBtn[3].mousePressed(showBg3);
-    bgBtn[4].mousePressed(showBg4);
-    bgBtn[5].mousePressed(showBg5);
-    bgBtn[6].mousePressed(showBg6);
-    bgBtn[7].mousePressed(showBg7);
+    bgBtn2[0].mousePressed(showBg0);
+    bgBtn2[1].mousePressed(showBg1);
+    bgBtn2[2].mousePressed(showBg2);
+    bgBtn2[3].mousePressed(showBg3);
+    bgBtn2[4].mousePressed(showBg4);
+    bgBtn2[5].mousePressed(showBg5);
+    bgBtn2[6].mousePressed(showBg6);
+    bgBtn2[7].mousePressed(showBg7);
    // bgBtn[8].mousePressed(showBg8);
 
     // desenhar retangulo sólido
     noStroke();
     fill(r, g, b, a);
-    rect(0, 0+header, windowWidth, windowWidth);
+    rect(0, 0+header2, windowWidth, windowWidth);
     
 
     // funções para mudar a cor sólida
@@ -179,39 +179,39 @@ function draw() {
 
 function showBg0() {
     a = 0;
-    image(backgrounds[0], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[0], 0, 0+header2, windowWidth, windowWidth);
 }
 function showBg1() {
     a = 0;
-    image(backgrounds[1], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[1], 0, 0+header2, windowWidth, windowWidth);
 }
 function showBg2() {
     a = 0;
-    image(backgrounds[2], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[2], 0, 0+header2, windowWidth, windowWidth);
 }
 function showBg3() {
     a = 0;
-    image(backgrounds[3], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[3], 0, 0+header2, windowWidth, windowWidth);
 }
 function showBg4() {
     a = 0;
-    image(backgrounds[4], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[4], 0, 0+header2, windowWidth, windowWidth);
 }
 function showBg5() {
     a = 0;
-    image(backgrounds[5], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[5], 0, 0+header2, windowWidth, windowWidth);
 }
 function showBg6() {
     a = 0;
-    image(backgrounds[6], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[6], 0, 0+header2, windowWidth, windowWidth);
 }
 function showBg7() {
     a = 0;
-    image(backgrounds[7], 0, 0+header, windowWidth, windowWidth);
+    image(backgrounds2[7], 0, 0+header2, windowWidth, windowWidth);
 }
 
 for (var i = 0; i < 8; i++) {
-    backgrounds[i].remove();
+    backgrounds2[i].remove();
 }
 /*function showBg8() {
     a = 0;
