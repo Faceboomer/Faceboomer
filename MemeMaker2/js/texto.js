@@ -34,9 +34,12 @@ class Texto {
     // construir objeto
     show(sT) {
         this.s = sT;
+        // tamanho
         textSize(this.s);
+        // texto, x, y
         let t = text(this.p, this.x, this.y);
 
+        // altura e largura para o click
         this.w = textWidth(t);
         this.h = textAscent();
     }
