@@ -35,11 +35,6 @@ function setup() {
   button.style("color", "#af7dfd");
   button.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button.style('border', 'none');
-  button.mousePressed(gotolink);
-
-  function gotolink() {
-    window.open('../BoaTarde-fundo.html', '_self');
-  }
 
   button2 = createButton("Texto");
   button2.size(85,85);
@@ -51,11 +46,6 @@ function setup() {
   button2.style("color", "#af7dfd");
   button2.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button2.style('border', 'none');
-  button2.mousePressed(gotolink1);
-
-  function gotolink1() {
-    window.open('../BoaTarde-texto.html', '_self');
-  }
 
   button3 = createButton("Molduras");
   button3.size(85,85);
@@ -67,11 +57,6 @@ function setup() {
   button3.style("color", "#af7dfd");
   button3.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button3.style('border', 'none');
-  button3.mousePressed(gotolink2);
-
-  function gotolink2() {
-    window.open('../BoaTarde-molduras.html', '_self');
-  }
 
   button4 = createButton("Stickers");
   button4.size(85,85);
@@ -83,11 +68,6 @@ function setup() {
   button4.style("color", "#af7dfd");
   button4.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button4.style('border', 'none');
-  button4.mousePressed(gotolink3);
-
-  function gotolink3() {
-    window.open('../BoaTarde-stickers.html', '_self');
-  }
 
   button5 = createButton("Brilho");
   button5.size(85,85);
@@ -99,11 +79,6 @@ function setup() {
   button5.style("color", "#af7dfd");
   button5.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button5.style('border', 'none');
-  button5.mousePressed(gotolink4);
-
-  function gotolink4() {
-    window.open('../BoaTarde-brilho.html', '_self');
-  }
 
   button6 = createButton("Formas");
   button6.size(85,85);
@@ -115,12 +90,7 @@ function setup() {
   button6.style("color", "#af7dfd");
   button6.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button6.style('border', 'none');
-  button6.mousePressed(gotolink5);
-
-  function gotolink5() {
-    window.open('../BoaTarde-formas.html', '_self');
-  }
-
+}
   
   
   /*buttonCA = createButton("Cancelar");
@@ -142,7 +112,7 @@ function setup() {
   buttonC.style("color", "#af7dfd");
   buttonC.style('background-color', 'rgba(255, 255, 255, 0.8)');
   buttonC.style('border', 'none');*/
-}
+
 
 function draw() {
   windowResized();
