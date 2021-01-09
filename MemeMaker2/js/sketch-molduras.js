@@ -8,7 +8,7 @@ let header = 56.8;
 let cor = [];
 // posição dos botoes
 btnPosY = 420;
-btnPosX = 30;
+btnPosX = 65;
 
 // cor de fundo
 r = 255; g = 255; b = 255; a = 255;
@@ -66,11 +66,12 @@ function setup() {
     for (var i = 0; i < 4; i++) {
         bgBtn[i] = createButton('');
 
-        bgBtn[i].position(btnPosX * i + margem, btnPosY + 140);
+        bgBtn[i].position(btnPosX * i + margem, btnPosY + 170);
         bgBtn[i].style('width', '60px');
-        bgBtn[i].style('height', '80px');
+        bgBtn[i].style('height', '60px');
         bgBtn[i].style('border', 'none');
-        bgBtn[i].style('background-size', 'cover');
+        bgBtn[i].style('background-size', '60px 60px');
+        bgBtn[i].style('background-repeat', 'no-repeat');
     }
 
     // divido em 2 para estarem alinhados
@@ -79,9 +80,10 @@ function setup() {
 
         bgBtn[i].position(btnPosX * i + + margem - (btnPosX * 4), btnPosY + 235);
         bgBtn[i].style('width', '60px');
-        bgBtn[i].style('height', '80px');
+        bgBtn[i].style('height', '60px');
         bgBtn[i].style('border', 'none');
-        bgBtn[i].style('background-size', 'cover');
+        bgBtn[i].style('background-size', '60px 60px');
+        bgBtn[i].style('background-repeat', 'no-repeat');
     }
 
     /*// cores sólidas dos botoes
@@ -121,8 +123,10 @@ function draw() {
    // bgBtn[8].mousePressed(showBg8);
 
     // desenhar retangulo sólido
+    noStroke();
     fill(r, g, b, a);
     rect(0, 0+header, windowWidth, windowWidth);
+    
 
     // funções para mudar a cor sólida
    /* cor[0].mousePressed(preto);
@@ -204,6 +208,10 @@ function showBg6() {
 function showBg7() {
     a = 0;
     image(backgrounds[7], 0, 0+header, windowWidth, windowWidth);
+}
+
+for (var i = 0; i < 8; i++) {
+    backgrounds[i].remove();
 }
 /*function showBg8() {
     a = 0;
