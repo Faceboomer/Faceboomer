@@ -101,10 +101,6 @@ function setup() {
         fontBtn[i].style('border', 'none');
         fontBtn[i].style('background-color', 'transparent');
         fontBtn[i].style('color', '#9b2fff');
-
-        // esconder (aparece quando se clica no menu)
-        /*         fontBtn[i].hide();
-                fontBtn[i].attribute('disabled', ''); */
     }
 
     fontBtn[0].style('font-family', 'myBonbon');
@@ -255,12 +251,15 @@ function draw() {
         textbox.hide();
         textbox.attribute('disabled', '');
         sliderT.hide();
+        for (var i = 0; i < 5; i++) {
+            fontBtn[i].hide();
+            fontBtn[i].attribute('disabled', '');
+        }
         ///
         for (var i = 0; i < 7; i++) {
             corTexto[i].show();
             corTexto[i].removeAttribute('disabled');
         }
-
     });
 
     // MENU TAMANHO TEXTO
@@ -273,6 +272,10 @@ function draw() {
         for (var i = 0; i < 7; i++) {
             corTexto[i].hide();
             corTexto[i].attribute('disabled', '');
+        }
+        for (var i = 0; i < 5; i++) {
+            fontBtn[i].hide();
+            fontBtn[i].attribute('disabled', '');
         }
         ///
         sliderT.show();
