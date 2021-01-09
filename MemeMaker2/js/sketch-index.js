@@ -18,7 +18,7 @@ let buttonCA;
 
 
 function setup() {
-  let c = createCanvas(windowWidth, windowHeight - header);
+  let c = createCanvas(windowWidth, windowHeight);
   // posicionar canvas abaixo da header
   c.position(0, 0);
 
@@ -26,8 +26,8 @@ function setup() {
   c.parent('sketch-geral');
 
   button = createButton("Fundo");
-  button.size(80,80);
-  button.position(40,innerHeight-300);
+  button.size(85,85);
+  button.position(30,innerHeight-250);
   button.style("font-family", "Open Sans");
   button.style("font-size", "12px");
   button.style('border-radius', '15px');
@@ -35,10 +35,15 @@ function setup() {
   button.style("color", "#af7dfd");
   button.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button.style('border', 'none');
+  button.mousePressed(gotolink);
+
+  function gotolink() {
+    window.open('../BoaTarde-fundo.html', '_self');
+  }
 
   button2 = createButton("Texto");
-  button2.size(80,80);
-  button2.position(width/2-40,innerHeight-300);
+  button2.size(85,85);
+  button2.position(width/2-40,innerHeight-250);
   button2.style("font-family", "Open Sans");
   button2.style("font-size", "12px");
   button2.style('border-radius', '15px');
@@ -46,10 +51,15 @@ function setup() {
   button2.style("color", "#af7dfd");
   button2.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button2.style('border', 'none');
+  button2.mousePressed(gotolink1);
+
+  function gotolink1() {
+    window.open('../BoaTarde-texto.html', '_self');
+  }
 
   button3 = createButton("Molduras");
-  button3.size(80,80);
-  button3.position(width-120,innerHeight-300);
+  button3.size(85,85);
+  button3.position(width-110,innerHeight-250);
   button3.style("font-family", "Open Sans");
   button3.style("font-size", "12px");
   button3.style('border-radius', '15px');
@@ -57,10 +67,15 @@ function setup() {
   button3.style("color", "#af7dfd");
   button3.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button3.style('border', 'none');
+  button3.mousePressed(gotolink2);
+
+  function gotolink2() {
+    window.open('../BoaTarde-molduras.html', '_self');
+  }
 
   button4 = createButton("Stickers");
-  button4.size(80,80);
-  button4.position(40,innerHeight-200);
+  button4.size(85,85);
+  button4.position(30,innerHeight-120);
   button4.style("font-family", "Open Sans");
   button4.style("font-size", "12px");
   button4.style('border-radius', '15px');
@@ -68,10 +83,15 @@ function setup() {
   button4.style("color", "#af7dfd");
   button4.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button4.style('border', 'none');
+  button4.mousePressed(gotolink3);
+
+  function gotolink3() {
+    window.open('../BoaTarde-stickers.html', '_self');
+  }
 
   button5 = createButton("Brilho");
-  button5.size(80,80);
-  button5.position(width/2-40,innerHeight-200);
+  button5.size(85,85);
+  button5.position(width/2-40,innerHeight-120);
   button5.style("font-family", "Open Sans");
   button5.style("font-size", "12px");
   button5.style('border-radius', '15px');
@@ -79,10 +99,15 @@ function setup() {
   button5.style("color", "#af7dfd");
   button5.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button5.style('border', 'none');
+  button5.mousePressed(gotolink4);
+
+  function gotolink4() {
+    window.open('../BoaTarde-brilho.html', '_self');
+  }
 
   button6 = createButton("Formas");
-  button6.size(80,80);
-  button6.position(width-120,innerHeight-200);
+  button6.size(85,85);
+  button6.position(width-110,innerHeight-120);
   button6.style("font-family", "Open Sans");
   button6.style("font-size", "12px");
   button6.style('border-radius', '15px');
@@ -90,6 +115,13 @@ function setup() {
   button6.style("color", "#af7dfd");
   button6.style('background-color', 'rgba(255, 255, 255, 0.8)');
   button6.style('border', 'none');
+  button6.mousePressed(gotolink5);
+
+  function gotolink5() {
+    window.open('../BoaTarde-formas.html', '_self');
+  }
+
+  
   
   /*buttonCA = createButton("Cancelar");
   buttonCA.size(width/2,footer);
@@ -114,7 +146,6 @@ function setup() {
 
 function draw() {
   windowResized();
-
 }
 
 function windowResized() {
