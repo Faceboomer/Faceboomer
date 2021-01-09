@@ -155,6 +155,7 @@ function draw() {
 // FUNÇOES
 // cores de fundo
 function preto() {
+    print("Y");
     r = 0;
     g = 0;
     b = 0;

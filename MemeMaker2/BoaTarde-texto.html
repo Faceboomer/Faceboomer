@@ -10,9 +10,14 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="https://use.fontawesome.com/b51a055151.js"></script>
+    <script src="libs/p5.js"></script>
+    <script src="libs/p5.sound.js"></script>
+    <script src="js/sketch-texto.js"></script>
+    <script src="js/texto.js"></script>
   </head>
 
   <body>
+    <div id="sketch-holder" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -100"></div>
     <header>
       <a href="BoaTarde.html"><i class="fa fa-arrow-left"></i></a>
       <p>Texto</p>
@@ -20,15 +25,15 @@
     </header>
 
     <div class="placeImg" style="box-shadow: none"></div>
-
+<!-- 
     <div class="options">
       <h2>Cor</h2>
       <div class="vl"></div>
       <h2>Tamanho</h2>
       <div class="vl"></div>
-    </div>
+    </div> -->
 
-    <div class="cores" style="text-align: center">
+<!--     <div class="cores" style="text-align: center">
       <span class="cor0"></span>
       <span class="cor1"></span>
       <span class="cor2"></span>
@@ -37,7 +42,7 @@
       <span class="cor5"></span>
       <span class="cor6"></span>
       <span class="cor7"></span>
-    </div>
+    </div> -->
 
     <footer>
       <h2>Cancelar</h2>
