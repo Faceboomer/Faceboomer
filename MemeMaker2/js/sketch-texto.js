@@ -19,12 +19,26 @@ let tSize = 22;
 
 // cor
 let corTexto = [];
+// cor default
 let rT = 155;
 let gT = 47;
 let bT = 255;
 // posição dos botoes
 btnPosY = 450;
 btnPosX = 30;
+
+// fontes
+let fontBtn = [];
+let font1, font2, font3, font4, font5;
+let fonttt;
+
+function preload() {
+    font1 = loadFont('data/fonts/Bonbon-Regular.ttf');
+    font2 = loadFont('data/fonts/CraftyGirls-Regular.ttf');
+    font3 = loadFont('data/fonts/HerrVonMuellerhoff-Regular.ttf');
+    font4 = loadFont('data/fonts/Meddon-Regular.ttf');
+    font5 = loadFont('data/fonts/OpenSans-Bold.ttf');
+}
 
 /* CONTRUÇÃO DOS ELEMENTOS */
 function setup() {
@@ -67,6 +81,7 @@ function setup() {
     tamanhoBtn.style('background-color', 'transparent');
     tamanhoBtn.style('border', 'none');
 
+
     /* SUBMENUS */
     // ESCREVER TEXTO
     textbox = createElement('textarea', 'Escreve aqui!');
@@ -75,6 +90,33 @@ function setup() {
     textbox.style('border', 'solid 1px #d8b7ff');
     textbox.style("font-family", "Open Sans");
     textbox.style('color', '#af7dfd');
+
+    // BOTOES ESCOLHER FONT
+    var margem = (windowWidth - (btnPosX * 5)) / 2;
+    for (var i = 0; i < 5; i++) {
+        fontBtn[i] = createButton('Aa');
+        fontBtn[i].position(btnPosX * i + margem, btnPosY - 25);
+        fontBtn[i].style('width', '20px');
+        fontBtn[i].style('height', '20px');
+        fontBtn[i].style('border', 'none');
+        fontBtn[i].style('background-color', 'transparent');
+        fontBtn[i].style('color', '#9b2fff');
+
+        // esconder (aparece quando se clica no menu)
+        /*         fontBtn[i].hide();
+                fontBtn[i].attribute('disabled', ''); */
+    }
+
+    fontBtn[0].style('font-family', 'myBonbon');
+    fontBtn[1].style('font-family', 'myCrafty');
+    fontBtn[2].style('font-family', 'myHerr');
+    fontBtn[2].style('font-size', '15px');
+    fontBtn[2].position(btnPosX * 2 + margem, btnPosY - 26);
+    fontBtn[3].style('font-family', 'myMeddon');
+    fontBtn[3].style('font-size', '10px');
+    fontBtn[3].position(btnPosX * 3 + margem - 3, btnPosY - 26);
+    fontBtn[4].style('font-family', 'myOpenSans');
+    fontBtn[4].style('font-weight', 'bold');
 
     // SLIDER TAMANHO
     sliderT = createSlider(10, 100, 22);
@@ -109,6 +151,8 @@ function setup() {
 
 
     // OBJETO TEXTO
+    fonttt = font5;
+    textFont(fonttt); // font default
     texto = new Texto(95, 100, tSize, 'Escreve aqui!');
 }
 
@@ -117,6 +161,29 @@ function draw() {
 
     // para apagar o texto arrastado, mas não o fundo anterior
     clear();
+
+    // MUDAR FONT
+    // botoes/funções para mudar a cor
+    fontBtn[0].mousePressed(function () {
+        fonttt = font1;
+        print(fonttt);
+    });
+    fontBtn[1].mousePressed(function () {
+        fonttt = font2;
+        print(fonttt);
+    });
+    fontBtn[2].mousePressed(function () {
+        fonttt = font3;
+        print(fonttt);
+    });
+    fontBtn[3].mousePressed(function () {
+        fonttt = font4;
+        print(fonttt);
+    });
+    fontBtn[4].mousePressed(function () {
+        fonttt = font5;
+        print(fonttt);
+    });
 
     // MUDAR A COR
     // botoes/funções para mudar a cor
@@ -133,6 +200,9 @@ function draw() {
 
     // MUDAR TAMANHO
     tSize = sliderT.value(); // val alterado no slider
+
+    // MUDAR FONT
+    textFont(fonttt);
 
     // MUDAR O QUE ESTÁ ESCRITO
     if (textbox) { // se escrever
@@ -169,6 +239,12 @@ function draw() {
         ///
         textbox.show();
         textbox.removeAttribute('disabled');
+
+        // mostrar botoes fonts
+        for (var i = 0; i < 4; i++) {
+            fontBtn[i].show();
+            fontBtn[i].removeAttribute('disabled');
+        }
     });
 
     // MENU COR TEXTO

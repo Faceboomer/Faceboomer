@@ -17,6 +17,31 @@ body {
   font-weight: bold;
 }
 
+/* fonts para o css do sketch */
+
+@font-face {
+  font-family: myBonbon;
+  src: url(../data/fonts/Bonbon-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: myCrafty;
+  src: url(../data/fonts/CraftyGirls-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: myHerr;
+  src: url(../data/fonts/HerrVonMuellerhoff-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: myMeddon;
+  src: url(../data/fonts/Meddon-Regular.ttf);
+  font-weight: normal;
+}
+
 header {
   margin: 0;
   padding: 1vh 0;
