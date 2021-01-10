@@ -4,11 +4,18 @@ let footer1 = 35;
 // altura da header
 let header1 = 56.8;
 
-// BOTOES cor de fundo (lista)
-let cor1 = [];
 // posição dos botoes
 btnPosY = 420;
 btnPosX = 65;
+
+
+// Cor e Tamanho
+let TEXTMENU = 0;
+let corBtn;
+let tamanhoBtn1;
+
+// Slider
+var sizeSlider;
 
 // cor de fundo
 r = 255; g = 255; b = 255; a = 255;
@@ -30,7 +37,7 @@ function preload() {
         'brilho5.png',
         'brilho6.png',
         'brilho7.png',
-      
+
     ];
 
     // "empurrar" cada ficheiro para a lista backgrounds
@@ -47,6 +54,15 @@ function setup() {
     // posicionar o sketch dentro desta div no html
     c.parent('sketch-brilho');
 
+
+
+    sizeSlider = createSlider(10, 100, 22);
+    sizeSlider.size(200, 20);
+    sizeSlider.position((windowWidth - 200) / 2, windowWidth + 130);
+
+    // esconder (aparece quando se clica no menu)
+    sizeSlider.hide();
+
     // CRIAÇÃO DOS BOTOES
     // margem dos botoes para estar centrado
     // margem = (largura - largura de todos os botões) /2
@@ -60,6 +76,17 @@ function setup() {
         cor[i].style('height', '20px');
         cor[i].style('border', 'solid 0.5px #af7dfd');
     }*/
+
+    // BOTOES slider tamanho
+
+    tamanhoBtn1 = createButton("Tamanho");
+    tamanhoBtn1.position(0, windowWidth + 57, 'fixed');
+    tamanhoBtn1.size(windowWidth / 3, 35);
+    tamanhoBtn1.style("font-family", "Open Sans");
+    tamanhoBtn1.style("font-size", "12px");
+    tamanhoBtn1.style("color", "#af7dfd");
+    tamanhoBtn1.style('background-color', 'transparent');
+    tamanhoBtn1.style('border', 'solid 0.5px #af7dfd');
 
 
     // IMAGEM DE FUNDO
@@ -104,12 +131,26 @@ function setup() {
     bgBtn1[5].style('background-image', 'url("data/brilho/brilho5.png")');
     bgBtn1[6].style('background-image', 'url("data/brilho/brilho6.png")');
     bgBtn1[7].style('background-image', 'url("data/brilho/brilho7.png")');
-   // bgBtn[8].style('background-image', 'url("data/moldura9.png")');
+    // bgBtn[8].style('background-image', 'url("data/moldura9.png")');
 
 }
 
 function draw() {
     background(0, 0, 0, 0);
+
+    /* BARRA MENU */
+    // está em draw para ser redesenhado por cima dos objetos do canvas
+    fill(255);
+    stroke(175, 125, 253);
+    strokeWeight(0.7);
+    rect(0, windowWidth, windowWidth, 35);
+    // fundo menu
+    // fundo
+    rectMode(CORNER)
+    rect(0, windowWidth + 35, windowWidth, windowHeight);
+
+
+
 
     // funções dos botoes para mudar a imagem
     bgBtn1[0].mousePressed(showBg0);
@@ -120,22 +161,58 @@ function draw() {
     bgBtn1[5].mousePressed(showBg5);
     bgBtn1[6].mousePressed(showBg6);
     bgBtn1[7].mousePressed(showBg7);
-   // bgBtn[8].mousePressed(showBg8);
+    // bgBtn[8].mousePressed(showBg8);
+
+
+
+
+
+
+    for (var i = 0; i < 8; i++) {
+        clear();
+        image(backgrounds1[i], 60, 60);
+        new_size = sizeSlider.value();
+        backgrounds1[0].resize(new_size, 0);
+        backgrounds1[1].resize(new_size, 0);
+        backgrounds1[2].resize(new_size, 0);
+        backgrounds1[3].resize(new_size, 0);
+        backgrounds1[4].resize(new_size, 0);
+        backgrounds1[5].resize(new_size, 0);
+        backgrounds1[6].resize(new_size, 0);
+        backgrounds1[7].resize(new_size, 0);
+    }
 
     // desenhar retangulo sólido
-    noStroke();
+
     fill(r, g, b, a);
-    rect(0, 0+header1, windowWidth, windowWidth);
-    
+    rect(0, 0 + header1, windowWidth, windowWidth);
+
+    // MENU TAMANHO TEXTO
+    tamanhoBtn1.mousePressed(function () {
+        TEXTMENU = 2;
+
+        // esconder outros menus
+
+        for (var i = 0; i < 8; i++) {
+            bgBtn1[i].hide();
+            bgBtn1[i].attribute('disabled', '');
+        }
+        ///
+        sizeSlider.show();
+    });
+
+
+
+
 
     // funções para mudar a cor sólida
-   /* cor[0].mousePressed(preto);
-    cor[1].mousePressed(branco);
-    cor[2].mousePressed(roxo);
-    cor[3].mousePressed(vermelho);
-    cor[4].mousePressed(azul);
-    cor[5].mousePressed(verde);
-    cor[6].mousePressed(amarelo);*/
+    /* cor[0].mousePressed(preto);
+     cor[1].mousePressed(branco);
+     cor[2].mousePressed(roxo);
+     cor[3].mousePressed(vermelho);
+     cor[4].mousePressed(azul);
+     cor[5].mousePressed(verde);
+     cor[6].mousePressed(amarelo);*/
 }
 
 // FUNÇOES
@@ -179,46 +256,47 @@ function draw() {
 
 function showBg0() {
     a = 0;
-    image(backgrounds1[0], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[0], 0, 0 + header1, windowWidth, windowWidth);
 }
 function showBg1() {
     a = 0;
-    image(backgrounds1[1], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[1], 0, 0 + header1, windowWidth, windowWidth);
 }
 function showBg2() {
     a = 0;
-    image(backgrounds1[2], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[2], 0, 0 + header1, windowWidth, windowWidth);
 }
 function showBg3() {
     a = 0;
-    image(backgrounds1[3], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[3], 0, 0 + header1, windowWidth, windowWidth);
 }
 function showBg4() {
     a = 0;
-    image(backgrounds1[4], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[4], 0, 0 + header1, windowWidth, windowWidth);
 }
 function showBg5() {
     a = 0;
-    image(backgrounds1[5], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[5], 0, 0 + header1, windowWidth, windowWidth);
 }
 function showBg6() {
     a = 0;
-    image(backgrounds1[6], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[6], 0, 0 + header1, windowWidth, windowWidth);
 }
 function showBg7() {
     a = 0;
-    image(backgrounds1[7], 0, 0+header1, windowWidth, windowWidth);
+    image(backgrounds1[7], 0, 0 + header1, windowWidth, windowWidth);
 }
 
-for (var i = 0; i < 8; i++) {
-    backgrounds1[i].remove();
-}
-/*function showBg8() {
-    a = 0;
-    image(backgrounds[8], 0, 0, windowWidth, windowWidth);
-}*/
 
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
+
+
+
+
+
+
+
+
