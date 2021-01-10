@@ -1,8 +1,9 @@
 body {
+  position: relative;
   color: #af7dfd;
   background-color: white;
   margin: 0;
-  font-family: 'myOpenSans', Helvetica, Arial, sans-serif;
+  font-family: "myOpenSans", Helvetica, Arial, sans-serif;
 }
 
 @font-face {
@@ -51,6 +52,15 @@ header {
   top: 0;
   width: 100%;
   box-shadow: 1px 1px 10px #d8b7ff;
+}
+
+.sketch {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+    top: 0;
+    left: 0;
+  z-index: -100;
 }
 
 .placeImg {

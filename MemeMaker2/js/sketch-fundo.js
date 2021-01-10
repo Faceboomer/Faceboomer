@@ -1,10 +1,9 @@
 // INICIALIZAÇÃO
-// altura da footer
-let footer = 35;
-// altura da header
-let header = 56.8;
 
-// BOTOES cor de fundo (lista)
+/* BOTTOM MENU */
+let buttonCA; let buttonC;
+
+// CORES FUNDO (lista)
 let cor = [];
 // posição dos botoes
 btnPosY = 420;
@@ -13,10 +12,9 @@ btnPosX = 30;
 // cor de fundo
 r = 255; g = 255; b = 255; a = 255;
 
-// BOTOES fundos (lista)
+// IMAGENS FUNDO
 let bgBtn = [];
 
-// load das imagens
 // lista de imagens
 let backgrounds = [];
 
@@ -45,12 +43,15 @@ function preload() {
 }
 
 function setup() {
-    let c = createCanvas(windowWidth, windowHeight - footer);
+    let footer = 35;
+    let header = 56.8;
+
+    let c = createCanvas(windowWidth, windowHeight - header);
     // posicionar canvas abaixo da header
     c.position(0, header);
 
     // posicionar o sketch dentro desta div no html
-    c.parent('sketch-holder');
+    c.parent('fundo');
 
     // CRIAÇÃO DOS BOTOES
     // margem dos botoes para estar centrado
@@ -71,7 +72,6 @@ function setup() {
     // IMAGEM DE FUNDO
     for (var i = 0; i < 7; i++) {
         bgBtn[i] = createButton('');
-
         bgBtn[i].position(btnPosX * i + margem, btnPosY + 30);
         bgBtn[i].style('width', '20px');
         bgBtn[i].style('height', '20px');
@@ -117,10 +117,33 @@ function setup() {
     bgBtn[12].style('background-image', 'url("data/Fundos/flor2.jpg")');
     bgBtn[13].style('background-image', 'url("data/Fundos/flor1.jpg")');
 
+
+    /* BOTTOM MENU */
+    buttonCA = createButton("Cancelar");
+    buttonCA.size(windowWidth / 2, footer);
+    buttonCA.position(0, height * 2.2);
+    buttonCA.style("font-family", "Open Sans");
+    buttonCA.style("font-size", "12px");
+    buttonCA.style('box-shadow', '1px 1px 10px #d8b7ff');
+    buttonCA.style("color", "#af7dfd");
+    buttonCA.style('background-color', 'rgba(255, 255, 255, 0.8)');
+    buttonCA.style('border', 'none');
+
+    buttonC = createButton("Concluído");
+    buttonC.size(windowWidth / 2, footer);
+    buttonC.position(windowWidth / 2, windowHeight * 2.2);
+    buttonC.style("font-family", "Open Sans");
+    buttonC.style("font-size", "12px");
+    buttonC.style('box-shadow', '1px 1px 10px #d8b7ff');
+    buttonC.style("color", "#af7dfd");
+    buttonC.style('background-color', 'rgba(255, 255, 255, 0.8)');
+    buttonC.style('border', 'none');
+
 }
 
 function draw() {
-    background(0, 0, 0, 0);
+    //background('red')
+    noStroke();
 
     // funções dos botoes para mudar a imagem
     bgBtn[0].mousePressed(showBg0);
@@ -155,7 +178,6 @@ function draw() {
 // FUNÇOES
 // cores de fundo
 function preto() {
-    print("Y");
     r = 0;
     g = 0;
     b = 0;
