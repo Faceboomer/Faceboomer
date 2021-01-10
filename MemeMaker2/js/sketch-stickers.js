@@ -1,5 +1,6 @@
 // INICIALIZAÇÃO
 // altura da header
+let footerS = 35;
 let headerS = 56.8;
 
 // posição dos botoes
@@ -15,6 +16,9 @@ let bgBtnS = [];
 // load das imagens
 // lista de imagens
 let backgroundsS = [];
+
+let buttonC;
+let buttonCA;
 
 function preload() {
     backgroundFilesS = [
@@ -80,6 +84,26 @@ function setup() {
     bgBtnS[5].style('background-image', 'url("data/stickers/sticker6.png")');
     bgBtnS[6].style('background-image', 'url("data/stickers/sticker7.png")');
     bgBtnS[7].style('background-image', 'url("data/stickers/sticker8.png")');  
+
+  buttonCA = createButton("Cancelar");
+  buttonCA.size(width/2,footerS);
+  buttonCA.position(0,height-footerS);
+  buttonCA.style("font-family", "Open Sans");
+  buttonCA.style("font-size", "12px");
+  buttonCA.style('box-shadow', '1px 1px 10px #d8b7ff');
+  buttonCA.style("color", "#af7dfd");
+  buttonCA.style('background-color', 'rgba(255, 255, 255, 0.8)');
+  buttonCA.style('border', 'none');
+
+  buttonC = createButton("Concluído");
+  buttonC.size(width/2,footerS);
+  buttonC.position(width/2,height-footerS);
+  buttonC.style("font-family", "Open Sans");
+  buttonC.style("font-size", "12px");
+  buttonC.style('box-shadow', '1px 1px 10px #d8b7ff');
+  buttonC.style("color", "#af7dfd");
+  buttonC.style('background-color', 'rgba(255, 255, 255, 0.8)');
+  buttonC.style('border', 'none');
 }
 
 function draw() {
