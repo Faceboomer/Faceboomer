@@ -237,7 +237,7 @@ function draw() {
         textbox.removeAttribute('disabled');
 
         // mostrar botoes fonts
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
             fontBtn[i].show();
             fontBtn[i].removeAttribute('disabled');
         }
