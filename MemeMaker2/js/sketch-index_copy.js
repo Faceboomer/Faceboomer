@@ -24,9 +24,7 @@ let bg = 255;
 let cor = []; // botoes cores fundo
 btnPosY = 420; // posição dos botoes
 btnPosX = 30;
-
 r = 255; g = 255; b = 255; a = 0;
-
 let bgBtn = []; // botoes imagens de fundo
 let backgrounds = []; // lista imagens
 function preload() { // load lista de imagens
@@ -69,13 +67,11 @@ function preload() {
 }
 let fonttt; // font default
 let corTexto = []; // botoes cor
-let rT = 155; // cor default
-let gT = 47;
-let bT = 255;
+let Tc = 'red'; // cor texto !!! mudar para transparente
 let Tx = 0; let Ty = -1000; // posição
 let tSize = 22; // tamanho texto
-var textbox;
-// !!!
+let textbox; // onde se escreve
+let textos; // objeto texto
 
 
 //////////////////////////////////
@@ -89,8 +85,11 @@ function setup() {
   createButtons();
   showFirstMenu();
 
-  fonttt = font5;  // OBJETO TEXTO
+  fonttt = font5;
   textFont(fonttt); // font default
+  fill(Tc); // cor default
+  textos = new Texto(95, 100, tSize, 'Escreve aqui!');
+
 }
 
 
@@ -106,18 +105,18 @@ function draw() {
   noStroke();
   // MUDAR TAMANHO
   tSize = sliderT.value(); // val alterado no slider
+  // MUDAR COR
+  fill(Tc);
   // MUDAR FONT
   textFont(fonttt);
   // MUDAR O QUE ESTÁ ESCRITO
-  if (textbox) { print("swdn") }
-  /*   for (var i = 0; i < 1; i++) {
-      if (textbox) { // se escrever
-        let textinho = textbox.value(); // val do input
-        newTextos[0].updateText(textinho);
-      } 
-    }*/
-
-  // TEXTO !!!
+  textbox.input(function () {
+    let escrito = textbox.value();
+    textos.updateText(escrito);
+  })
+  // TEXTO !!! colocar mais um
+  textos.update(); // update drag
+  textos.show(tSize); // display + aplicar tamanho
 
 
   ////* BARRA MENU */
@@ -224,6 +223,29 @@ function texto() {
   });
   fontBtn[4].mousePressed(function () {
     fonttt = font5;
+  });
+  // MUDAR A COR
+  // botoes/funções para mudar a cor
+  corTexto[0].mousePressed(function () {
+    Tc = 0;
+  });
+  corTexto[1].mousePressed(function () {
+    Tc = 255;
+  });
+  corTexto[2].mousePressed(function () {
+    Tc = '#9a2fff';
+  });
+  corTexto[3].mousePressed(function () {
+    Tc = '#ff2f2b';
+  });
+  corTexto[4].mousePressed(function () {
+    Tc = '#3cb1ff';
+  });
+  corTexto[5].mousePressed(function () {
+    Tc = '#7fd24b';
+  });
+  corTexto[6].mousePressed(function () {
+    Tc = '#ffd12c';
   });
 
 } function stickers() {
@@ -441,6 +463,16 @@ function hideFirstMenu() {
     button[i].hide();
     button[i].attribute('disabled', '');
   }
+}
+
+
+// FUNÇÕES ARRASTAR O TEXTO
+function mousePressed() {
+  textos.pressed();
+}
+
+function mouseReleased() {
+  textos.released();
 }
 
 
