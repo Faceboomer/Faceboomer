@@ -53,8 +53,7 @@ class Texto {
             // If so, keep track of relative location of click to corner of rectangle
             this.offsetX = this.x - mouseX;
             this.offsetY = this.y - mouseY;
-            print(this.w);
-        }
+          }
     }
 
 

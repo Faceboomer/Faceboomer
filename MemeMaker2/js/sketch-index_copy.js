@@ -2,7 +2,6 @@
 Catarina Lobão, Giuliana Almasio, Mariana Simões, Marta Sousa
 FBAUP 2020/2021*/
 
-
 /* legenda: "----" é preciso melhorar pequenas coisas
 legenda: "!!!" é preciso colocar algo urgente */
 
@@ -71,7 +70,7 @@ let Tc = 'red'; // cor texto !!! mudar para transparente
 let Tx = 0; let Ty = -1000; // posição
 let tSize = 22; // tamanho texto
 let textbox; // onde se escreve
-let textos; // objeto texto
+let textos = []; // objeto texto
 
 
 //////////////////////////////////
@@ -88,8 +87,7 @@ function setup() {
   fonttt = font5;
   textFont(fonttt); // font default
   fill(Tc); // cor default
-  textos = new Texto(95, 100, tSize, 'Escreve aqui!');
-
+  textos.push(new Texto(95, 100, tSize, 'Escreve aqui!'));
 }
 
 
@@ -112,12 +110,16 @@ function draw() {
   // MUDAR O QUE ESTÁ ESCRITO
   textbox.input(function () {
     let escrito = textbox.value();
-    textos.updateText(escrito);
+    for (let t of textos){
+      t.updateText(escrito);
+    }
   })
   // TEXTO !!! colocar mais um
-  textos.update(); // update drag
-  textos.show(tSize); // display + aplicar tamanho
-
+  for (let t of textos){ // por cada texto
+    t.update(); // update drag
+    t.show(tSize); // display + aplicar tamanho
+  }
+  
 
   ////* BARRA MENU */
   // está em draw para ser redesenhado por cima dos objetos do canvas
@@ -468,11 +470,15 @@ function hideFirstMenu() {
 
 // FUNÇÕES ARRASTAR O TEXTO
 function mousePressed() {
-  textos.pressed();
-}
+  for (let t of textos){
+    t.pressed();
+  }
+  }
 
 function mouseReleased() {
-  textos.released();
+  for (let t of textos) {
+    t.released();
+  }
 }
 
 
