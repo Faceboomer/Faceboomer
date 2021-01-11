@@ -21,7 +21,6 @@ class Texto {
 
     // update objeto sendo arrastado
     update() {
-        print(this.x, this.y)
         if (this.dragging) {
             this.x = mouseX + this.offsetX;
             this.y = mouseY + this.offsetY;
