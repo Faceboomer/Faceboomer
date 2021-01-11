@@ -64,10 +64,10 @@ function preload() {
   font4 = loadFont('data/fonts/Meddon-Regular.ttf');
   font5 = loadFont('data/fonts/OpenSans-Bold.ttf');
 }
-let fonttt; // font default
+let fonttt = font5; // font default
 let corTexto = []; // botoes cor
-let Tc = 'red'; // cor texto !!! mudar para transparente
-let Tx = 0; let Ty = -1000; // posição
+let Tc = '#9a2fff'; // cor texto
+let Tx = 95; let Ty = 100; // posição
 let tSize = 22; // tamanho texto
 let textbox; // onde se escreve
 let textos = []; // objeto texto
@@ -84,10 +84,7 @@ function setup() {
   createButtons();
   showFirstMenu();
 
-  fonttt = font5;
-  textFont(fonttt); // font default
-  fill(Tc); // cor default
-  textos.push(new Texto(95, 100, tSize, 'Escreve aqui!'));
+  textos.push(new Texto(-100, -1000, tSize, 'Escreve aqui!'));
 }
 
 
@@ -95,41 +92,32 @@ function setup() {
 //////////////////////////////////
 function draw() {
   /*----- colocar fundos dos menus aqui  */
-  //// LAYER 1: FUNDO
+  //// LAYER 1: FUNDO !!! arranjar
   background(bg);
   //// LAYER 2: MOLDURAS
 
-  //// LAYER 3: TEXTO !!!
+  //// LAYER 3: TEXTO
   noStroke();
-  // MUDAR TAMANHO
-  tSize = sliderT.value(); // val alterado no slider
-  // MUDAR COR
-  fill(Tc);
-  // MUDAR FONT
-  textFont(fonttt);
-  // MUDAR O QUE ESTÁ ESCRITO
-  textbox.input(function () {
-    let escrito = textbox.value();
-    for (let t of textos){
-      t.updateText(escrito);
-    }
-  })
-  // TEXTO !!! colocar mais um
-  for (let t of textos){ // por cada texto
-    t.update(); // update drag
-    t.show(tSize); // display + aplicar tamanho
+  tSize = sliderT.value(); // tamanho texto
+  let escrito = textbox.value(); // o que se escreve
+  // UPDATE: texto, tamanho, cor, font
+  textos[textos.length - 1].updateText(escrito, tSize, Tc, fonttt);
+  // UPDATE POSIÇÃO
+  textos[textos.length - 1].update(); // update drag
+  // MOSTRAR TODOS OS TEXTOS
+  for (let t of textos) {
+    t.show(); // display + aplicar tamanho
   }
-  
+
 
   ////* BARRA MENU */
   // está em draw para ser redesenhado por cima dos objetos do canvas
+  fill(255);
   rect(0, w + 35, w, h);
-  fill(255, aBM);
-  stroke(175, 125, 253, aBM);
+  stroke(175, 125, 253);
   strokeWeight(0.7);
   rect(0, w, w, 35);
 }
-
 
 
 
@@ -207,8 +195,9 @@ function fundo() {
 
 ////////* ACTIONS TEXTO */
 function texto() {
-  Tx = 95;
-  Ty = 100;
+  textbox.value('Escreve aqui!');
+  sliderT.value(22);
+  fonttt = font5;
 
   // MUDAR FONT
   fontBtn[0].mousePressed(function () {
@@ -248,6 +237,15 @@ function texto() {
   });
   corTexto[6].mousePressed(function () {
     Tc = '#ffd12c';
+  });
+
+  textos.push(new Texto(Tx, Ty, tSize, 'Escreve aqui!'));
+
+  bMenu[0].mousePressed(function () {
+    apagarTexto();
+    showFirstMenu();
+    hideTextoMenu();
+    hideBottomMenu();
   });
 
 } function stickers() {
@@ -358,17 +356,22 @@ function showTextoMenu() {
 
 function hideTextoMenu() {
   textoBM.hide();
+  textoBM.attribute('disabled', '');
   corTBM.hide();
+  corTBM.attribute('disabled', '');
   tamanhoTBM.hide();
+  tamanhoTBM.attribute('disabled', '');
   textbox.hide();
+  textbox.attribute('disabled', '');
+  sliderT.hide();
   for (var i = 0; i < 5; i++) {
     fontBtn[i].hide();
     fontBtn[i].attribute('disabled', '');
   }
-  textoBM.attribute('disabled', '');
-  corTBM.attribute('disabled', '');
-  tamanhoTBM.attribute('disabled', '');
-  textbox.attribute('disabled', '');
+  for (var i = 0; i < 7; i++) {
+    corTexto[i].hide();
+    corTexto[i].attribute('disabled', '');
+  }
 }
 
 //////////////////////* NAV MENUS */
@@ -401,6 +404,20 @@ function showBottomMenu() {
     hideBottomMenu();
     hideFundoMenu();
     hideTextoMenu();
+    // hideMolduraMenu();
+    // hideStickerMenu();
+    // hideFormaMenu();
+    // hideBrilhoMenu();
+    showFirstMenu();
+  });
+  bMenu[1].mousePressed(function () {
+    hideBottomMenu();
+    hideFundoMenu();
+    hideTextoMenu();
+    // hideMolduraMenu();
+    // hideStickerMenu();
+    // hideFormaMenu();
+    // hideBrilhoMenu();
     showFirstMenu();
   });
 }
@@ -470,15 +487,20 @@ function hideFirstMenu() {
 
 // FUNÇÕES ARRASTAR O TEXTO
 function mousePressed() {
-  for (let t of textos){
+  for (let t of textos) {
     t.pressed();
   }
-  }
+}
 
 function mouseReleased() {
   for (let t of textos) {
     t.released();
   }
+}
+
+// FUNÇÃO PARA APAGAR ÚLTIMOS OBJETOS
+function apagarTexto() {
+  textos.pop();
 }
 
 

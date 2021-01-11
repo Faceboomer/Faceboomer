@@ -19,24 +19,29 @@ class Texto {
         this.offsetY = 0;
     }
 
-    // update objeto sendo arrastado
+    // update objeto: posição, cor e font
     update() {
-        print(this.x, this.y);
+
+        // está a ser arrastado?
         if (this.dragging) {
             this.x = mouseX + this.offsetX;
             this.y = mouseY + this.offsetY;
         }
     }
 
-    updateText(T) {
+    // update de texto, font, tamanho e cor
+    updateText(T, S, C, F) {
         this.p = T;
+        this.s = S;
+        this.c = C;
+        this.f = F;
     }
 
     // construir objeto
-    show(sT) {
-        this.s = sT;
-        // tamanho
+    show() {
         textSize(this.s);
+        fill(this.c);
+        textFont(this.f);
         // texto, x, y
         let t = text(this.p, this.x, this.y);
 
@@ -53,7 +58,7 @@ class Texto {
             // If so, keep track of relative location of click to corner of rectangle
             this.offsetX = this.x - mouseX;
             this.offsetY = this.y - mouseY;
-          }
+        }
     }
 
 
