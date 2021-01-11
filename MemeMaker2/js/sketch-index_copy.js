@@ -56,7 +56,7 @@ let corBTM;
 let tamanhoBTM;
 var sliderT; // slider texto
 let fontBtn = []; // botoes fonts
-let font1, font2, font3, font4, font5;
+let font1, font2, font3, font4, font5; // load fonts
 function preload() {
   font1 = loadFont('data/fonts/Bonbon-Regular.ttf');
   font2 = loadFont('data/fonts/CraftyGirls-Regular.ttf');
@@ -64,7 +64,7 @@ function preload() {
   font4 = loadFont('data/fonts/Meddon-Regular.ttf');
   font5 = loadFont('data/fonts/OpenSans-Bold.ttf');
 }
-let fonttt = font5; // font default
+let fonttt; // font default
 let corTexto = []; // botoes cor
 let Tc = '#9a2fff'; // cor texto
 let Tx = 95; let Ty = 100; // posição
@@ -84,6 +84,8 @@ function setup() {
   createButtons();
   showFirstMenu();
 
+  fonttt = font5;
+  textFont(fonttt);
   textos.push(new Texto(-100, -1000, tSize, 'Escreve aqui!'));
 }
 
@@ -98,6 +100,28 @@ function draw() {
 
   //// LAYER 3: TEXTO
   noStroke();
+  fontBtn[0].mousePressed(function () {
+    fonttt = font1;
+    print(fonttt.font.names.fullName);
+    print("yay");
+});
+fontBtn[1].mousePressed(function () {
+    fonttt = font2;
+    print(fonttt.font.names.fullName);
+});
+fontBtn[2].mousePressed(function () {
+    fonttt = font3;
+    print(fonttt.font.names.fullName);
+});
+fontBtn[3].mousePressed(function () {
+    fonttt = font4;
+    print(fonttt.font.names.fullName);
+});
+fontBtn[4].mousePressed(function () {
+    fonttt = font5;
+    print(fonttt.font.names.fullName);
+});
+  
   tSize = sliderT.value(); // tamanho texto
   let escrito = textbox.value(); // o que se escreve
   // UPDATE: texto, tamanho, cor, font
@@ -200,21 +224,8 @@ function texto() {
   fonttt = font5;
 
   // MUDAR FONT
-  fontBtn[0].mousePressed(function () {
-    fonttt = font1;
-  });
-  fontBtn[1].mousePressed(function () {
-    fonttt = font2;
-  });
-  fontBtn[2].mousePressed(function () {
-    fonttt = font3;
-  });
-  fontBtn[3].mousePressed(function () {
-    fonttt = font4;
-  });
-  fontBtn[4].mousePressed(function () {
-    fonttt = font5;
-  });
+  
+
   // MUDAR A COR
   // botoes/funções para mudar a cor
   corTexto[0].mousePressed(function () {
@@ -241,6 +252,7 @@ function texto() {
 
   textos.push(new Texto(Tx, Ty, tSize, 'Escreve aqui!'));
 
+// ao clicar cancelar
   bMenu[0].mousePressed(function () {
     apagarTexto();
     showFirstMenu();

@@ -162,23 +162,24 @@ function draw() {
     // botoes/funções para mudar a cor
     fontBtn[0].mousePressed(function () {
         fonttt = font1;
-        print(fonttt);
+        print(fonttt.font.names.fullName);
+        print("yay");
     });
     fontBtn[1].mousePressed(function () {
         fonttt = font2;
-        print(fonttt);
+        print(fonttt.font.names.fullName);
     });
     fontBtn[2].mousePressed(function () {
         fonttt = font3;
-        print(fonttt);
+        print(fonttt.font.names.fullName);
     });
     fontBtn[3].mousePressed(function () {
         fonttt = font4;
-        print(fonttt);
+        print(fonttt.font.names.fullName);
     });
     fontBtn[4].mousePressed(function () {
         fonttt = font5;
-        print(fonttt);
+        print(fonttt.font.names.fullName);
     });
 
     // MUDAR A COR
