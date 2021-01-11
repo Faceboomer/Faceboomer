@@ -31,7 +31,7 @@ function preload() {
 
   // Background import
   for (let file of backgroundFiles) {
-    backgrounds.push(loadImage('data/Fundos/' + file));
+    backgrounds.push(loadImage('data/fundos/' + file));
   }
 
   // Frame import

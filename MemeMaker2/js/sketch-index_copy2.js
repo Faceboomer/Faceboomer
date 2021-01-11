@@ -46,7 +46,7 @@ function preload() { // load lista de imagens
   ];
   // "empurrar" cada ficheiro para a lista backgrounds
   for (let file of backgroundFiles) {
-    backgrounds.push(loadImage('data/Fundos/' + file));
+    backgrounds.push(loadImage('data/fundos/' + file));
   }
 }
 

@@ -5,6 +5,36 @@ FBAUP 2020/2021*/
 /* legenda: "----" é preciso melhorar pequenas coisas
 legenda: "!!!" é preciso colocar algo urgente */
 
+/* 
+ORDEM DOS LAYERS:
+1. FUNDO
+2. MOLDURA
+3. TEXTO
+4. STICKERS
+5. BRILHOS
+6. FORMAS
+*/
+
+// PARA ADICIONAR NOVOS LAYERS, PASSAR PELOS SEGUINTES PASSOS:
+// 1. DECLARAR VARIÁVEIS (no início)
+// 2. LOAD DE ASSETS (em "preload()" )
+
+// 3. CRIAR OS BOTÕES DO LAYER RESPETIVO (em "CreateButtons" )
+// 3.1 depois de verificar a posição dos botões, ESCONDER BOTÕES (em "CreateButtons" )
+
+// 4. FAZER FUNÇÃO "show[Layer]Menu"
+// 4.1 .show() os botoes (em "show[Layer]Menu" )
+// 4.2 FAZER FUNÇÃO "hide[Layer]Menu"
+// 4.2 .hide() os botoes (em "hide[Layer]Menu" )
+
+// 5. descomentar "hide[Layer]Menu()" (em "showBottomMenu")
+
+// 6. COLOCAR FUNÇÕES NO BOTÃO INICIAL (em "showFirstMenu" )
+// show[botao]Menu(); showBottomMenu(); [layer]();
+
+// FAZER A FUNÇÃO LAYER
+
+
 //////////////////////////////////
 let footer = 35;
 let header = 56.8;
@@ -26,8 +56,32 @@ btnPosX = 30;
 r = 255; g = 255; b = 255; a = 0;
 let bgBtn = []; // botoes imagens de fundo
 let backgrounds = []; // lista imagens
-function preload() { // load lista de imagens
-  backgroundFiles = [
+
+/* DECLARAR MOLDURAS */
+let molduras = 8;
+btnPosY2 = w + 80; // posição dos botoes
+btnPosX2 = 55;
+let molduraBtn = []; // botoes
+let frames = [];
+
+/* DECLARAR TEXTO */
+let textoBM; // barra menu
+let corBTM;
+let tamanhoBTM;
+var sliderT; // slider texto
+let fontBtn = []; // botoes fonts
+let font1, font2, font3, font4, font5; // load fonts
+let fonttt; // font default
+let corTexto = []; // botoes cor
+let Tc = '#9a2fff'; // cor texto
+let Tx = 95; let Ty = 100; // posição
+let tSize = 22; // tamanho texto
+let textbox; // onde se escreve
+let textos = []; // objeto texto
+
+// load de ficheiros
+function preload() {
+  backgroundFiles = [ // load fundos
     'inverno2.jpg',
     'inverno3.jpg',
     'jesus3.jpg',
@@ -43,35 +97,33 @@ function preload() { // load lista de imagens
     'flor1.jpg',
     'flor2.jpg'
   ];
-
   // "empurrar" cada ficheiro para a lista backgrounds
   for (let file of backgroundFiles) {
-    backgrounds.push(loadImage('data/Fundos/' + file));
+    backgrounds.push(loadImage('data/fundos/' + file));
   }
-}
 
-/* DECLARAR TEXTO */
-let textoBM; // barra menu
-let corBTM;
-let tamanhoBTM;
-var sliderT; // slider texto
-let fontBtn = []; // botoes fonts
-let font1, font2, font3, font4, font5; // load fonts
-function preload() {
+  framesFiles = [ // load molduras
+    'moldura1.png',
+    'moldura2.png',
+    'moldura3.png',
+    'moldura4.png',
+    'moldura5.png',
+    'moldura6.png',
+    'moldura7.png',
+    'moldura8.png'
+  ];
+
+  for (let file of framesFiles) { // por cada ficheiro, add
+    frames.push(loadImage('data/molduras/' + file));
+  }
+
+  // load fonts
   font1 = loadFont('data/fonts/Bonbon-Regular.ttf');
   font2 = loadFont('data/fonts/CraftyGirls-Regular.ttf');
   font3 = loadFont('data/fonts/HerrVonMuellerhoff-Regular.ttf');
   font4 = loadFont('data/fonts/Meddon-Regular.ttf');
   font5 = loadFont('data/fonts/OpenSans-Bold.ttf');
 }
-let fonttt; // font default
-let corTexto = []; // botoes cor
-let Tc = '#9a2fff'; // cor texto
-let Tx = 95; let Ty = 100; // posição
-let tSize = 22; // tamanho texto
-let textbox; // onde se escreve
-let textos = []; // objeto texto
-
 
 //////////////////////////////////
 function setup() {
@@ -97,31 +149,38 @@ function draw() {
   //// LAYER 1: FUNDO !!! arranjar
   background(bg);
   //// LAYER 2: MOLDURAS
+  switch (moldura) {
+    case 0:
+      image(frames[0], 0, 0, w, w);
+      break;
+    case 1:
+      image(frames[1], 0, 0, w, w);
+      break;
+    case 2:
+      image(frames[2], 0, 0, w, w);
+      break;
+    case 3:
+      image(frames[3], 0, 0, w, w);
+      break;
+    case 4:
+      image(frames[4], 0, 0, w, w);
+      break;
+    case 5:
+      image(frames[5], 0, 0, w, w);
+      break;
+    case 6:
+      image(frames[6], 0, 0, w, w);
+      break;
+    case 7:
+      image(frames[7], 0, 0, w, w);
+      break;
+    case 8:
+      break;
+  }
 
   //// LAYER 3: TEXTO
   noStroke();
-  fontBtn[0].mousePressed(function () {
-    fonttt = font1;
-    print(fonttt.font.names.fullName);
-    print("yay");
-});
-fontBtn[1].mousePressed(function () {
-    fonttt = font2;
-    print(fonttt.font.names.fullName);
-});
-fontBtn[2].mousePressed(function () {
-    fonttt = font3;
-    print(fonttt.font.names.fullName);
-});
-fontBtn[3].mousePressed(function () {
-    fonttt = font4;
-    print(fonttt.font.names.fullName);
-});
-fontBtn[4].mousePressed(function () {
-    fonttt = font5;
-    print(fonttt.font.names.fullName);
-});
-  
+
   tSize = sliderT.value(); // tamanho texto
   let escrito = textbox.value(); // o que se escreve
   // UPDATE: texto, tamanho, cor, font
@@ -215,7 +274,39 @@ function fundo() {
     bg = '#ffd12c';
   });
 
-} function moldura() { }
+} function moldura() {
+  // funções dos botoes para mudar a imagem
+  molduraBtn[0].mousePressed(function () {
+    moldura = 0;
+  });
+  molduraBtn[1].mousePressed(function () {
+    moldura = 1;
+  });
+  molduraBtn[2].mousePressed(function () {
+    moldura = 2;
+  });
+  molduraBtn[3].mousePressed(function () {
+    moldura = 3;
+  });
+  molduraBtn[4].mousePressed(function () {
+    moldura = 4;
+  });
+  molduraBtn[5].mousePressed(function () {
+    moldura = 5;
+  });
+  molduraBtn[6].mousePressed(function () {
+    moldura = 6;
+  });
+  molduraBtn[7].mousePressed(function () {
+    moldura = 7;
+  });
+  bMenu[0].mousePressed(function() {
+    moldura = 8;
+    hideMolduraMenu();
+    hideBottomMenu();
+    showFirstMenu();
+  });
+}
 
 ////////* ACTIONS TEXTO */
 function texto() {
@@ -224,7 +315,26 @@ function texto() {
   fonttt = font5;
 
   // MUDAR FONT
-  
+  fontBtn[0].mousePressed(function () {
+    fonttt = font1;
+    print(fonttt.font.names.fullName);
+  });
+  fontBtn[1].mousePressed(function () {
+    fonttt = font2;
+    print(fonttt.font.names.fullName);
+  });
+  fontBtn[2].mousePressed(function () {
+    fonttt = font3;
+    print(fonttt.font.names.fullName);
+  });
+  fontBtn[3].mousePressed(function () {
+    fonttt = font4;
+    print(fonttt.font.names.fullName);
+  });
+  fontBtn[4].mousePressed(function () {
+    fonttt = font5;
+    print(fonttt.font.names.fullName);
+  });
 
   // MUDAR A COR
   // botoes/funções para mudar a cor
@@ -252,7 +362,7 @@ function texto() {
 
   textos.push(new Texto(Tx, Ty, tSize, 'Escreve aqui!'));
 
-// ao clicar cancelar
+  // ao clicar cancelar
   bMenu[0].mousePressed(function () {
     apagarTexto();
     showFirstMenu();
@@ -293,6 +403,23 @@ function hideFundoMenu() {
   for (var i = 0; i < 14; i++) {
     bgBtn[i].hide();
     bgBtn[i].attribute('disabled', '');
+  }
+}
+
+////////* MOLDURA MENU */
+function showMolduraMenu() {
+  aBM = 255; // fundo da barra menu
+  // botoes molduras
+  for (var i = 0; i < 8; i++) {
+    molduraBtn[i].show();
+    molduraBtn[i].removeAttribute('disabled');
+  }
+}
+
+function hideMolduraMenu() {
+  for (var i = 0; i < 8; i++) {
+    molduraBtn[i].hide();
+    molduraBtn[i].attribute('disabled', '');
   }
 }
 
@@ -416,7 +543,7 @@ function showBottomMenu() {
     hideBottomMenu();
     hideFundoMenu();
     hideTextoMenu();
-    // hideMolduraMenu();
+    hideMolduraMenu();
     // hideStickerMenu();
     // hideFormaMenu();
     // hideBrilhoMenu();
@@ -426,7 +553,7 @@ function showBottomMenu() {
     hideBottomMenu();
     hideFundoMenu();
     hideTextoMenu();
-    // hideMolduraMenu();
+    hideMolduraMenu();
     // hideStickerMenu();
     // hideFormaMenu();
     // hideBrilhoMenu();
@@ -476,7 +603,10 @@ function showFirstMenu() {
     fundo();
   });
   button[1].mousePressed(function () { // molduras
-
+    showMolduraMenu();
+    showBottomMenu();
+    hideFirstMenu();
+    moldura();
   });
   button[2].mousePressed(function () { // texto
     showTextoMenu();
@@ -571,8 +701,35 @@ function createButtons() {
   bgBtn[9].style('background-image', 'url("data/Fundos/primavera2.jpg")');
   bgBtn[10].style('background-image', 'url("data/Fundos/verao1.jpg")');
   bgBtn[11].style('background-image', 'url("data/Fundos/verao2.jpg")');
-  bgBtn[12].style('background-image', 'url("data/Fundos/flor2.jpg")');
-  bgBtn[13].style('background-image', 'url("data/Fundos/flor1.jpg")');
+  bgBtn[12].style('background-image', 'url("data/Fundos/flor1.jpg")');
+  bgBtn[13].style('background-image', 'url("data/Fundos/flor2.jpg")');
+
+  //// molduras
+  margem = (w - (btnPosX2 * 4)) / 2;
+  for (var i = 0; i < 8; i++) {
+    molduraBtn[i] = createButton('');
+    molduraBtn[i].position(btnPosX2 * i + margem, btnPosY2);
+    molduraBtn[i].style('width', '50px');
+    molduraBtn[i].style('height', '50px');
+    molduraBtn[i].style('border', 'none');
+    molduraBtn[i].style('background-size', '50px 50px');
+    molduraBtn[i].style('background-repeat', 'no-repeat');
+
+    if (i >= 4) {
+      molduraBtn[i].position(btnPosX2 * i + margem - (btnPosX2 * 4), btnPosY2 + 55);
+    }
+    molduraBtn[i].hide();
+    molduraBtn[i].attribute('disabled', '');
+  }
+  // colocar imagens de fundo nos botoes
+  molduraBtn[0].style('background-image', 'url("data/molduras/moldura1.png")');
+  molduraBtn[1].style('background-image', 'url("data/molduras/moldura2.png")');
+  molduraBtn[2].style('background-image', 'url("data/molduras/moldura3.png")');
+  molduraBtn[3].style('background-image', 'url("data/molduras/moldura4.png")');
+  molduraBtn[4].style('background-image', 'url("data/molduras/moldura5.png")');
+  molduraBtn[5].style('background-image', 'url("data/molduras/moldura6.png")');
+  molduraBtn[6].style('background-image', 'url("data/molduras/moldura7.png")');
+  molduraBtn[7].style('background-image', 'url("data/molduras/moldura8.png")');
 
   //// texto
   // menu barra
@@ -617,7 +774,7 @@ function createButtons() {
   textbox.hide();
   textbox.attribute('disabled', '');
   // BOTOES ESCOLHER FONT
-  var margem = (w - (btnPosX * 5)) / 2;
+  margem = (w - (btnPosX * 5)) / 2;
   for (var i = 0; i < 5; i++) {
     fontBtn[i] = createButton('Aa');
     fontBtn[i].position(btnPosX * i + margem, btnPosY);
@@ -645,7 +802,7 @@ function createButtons() {
   sliderT.position((windowWidth - 200) / 2, windowWidth + 130);
   sliderT.hide();
   // OPÇÕES CORES DE TEXTO
-  var margem = (windowWidth - (btnPosX * 6 + 20)) / 2;
+  margem = (windowWidth - (btnPosX * 6 + 20)) / 2;
   for (var i = 0; i < 7; i++) {
     corTexto[i] = createButton('');
     corTexto[i].position(btnPosX * i + margem, btnPosY + 45);

@@ -14,7 +14,7 @@ btnPosX2 = 65;
 r = 255; g = 255; b = 255; a = 255;
 
 // BOTOES fundos (lista)
-let bgBtn2 = [];
+let molduraBtn = [];
 
 // load das imagens
 // lista de imagens
@@ -64,26 +64,26 @@ function setup() {
 
     // IMAGEM DE FUNDO
     for (var i = 0; i < 4; i++) {
-        bgBtn2[i] = createButton('');
+        molduraBtn[i] = createButton('');
 
-        bgBtn2[i].position(btnPosX2 * i + margem, btnPosY2 + 170);
-        bgBtn2[i].style('width', '60px');
-        bgBtn2[i].style('height', '60px');
-        bgBtn2[i].style('border', 'none');
-        bgBtn2[i].style('background-size', '60px 60px');
-        bgBtn2[i].style('background-repeat', 'no-repeat');
+        molduraBtn[i].position(btnPosX2 * i + margem, btnPosY2 + 170);
+        molduraBtn[i].style('width', '60px');
+        molduraBtn[i].style('height', '60px');
+        molduraBtn[i].style('border', 'none');
+        molduraBtn[i].style('background-size', '60px 60px');
+        molduraBtn[i].style('background-repeat', 'no-repeat');
     }
 
     // divido em 2 para estarem alinhados
     for (var i = 4; i < 8; i++) {
-        bgBtn2[i] = createButton('');
+        molduraBtn[i] = createButton('');
 
-        bgBtn2[i].position(btnPosX2 * i + + margem - (btnPosX2 * 4), btnPosY2 + 235);
-        bgBtn2[i].style('width', '60px');
-        bgBtn2[i].style('height', '60px');
-        bgBtn2[i].style('border', 'none');
-        bgBtn2[i].style('background-size', '60px 60px');
-        bgBtn2[i].style('background-repeat', 'no-repeat');
+        molduraBtn[i].position(btnPosX2 * i + + margem - (btnPosX2 * 4), btnPosY2 + 235);
+        molduraBtn[i].style('width', '60px');
+        molduraBtn[i].style('height', '60px');
+        molduraBtn[i].style('border', 'none');
+        molduraBtn[i].style('background-size', '60px 60px');
+        molduraBtn[i].style('background-repeat', 'no-repeat');
     }
 
     /*// cores sólidas dos botoes
@@ -96,14 +96,14 @@ function setup() {
     cor[6].style('background-color', '#FFD22C');*/
 
     // colocar imagens de fundo nos botoes
-    bgBtn2[0].style('background-image', 'url("data/moldura1.png")');
-    bgBtn2[1].style('background-image', 'url("data/moldura2.png")');
-    bgBtn2[2].style('background-image', 'url("data/moldura3.png")');
-    bgBtn2[3].style('background-image', 'url("data/moldura4.png")');
-    bgBtn2[4].style('background-image', 'url("data/moldura5.png")');
-    bgBtn2[5].style('background-image', 'url("data/moldura6.png")');
-    bgBtn2[6].style('background-image', 'url("data/moldura7.png")');
-    bgBtn2[7].style('background-image', 'url("data/moldura8.png")');
+    molduraBtn[0].style('background-image', 'url("data/moldura1.png")');
+    molduraBtn[1].style('background-image', 'url("data/moldura2.png")');
+    molduraBtn[2].style('background-image', 'url("data/moldura3.png")');
+    molduraBtn[3].style('background-image', 'url("data/moldura4.png")');
+    molduraBtn[4].style('background-image', 'url("data/moldura5.png")');
+    molduraBtn[5].style('background-image', 'url("data/moldura6.png")');
+    molduraBtn[6].style('background-image', 'url("data/moldura7.png")');
+    molduraBtn[7].style('background-image', 'url("data/moldura8.png")');
    // bgBtn[8].style('background-image', 'url("data/moldura9.png")');
 
 }
@@ -112,14 +112,14 @@ function draw() {
     background(0, 0, 0, 0);
 
     // funções dos botoes para mudar a imagem
-    bgBtn2[0].mousePressed(showBg0);
-    bgBtn2[1].mousePressed(showBg1);
-    bgBtn2[2].mousePressed(showBg2);
-    bgBtn2[3].mousePressed(showBg3);
-    bgBtn2[4].mousePressed(showBg4);
-    bgBtn2[5].mousePressed(showBg5);
-    bgBtn2[6].mousePressed(showBg6);
-    bgBtn2[7].mousePressed(showBg7);
+    molduraBtn[0].mousePressed(showBg0);
+    molduraBtn[1].mousePressed(showBg1);
+    molduraBtn[2].mousePressed(showBg2);
+    molduraBtn[3].mousePressed(showBg3);
+    molduraBtn[4].mousePressed(showBg4);
+    molduraBtn[5].mousePressed(showBg5);
+    molduraBtn[6].mousePressed(showBg6);
+    molduraBtn[7].mousePressed(showBg7);
    // bgBtn[8].mousePressed(showBg8);
 
     // desenhar retangulo sólido
@@ -211,7 +211,7 @@ function showBg7() {
 }
 
 for (var i = 0; i < 8; i++) {
-    backgrounds2[i].remove();
+    //backgrounds2[i].remove();
 }
 /*function showBg8() {
     a = 0;
