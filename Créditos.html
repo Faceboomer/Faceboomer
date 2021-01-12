@@ -15,10 +15,11 @@
   <script src="js/jquery-3.5.1.min.js"></script>
 
   <style>
-    body{
+    body {
       background-color: #fff;
       animation: none;
     }
+
     main div {
       text-align: center;
     }
@@ -30,11 +31,12 @@
   <main>
     <p id="creditosP3">FBAUP 2020/2021<br>Prof.Miguel Carvalhais<br>Prof.Pedro Amado</p>
 
-    <p id="creditosP">Trabalho realizado por:<br>Catarina Lobão<br>Francisca Marques<br>Giuliana Almasio<br>Mariana Simões<br>Marta Sousa<br>Raquel Clemente</p>
-  
-      <button id="Faceboomer">Faceboomer</button>
-      <button id="MemeMaker">Boa Tarde</button>
-   
+    <p id="creditosP"><span id="cP">Trabalho realizado por:</span><br>Catarina Lobão<br>Francisca Marques<br>Giuliana Almasio<br>Mariana
+      Simões<br>Marta Sousa<br>Raquel Clemente</p>
+
+    <button id="Faceboomer">Faceboomer</button>
+    <button id="MemeMaker">Boa Tarde</button>
+
   </main>
   <script src="js/login.js"></script>
 
@@ -49,10 +51,9 @@
 
     $("#MemeMaker").on("click", function () {
 
-localStorage.clear();
-window.location.replace("MemeMaker2/BoaTarde_copy.html");
+      window.location.replace("MemeMaker2/BoaTarde_copy.html");
 
-})
+    })
 
   </script>
 </body>

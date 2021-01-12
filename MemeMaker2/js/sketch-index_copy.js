@@ -247,7 +247,7 @@ function setup() {
   iconFechar.style('float', 'right');
 
   let pAlerta = createP('Bem vindo/a! O Boa Noite ajuda-te a gerar as tuas próprias imagens para fazeres, finalmente, parte da comunidade Faceboomer! Toca em qualquer botão para começar a personalizar.');
-  pAlerta.style('margin-top', '65px');
+    pAlerta.style('margin-top', '65px');
 
   iconFechar.parent(divAlerta);
   pAlerta.parent(divAlerta);
@@ -537,28 +537,28 @@ function sticker() {
   qualSticker = 0;
 
   stickersBtn[0].mousePressed(function () {
-    qualBrilho = 0;
+    qualSticker = 0;
   });
   stickersBtn[1].mousePressed(function () {
-    qualBrilho = 1;
+    qualSticker = 1;
   });
   stickersBtn[2].mousePressed(function () {
-    qualBrilho = 2;
+    qualSticker = 2;
   });
   stickersBtn[3].mousePressed(function () {
-    qualBrilho = 3;
+    qualSticker = 3;
   });
   stickersBtn[4].mousePressed(function () {
-    qualBrilho = 4;
+    qualSticker = 4;
   });
   stickersBtn[5].mousePressed(function () {
-    qualBrilho = 5;
+    qualSticker = 5;
   });
   stickersBtn[6].mousePressed(function () {
-    qualBrilho = 6;
+    ququalStickeralBrilho = 6;
   });
   stickersBtn[7].mousePressed(function () {
-    qualBrilho = 7;
+    qualSticker = 7;
   });
 
   stickers.push(new Sticker(w / 2, w / 2, bSize));
@@ -591,17 +591,6 @@ function brilho() {
   brilhosBtn[4].mousePressed(function () {
     qualBrilho = 4;
   });
-  brilhosBtn[5].mousePressed(function () {
-    qualBrilho = 5;
-  });
-  brilhosBtn[6].mousePressed(function () {
-    qualBrilho = 6;
-  });
-  brilhosBtn[7].mousePressed(function () {
-    qualBrilho = 7;
-  });
-
-  brilhos.push(new Brilho(w / 2, w / 2, fSize));
   brilhosBtn[5].mousePressed(function () {
     qualBrilho = 5;
   });
@@ -1008,7 +997,7 @@ function showFirstMenu() {
   voltarIcon.position(0, 3);
   voltarIcon.attribute('href', '../Final.html');
   voltarIcon.parent(linkVoltar);
-
+  
   let guardarIcon = createElement('i');
   guardarIcon.addClass('fa fa-download');
   guardarIcon.position(w - 50, 3);
@@ -1021,10 +1010,6 @@ function showFirstMenu() {
   guardar.style('border', 'none');
   guardar.style('background-color', 'transparent');
 
-  linkVoltar.show();
-  linkVoltar.removeAttribute('disabled');
-  voltarIcon.show();
-  voltarIcon.removeAttribute('disabled');
 
   button[0] = createButton('Fundo');
   button[1] = createButton('Moldura');
@@ -1091,10 +1076,11 @@ function showFirstMenu() {
 }
 
 function hideFirstMenu() {
-  linkVoltar.hide();
-  linkVoltar.attribute('disabled', '');
-  voltarIcon.hide();
-  voltarIcon.attribute('disabled', '');
+  let linkVoltar = createA('../Final.html', '');
+  let voltarIcon = createElement('i');
+  
+  linkVoltar.remove();
+  voltarIcon.remove();
 
   for (var i = 0; i < 6; i++) {
     button[i].hide();
