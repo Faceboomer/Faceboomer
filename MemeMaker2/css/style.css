@@ -51,6 +51,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 35px;
   box-shadow: 1px 1px 10px #d8b7ff;
 }
 
@@ -58,8 +59,8 @@ header {
   height: 100vh;
   width: 100vw;
   position: absolute;
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
   z-index: -100;
 }
 
@@ -83,11 +84,11 @@ i {
 }
 
 .fa-arrow-left {
-  margin-left: 1vh;
+  /* margin-left: 1vh; */
 }
 
 .fa-share-alt {
-  margin-right: 1vh;
+  /* margin-right: 1vh; */
 }
 
 .elementos {

@@ -1,5 +1,5 @@
 /* Trabalho realizado por
-Catarina Lobão, Giuliana Almasio, Mariana Simões, Marta Sousa
+Catarina Lobão, Francisca Marques, Giuliana Almasio, Mariana Simões, Marta Sousa
 FBAUP 2020/2021*/
 
 /* legenda: "----" é preciso melhorar pequenas coisas
@@ -50,7 +50,7 @@ CAPÍTULOS
 
 //////////////////////////////////
 let footer = 35;
-let header = 56.8;
+let header = 35;
 let w = window.innerWidth;
 let h = window.innerHeight;
 
@@ -228,20 +228,45 @@ function setup() {
   createButtons();
   showFirstMenu();
 
+  // alerta
+  //icone fechar alerta
+  let divAlerta = createDiv('');
+  divAlerta.size(w - 50, 130);
+  divAlerta.position(30, w / 3);
+  divAlerta.style('font-family', 'Open Sans');
+  divAlerta.style('font-size', '12px');
+  divAlerta.style('border-radius', '15px');
+  divAlerta.style('box-shadow', '1px 1px 10px #d8b7ff');
+  divAlerta.style('color', '#af7dfd');
+  divAlerta.style('background-color', 'rgba(255, 255, 255, 0.8)');
+  divAlerta.style('border', 'none');
+  divAlerta.style('text-align', 'center');
+
+  let iconFechar = createElement('i');
+  iconFechar.addClass('fa fa-times');
+  iconFechar.style('float', 'right');
+
+  let pAlerta = createP('Bem vindo/a! O Boa Noite ajuda-te a gerar as tuas próprias imagens para fazeres, finalmente, parte da comunidade Faceboomer! Toca em qualquer botão para começar a personalizar.');
+  pAlerta.style('margin-top', '65px');
+
+  iconFechar.parent(divAlerta);
+  pAlerta.parent(divAlerta);
+
+  iconFechar.mousePressed(function () {
+    divAlerta.remove();
+  });
+
   fonttt = font5;
   textFont(fonttt);
   textos.push(new Texto(-100, -1000, tSize, 'Escreve aqui!'));
 
-  let icon = createElement('i');
-  icon.addClass('fa fa-address-book');
-  icon.position(100, 100);
 }
 
 //////////////////////////////////
 function draw() {
   /*----- colocar fundos dos menus aqui  */
   //// LAYER 1: FUNDO
-  imageMode(CENTER);
+  imageMode(CORNER);
   background(bg);
   //// LAYER 2: MOLDURAS
   switch (moldura) {
@@ -576,7 +601,18 @@ function brilho() {
     qualBrilho = 7;
   });
 
-  brilhos.push(new Forma(w / 2, w / 2, fSize));
+  brilhos.push(new Brilho(w / 2, w / 2, fSize));
+  brilhosBtn[5].mousePressed(function () {
+    qualBrilho = 5;
+  });
+  brilhosBtn[6].mousePressed(function () {
+    qualBrilho = 6;
+  });
+  brilhosBtn[7].mousePressed(function () {
+    qualBrilho = 7;
+  });
+
+  brilhos.push(new Brilho(w / 2, w / 2, fSize));
 
   // ao clicar cancelar
   bMenu[0].mousePressed(function () {
@@ -642,6 +678,7 @@ function showFundoMenu() {
     bgBtn[i].show();
     bgBtn[i].removeAttribute('disabled');
   }
+
 }
 
 function hideFundoMenu() {
@@ -653,6 +690,7 @@ function hideFundoMenu() {
     bgBtn[i].hide();
     bgBtn[i].attribute('disabled', '');
   }
+
 }
 
 ////////* MOLDURA MENU */
@@ -963,7 +1001,30 @@ function hideBottomMenu() {
 
 /* MENU INICIAL */
 function showFirstMenu() {
-  /* mostrar SETA */
+  //// botões gerais e alerta
+  let linkVoltar = createA('../Final.html', '');
+  let voltarIcon = createElement('i');
+  voltarIcon.addClass('fa fa-arrow-left');
+  voltarIcon.position(0, 3);
+  voltarIcon.attribute('href', '../Final.html');
+  voltarIcon.parent(linkVoltar);
+
+  let guardarIcon = createElement('i');
+  guardarIcon.addClass('fa fa-download');
+  guardarIcon.position(w - 50, 3);
+  let guardar = createButton('');
+  guardar.position(w - 38, 13);
+  guardar.size(20, 20);
+  guardar.mousePressed(function () {
+    saveCanvas(c, 'Faceboomer', 'jpg');
+  });
+  guardar.style('border', 'none');
+  guardar.style('background-color', 'transparent');
+
+  linkVoltar.show();
+  linkVoltar.removeAttribute('disabled');
+  voltarIcon.show();
+  voltarIcon.removeAttribute('disabled');
 
   button[0] = createButton('Fundo');
   button[1] = createButton('Moldura');
@@ -982,7 +1043,7 @@ function showFirstMenu() {
     button[i].style('background-color', 'rgba(255, 255, 255, 0.8)');
     button[i].style('border', 'none');
 
-    ////////* ------ MELHORAR MARGENS */
+    var margem = (w - 60 * 3) / 2;
     if (i < 3) {
       button[i].position(75 * i + 50, h - 160);
     } else {
@@ -1030,6 +1091,11 @@ function showFirstMenu() {
 }
 
 function hideFirstMenu() {
+  linkVoltar.hide();
+  linkVoltar.attribute('disabled', '');
+  voltarIcon.hide();
+  voltarIcon.attribute('disabled', '');
+
   for (var i = 0; i < 6; i++) {
     button[i].hide();
     button[i].attribute('disabled', '');
