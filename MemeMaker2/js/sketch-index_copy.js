@@ -96,6 +96,8 @@ let textos = []; // objeto texto
 // posição dos botoes
 btnPosYS = 420;
 btnPosXS = 45;
+// Tamanho e Stickers
+let boanoiteBtn; // sticker boa noite
 let tamanhoBtnS; // barra menu
 let stickerBtnS;
 var sizeSliderS;
@@ -767,6 +769,8 @@ function showStickerMenu() {
   tamanhoBtnS.removeAttribute('disabled');
   stickerBtnS.show();
   stickerBtnS.removeAttribute('disabled');
+  boanoiteBtn.show();
+  boanoiteBtn.removeAttribute('disabled');
 
   for (var i = 0; i < 8; i++) {
     stickersBtn[i].show();
@@ -1241,6 +1245,7 @@ function createButtons() {
 
   // STICKERS
   margem = (windowWidth - (btnPosXS * 4 + 8)) / 2;
+
   // BOTOES slider stickers
   stickerBtnS = createButton("Stickers");
   stickerBtnS.position(0, w + 57, 'fixed');
@@ -1268,6 +1273,19 @@ function createButtons() {
   sizeSliderS = createSlider(60, 200, 60);
   sizeSliderS.size(200, 20);
   sizeSliderS.position((windowWidth - 200) / 2, windowWidth + 130);
+
+
+  //BOA NOITE botão
+  boanoiteBtn = createButton("Boa noite");
+  boanoiteBtn.position((windowWidth / 3) * 2, windowWidth + 57, 'fixed');
+  boanoiteBtn.size(windowWidth / 3, 35);
+  boanoiteBtn.style("font-family", "Open Sans");
+  boanoiteBtn.style("font-size", "12px");
+  boanoiteBtn.style("color", "#af7dfd");
+  boanoiteBtn.style('background-color', 'transparent');
+  boanoiteBtn.style('border', 'solid 0.5px #af7dfd');
+  boanoiteBtn.hide();
+  boanoiteBtn.attribute('disable', '');
 
   // esconder (aparece quando se clica no menu)
   sizeSliderS.hide();
