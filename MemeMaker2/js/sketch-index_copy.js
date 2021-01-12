@@ -230,6 +230,9 @@ function setup() {
   textFont(fonttt);
   textos.push(new Texto(-100, -1000, tSize, 'Escreve aqui!'));
 
+  let icon = createElement('i');
+  icon.addClass('fa fa-address-book');
+  icon.position(100, 100);
 }
 
 //////////////////////////////////
