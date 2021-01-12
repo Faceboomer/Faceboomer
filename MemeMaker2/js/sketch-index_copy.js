@@ -831,6 +831,7 @@ function hideBottomMenu() {
 
 /* MENU INICIAL */
 function showFirstMenu() {
+  /* mostrar SETA */
 
   button[0] = createButton('Fundo');
   button[1] = createButton('Moldura');
@@ -862,6 +863,7 @@ function showFirstMenu() {
     showBottomMenu();
     hideFirstMenu();
     fundo();
+    /* esconder SETA */
   });
   button[1].mousePressed(function () { // molduras
     showMolduraMenu();
