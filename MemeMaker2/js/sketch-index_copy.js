@@ -15,6 +15,20 @@ ORDEM DOS LAYERS:
 6. FORMAS
 */
 
+/*
+CAPÍTULOS
+1. preload()
+2. setup()
+3. draw()
+4. funções específicas aos layers
+5. show/hide subMenus
+7. show/hide bottom menu
+8. show/hide first menu
+9. mousePressed()
+10. mouseReleased()
+11. createButtons()
+*/
+
 // PARA ADICIONAR NOVOS LAYERS, PASSAR PELOS SEGUINTES PASSOS:
 // 1. DECLARAR VARIÁVEIS (no início)
 // 2. LOAD DE ASSETS (em "preload()" )
@@ -82,33 +96,37 @@ let textos = []; // objeto texto
 // posição dos botoes
 btnPosYS = 420;
 btnPosXS = 45;
-// Tamanho e Stickers
 let tamanhoBtnS; // barra menu
 let stickerBtnS;
 var sizeSliderS;
-// BOTOES fundos (lista)
-let stickersBtn = [];
-// lista de imagens
-let stickers = [];
+let sSize; // variavel tamanho
+let stickersBtn = []; // lista botoes
+let stickersImg = []; // lista de imagens
+let qualSticker = 8;
+let stickers = [] // lista de objetos sticker
 
 /* DECLARAR BRILHOS */
-// Cor e Tamanho
-let brilhoBtnB;
+let brilhoBtnB; // menu barra
 let tamanhoBtnB;
 var sizeSliderB;
-// BOTOES fundos (lista)
-brilhosBtn = [];
-// lista de imagens
-let brilhos = [];
+let bSize; // variavel tamanho brilho
+brilhosBtn = []; // lista botoes
+let brilhosImg = []; // lista de imagens
+let qualBrilho = 8;
+let brilhos = []; // lista de objetos brilho
 
 /* DECLARAR FORMAS */
-let formasBtn = []; // lista de botões
-let formas = []; // lista de formas
 let formaBtnF;
 let tamanhoBtnF;
 var sizeSliderF;
+var sizeSliderF;
+let fSize; // variavel tamanho brilho
+let formasBtn = []; // lista de botões
+let formasImg = []; // lista de imagens
+let qualForma = 8;
+let formas = []; // lista de objetos brilho
 
-// load de ficheiros
+/* LOAD DE FICHEIROS */
 function preload() {
   backgroundFiles = [ // load fundos
     'inverno2.jpg',
@@ -164,7 +182,7 @@ function preload() {
     'sticker8.png',
   ];
   for (let file of stickersFiles) {
-    stickers.push(loadImage('data/stickers/' + file));
+    stickersImg.push(loadImage('data/stickers/' + file));
   }
 
   brilhosFiles = [
@@ -179,7 +197,7 @@ function preload() {
 
   ];
   for (let file of brilhosFiles) {
-    brilhos.push(loadImage('data/brilho/' + file));
+    brilhosImg.push(loadImage('data/brilho/' + file));
   }
 
   formasFiles = [
@@ -193,7 +211,7 @@ function preload() {
     'forma8.png',
   ];
   for (let file of formasFiles) {
-    formas.push(loadImage('data/formas/' + file));
+    formasImg.push(loadImage('data/formas/' + file));
   }
 }
 
@@ -211,14 +229,14 @@ function setup() {
   fonttt = font5;
   textFont(fonttt);
   textos.push(new Texto(-100, -1000, tSize, 'Escreve aqui!'));
+
 }
-
-
 
 //////////////////////////////////
 function draw() {
   /*----- colocar fundos dos menus aqui  */
-  //// LAYER 1: FUNDO !!! arranjar
+  //// LAYER 1: FUNDO
+  imageMode(CENTER);
   background(bg);
   //// LAYER 2: MOLDURAS
   switch (moldura) {
@@ -257,13 +275,53 @@ function draw() {
   let escrito = textbox.value(); // o que se escreve
   // UPDATE: texto, tamanho, cor, font
   textos[textos.length - 1].updateText(escrito, tSize, Tc, fonttt);
-  // UPDATE POSIÇÃO
+  // update posição
   textos[textos.length - 1].update(); // update drag
-  // MOSTRAR TODOS OS TEXTOS
+  // mostrar todos
   for (let t of textos) {
     t.show(); // display + aplicar tamanho
   }
 
+  //// LAYER 4: STICKERS
+  sSize = sizeSliderS.value();
+  if (stickers.length > 0) {
+    // update posição do último
+    stickers[stickers.length - 1].update();
+    // update tamanho / escolha do último
+    stickers[stickers.length - 1].updateSize(sSize, qualSticker);
+  }
+  // mostrar todos
+  for (let s of stickers) {
+    s.show();
+  }
+
+  //// LAYER 5: BRILHOS
+  bSize = sizeSliderB.value();
+
+  if (brilhos.length > 0) {
+    // update posição do último
+    brilhos[brilhos.length - 1].update();
+    // update tamanho / escolha do último
+    brilhos[brilhos.length - 1].updateSize(bSize, qualBrilho);
+  }
+  // mostrar todos
+  for (let b of brilhos) {
+    b.show();
+  }
+
+  //// LAYER 6: FORMAS
+  fSize = sizeSliderF.value();
+
+  if (formas.length > 0) {
+    // update posição do último
+    formas[formas.length - 1].update();
+    // update tamanho / escolha do último
+    formas[formas.length - 1].updateSize(fSize, qualForma);
+  }
+  // mostrar todos
+  for (let f of formas) {
+    f.show();
+  }
 
   ////* BARRA MENU */
   // está em draw para ser redesenhado por cima dos objetos do canvas
@@ -346,7 +404,9 @@ function fundo() {
     bg = '#ffd12c';
   });
 
-} function moldura() {
+}
+////////* ACTIONS MOLDURA */
+function moldura() {
   // funções dos botoes para mudar a imagem
   molduraBtn[0].mousePressed(function () {
     moldura = 0;
@@ -379,7 +439,6 @@ function fundo() {
     showFirstMenu();
   });
 }
-
 ////////* ACTIONS TEXTO */
 function texto() {
   textbox.value('Escreve aqui!');
@@ -436,68 +495,131 @@ function texto() {
 
   // ao clicar cancelar
   bMenu[0].mousePressed(function () {
-    apagarTexto();
+    textos.pop();
     showFirstMenu();
     hideTextoMenu();
     hideBottomMenu();
   });
 
-} function sticker() {
+}
+////////* ACTIONS STICKER */
+function sticker() {
+  qualSticker = 0;
 
   stickersBtn[0].mousePressed(function () {
-    image(stickers[0], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 0;
   });
   stickersBtn[1].mousePressed(function () {
-    image(stickers[1], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 1;
   });
   stickersBtn[2].mousePressed(function () {
-    image(stickers[2], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 2;
   });
   stickersBtn[3].mousePressed(function () {
-    image(stickers[3], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 3;
   });
   stickersBtn[4].mousePressed(function () {
-    image(stickers[4], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 4;
   });
   stickersBtn[5].mousePressed(function () {
-    image(stickers[5], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 5;
   });
   stickersBtn[6].mousePressed(function () {
-    image(stickers[6], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 6;
   });
   stickersBtn[7].mousePressed(function () {
-    image(stickers[7], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+    qualBrilho = 7;
   });
 
-} function brilho() {
+  stickers.push(new Sticker(w / 2, w / 2, bSize));
+
+  // ao clicar cancelar
+  bMenu[0].mousePressed(function () {
+    stickers.pop();
+    showFirstMenu();
+    hideStickerMenu();
+    hideBottomMenu();
+  });
+
+}
+////////* ACTIONS BRILHO */
+function brilho() {
+  qualBrilho = 1;
 
   brilhosBtn[0].mousePressed(function () {
-    image(brilhos[0], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 0;
   });
   brilhosBtn[1].mousePressed(function () {
-    image(brilhos[1], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 1;
   });
   brilhosBtn[2].mousePressed(function () {
-    image(brilhos[2], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 2;
   });
   brilhosBtn[3].mousePressed(function () {
-    image(brilhos[3], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 3;
   });
   brilhosBtn[4].mousePressed(function () {
-    image(brilhos[4], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 4;
   });
   brilhosBtn[5].mousePressed(function () {
-    image(brilhos[5], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 5;
   });
   brilhosBtn[6].mousePressed(function () {
-    image(brilhos[6], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 6;
   });
   brilhosBtn[7].mousePressed(function () {
-    image(brilhos[7], 0, 0 + header, windowWidth, windowWidth)
+    qualBrilho = 7;
   });
 
-} function forma() {
+  brilhos.push(new Forma(w / 2, w / 2, fSize));
 
+  // ao clicar cancelar
+  bMenu[0].mousePressed(function () {
+    brilhos.pop();;
+    showFirstMenu();
+    hideBrilhoMenu();
+    hideBottomMenu();
+  });
+
+}
+////////* ACTIONS FORMA */
+function forma() {
+  qualForma = 1;
+
+  formasBtn[0].mousePressed(function () {
+    qualForma = 0;
+  });
+  formasBtn[1].mousePressed(function () {
+    qualForma = 1;
+  });
+  formasBtn[2].mousePressed(function () {
+    qualForma = 2;
+  });
+  formasBtn[3].mousePressed(function () {
+    qualForma = 3;
+  });
+  formasBtn[4].mousePressed(function () {
+    qualForma = 4;
+  });
+  formasBtn[5].mousePressed(function () {
+    qualForma = 5;
+  });
+  formasBtn[6].mousePressed(function () {
+    qualForma = 6;
+  });
+  formasBtn[7].mousePressed(function () {
+    qualForma = 7;
+  });
+
+  formas.push(new Forma(w / 2, w / 2, fSize));
+
+  // ao clicar cancelar
+  bMenu[0].mousePressed(function () {
+    formas.pop();;
+    showFirstMenu();
+    hideFormaMenu();
+    hideBottomMenu();
+  });
 }
 
 //////////////////////////////////
@@ -635,6 +757,7 @@ function hideTextoMenu() {
   }
 }
 
+////////* STICKER MENU */
 function showStickerMenu() {
   // MENU MOSTRAR STICKERS/ESCONDER SLIDER
   tamanhoBtnS.show();
@@ -680,6 +803,7 @@ function hideStickerMenu() {
   sizeSliderS.hide();
 }
 
+////////* BRILHO MENU */
 function showBrilhoMenu() {
   // MENU MOSTRAR STICKERS/ESCONDER SLIDER
   tamanhoBtnB.show();
@@ -727,6 +851,7 @@ function hideBrilhoMenu() {
 
 }
 
+////////* FORMA MENU */
 function showFormaMenu() {
   // MENU MOSTRAR STICKERS/ESCONDER SLIDER
   tamanhoBtnF.show();
@@ -889,7 +1014,7 @@ function showFirstMenu() {
     hideFirstMenu();
     brilho();
   });
-  button[5].mousePressed(function() {
+  button[5].mousePressed(function () {
     showFormaMenu();
     showBottomMenu();
     hideFirstMenu();
@@ -910,19 +1035,31 @@ function mousePressed() {
   for (let t of textos) {
     t.pressed();
   }
+  for (let b of brilhos) {
+    b.pressed();
+  }
+  for (let s of stickers) {
+    s.pressed();
+  }
+  for (let f of formas) {
+    f.pressed();
+  }
 }
 
 function mouseReleased() {
   for (let t of textos) {
     t.released();
   }
+  for (let b of brilhos) {
+    b.released();
+  }
+  for (let s of stickers) {
+    s.released();
+  }
+  for (let f of formas) {
+    f.released();
+  }
 }
-
-// FUNÇÃO PARA APAGAR ÚLTIMOS OBJETOS
-function apagarTexto() {
-  textos.pop();
-}
-
 
 
 
@@ -1190,7 +1327,7 @@ function createButtons() {
   tamanhoBtnB.hide();
   tamanhoBtnB.attribute('disable', '');
 
-  sizeSliderB = createSlider(10, 100, 22);
+  sizeSliderB = createSlider(100, 1000, 200);
   sizeSliderB.size(200, 20);
   sizeSliderB.position((windowWidth - 200) / 2, windowWidth + 130);
   sizeSliderB.hide();
@@ -1249,13 +1386,13 @@ function createButtons() {
   tamanhoBtnF.hide();
   tamanhoBtnF.attribute('disable', '');
 
-   sizeSliderF = createSlider(10, 100, 22);
+  sizeSliderF = createSlider(70, 300, 22);
   sizeSliderF.size(200, 20);
   sizeSliderF.position((windowWidth - 200) / 2, windowWidth + 130);
   sizeSliderF.hide();
 
   // IMAGEM DE FUNDO
-  btnPosXS = btnPosXS-10;
+  btnPosXS = btnPosXS - 10;
   margem = (w - (btnPosXS * 4)) / 2;
   for (var i = 0; i < 8; i++) {
     formasBtn[i] = createButton('');
