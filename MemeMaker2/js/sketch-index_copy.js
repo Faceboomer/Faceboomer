@@ -32,7 +32,7 @@ ORDEM DOS LAYERS:
 // 6. COLOCAR FUNÇÕES NO BOTÃO INICIAL (em "showFirstMenu" )
 // show[botao]Menu(); showBottomMenu(); [layer]();
 
-// FAZER A FUNÇÃO LAYER
+// 7. FAZER A FUNÇÃO LAYER + a classe (outro ficheiro) se necessário
 
 
 //////////////////////////////////
