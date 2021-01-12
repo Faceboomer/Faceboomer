@@ -7,6 +7,14 @@ let headerS = 56.8;
 btnPosYS = 420;
 btnPosXS = 65;
 
+// Tamanho e Stickers
+let TEXTMENU = 0;
+let tamanhoBtnS;
+let stickerBtnS;
+
+// Slider
+var sizeSliderS;
+
 // cor de fundo
 r = 255; g = 255; b = 255; a = 255;
 
@@ -17,6 +25,7 @@ let bgBtnS = [];
 // lista de imagens
 let backgroundsS = [];
 
+//botões concluído e cancelar
 let buttonC;
 let buttonCA;
 
@@ -51,10 +60,39 @@ function setup() {
     // margem = (largura - largura de todos os botões) /2
     var margem = (windowWidth - (btnPosXS * 4 + 8)) / 2;
 
+    // BOTOES slider stickers
+    stickerBtnS = createButton("Stickers");
+    stickerBtnS.position(0, windowWidth, 'fixed');
+    stickerBtnS.size(windowWidth / 3, 35);
+    stickerBtnS.style("font-family", "Open Sans");
+    stickerBtnS.style("font-size", "12px");
+    stickerBtnS.style("color", "#af7dfd");
+    stickerBtnS.style('background-color', 'transparent');
+    stickerBtnS.style('border', 'solid 0.5px #af7dfd');
+
+    // BOTOES slider tamanho
+    tamanhoBtnS = createButton("Tamanho");
+    tamanhoBtnS.position(windowWidth / 3, windowWidth, 'fixed');
+    tamanhoBtnS.size(windowWidth / 3, 35);
+    tamanhoBtnS.style("font-family", "Open Sans");
+    tamanhoBtnS.style("font-size", "12px");
+    tamanhoBtnS.style("color", "#af7dfd");
+    tamanhoBtnS.style('background-color', 'transparent');
+    tamanhoBtnS.style('border', 'solid 0.5px #af7dfd');
+
+    /*  sizeSlider = createSlider(0, 500, 250); 
+      sizeSlider.position(30, 240); */
+
+    sizeSliderS = createSlider(60, 200, 60);
+    sizeSliderS.size(200, 20);
+    sizeSliderS.position((windowWidth - 200) / 2, windowWidth + 130);
+
+    // esconder (aparece quando se clica no menu)
+    sizeSliderS.hide();
+
     // IMAGEM DE FUNDO
     for (var i = 0; i < 4; i++) {
         bgBtnS[i] = createButton('');
-
         bgBtnS[i].position(btnPosXS * i + margem, btnPosYS + 170);
         bgBtnS[i].style('width', '60px');
         bgBtnS[i].style('height', '60px');
@@ -66,7 +104,6 @@ function setup() {
     // divido em 2 para estarem alinhados
     for (var i = 4; i < 8; i++) {
         bgBtnS[i] = createButton('');
-
         bgBtnS[i].position(btnPosXS * i + + margem - (btnPosXS * 4), btnPosYS + 235);
         bgBtnS[i].style('width', '60px');
         bgBtnS[i].style('height', '60px');
@@ -83,27 +120,28 @@ function setup() {
     bgBtnS[4].style('background-image', 'url("data/stickers/sticker5.png")');
     bgBtnS[5].style('background-image', 'url("data/stickers/sticker6.png")');
     bgBtnS[6].style('background-image', 'url("data/stickers/sticker7.png")');
-    bgBtnS[7].style('background-image', 'url("data/stickers/sticker8.png")');  
+    bgBtnS[7].style('background-image', 'url("data/stickers/sticker8.png")');
 
-  buttonCA = createButton("Cancelar");
-  buttonCA.size(width/2,footerS);
-  buttonCA.position(0,height-footerS);
-  buttonCA.style("font-family", "Open Sans");
-  buttonCA.style("font-size", "12px");
-  buttonCA.style('box-shadow', '1px 1px 10px #d8b7ff');
-  buttonCA.style("color", "#af7dfd");
-  buttonCA.style('background-color', 'rgba(255, 255, 255, 0.8)');
-  buttonCA.style('border', 'none');
+    buttonCA = createButton("Cancelar");
+    buttonCA.size(width / 2, footerS);
+    buttonCA.position(0, height - footerS);
+    buttonCA.style("font-family", "Open Sans");
+    buttonCA.style("font-size", "12px");
+    buttonCA.style('box-shadow', '1px 1px 10px #d8b7ff');
+    buttonCA.style("color", "#af7dfd");
+    buttonCA.style('background-color', 'rgba(255, 255, 255, 0.8)');
+    buttonCA.style('border', 'none');
 
-  buttonC = createButton("Concluído");
-  buttonC.size(width/2,footerS);
-  buttonC.position(width/2,height-footerS);
-  buttonC.style("font-family", "Open Sans");
-  buttonC.style("font-size", "12px");
-  buttonC.style('box-shadow', '1px 1px 10px #d8b7ff');
-  buttonC.style("color", "#af7dfd");
-  buttonC.style('background-color', 'rgba(255, 255, 255, 0.8)');
-  buttonC.style('border', 'none');
+    buttonC = createButton("Concluído");
+    buttonC.size(width / 2, footerS);
+    buttonC.position(width / 2, height - footerS);
+    buttonC.style("font-family", "Open Sans");
+    buttonC.style("font-size", "12px");
+    buttonC.style('box-shadow', '1px 1px 10px #d8b7ff');
+    buttonC.style("color", "#af7dfd");
+    buttonC.style('background-color', 'rgba(255, 255, 255, 0.8)');
+    buttonC.style('border', 'none');
+
 }
 
 function draw() {
@@ -119,43 +157,78 @@ function draw() {
     bgBtnS[6].mousePressed(showBg6);
     bgBtnS[7].mousePressed(showBg7);
 
+    clear();
+    image(backgroundsS[0], windowWidth / 2-30, windowWidth / 2);
+    new_size = sizeSliderS.value();
+    backgroundsS[0].resize(new_size, 0);
+
     // desenhar retangulo sólido
     noStroke();
     fill(r, g, b, a);
-    rect(0, 0+headerS, windowWidth, windowWidth);
- }
+    rect(0, 0 + headerS, windowWidth, windowWidth);
+
+    // MENU TAMANHO TEXTO
+    tamanhoBtnS.mousePressed(function () {
+        TEXTMENU = 0;
+
+        // esconder outros menus
+
+        for (var i = 0; i < 8; i++) {
+            bgBtnS[i].hide();
+            bgBtnS[i].attribute('disabled', '');
+        }
+        ///
+        sizeSliderS.show();
+    });
+
+    // MENU TAMANHO TEXTO
+    stickerBtnS.mousePressed(function () {
+        TEXTMENU = 1;
+
+        // esconder outros menus
+
+        for (var i = 0; i < 8; i++) {
+            bgBtnS[i].show();
+            bgBtnS[i].removeAttribute('disabled', '');
+        }
+        ///
+        sizeSliderS.hide();
+    });
+
+}
 
 function showBg0() {
+    clear();
     a = 0;
-    image(backgroundsS[0], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[0], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg1() {
     a = 0;
-    image(backgroundsS[1], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[1], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg2() {
     a = 0;
-    image(backgroundsS[2], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[2], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg3() {
     a = 0;
-    image(backgroundsS[3], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[3], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg4() {
     a = 0;
-    image(backgroundsS[4], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[4], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg5() {
     a = 0;
-    image(backgroundsS[5], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[5], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg6() {
     a = 0;
-    image(backgroundsS[6], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[6], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg7() {
     a = 0;
-    image(backgroundsS[7], 0, 0+headerS, windowWidth, windowWidth);
+    image(backgroundsS[7], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 
 function windowResized() {
