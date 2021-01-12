@@ -89,7 +89,9 @@ ul li input{
 }
 
 #final {
-    margin-top: 10vh;
+    width: 70%;
+    height: auto;
+    margin-top: 5vh;
     padding: 16px 32px;
     text-align: center;
     font-size: 15px;
@@ -106,4 +108,36 @@ main p#finalP, main p#finalP2{
     font-size: 12px !important;
     text-shadow: none !important;
     line-height: 11.5pt !important;
+}
+
+#MemeMaker{
+    width: 70%;
+    height: auto;
+    margin-top: 2vh;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    display:inline-block;
+    background-color:#F4EBFF; 
+    color: #7300ff; 
+    border: solid #7300ff 1px;
+    box-shadow: 1px 1px 10px #d8b7ff;
+    border-radius: 10px;
+}
+
+#Creditos{
+    width: 70%;
+    height: auto;
+    margin-top:2vh;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    display:inline-block;
+    background-color:#F4EBFF; 
+    color: #7300ff; 
+    border: solid #7300ff 1px;
+    box-shadow: 1px 1px 10px #d8b7ff;
+    border-radius: 10px;
 }
