@@ -1,8 +1,8 @@
 // INICIALIZAÇÃO
 // altura da footer
-let footer1 = 35;
+let footer = 35;
 // altura da header
-let header1 = 56.8;
+let header = 56.8;
 
 // posição dos botoes
 btnPosY = 420;
@@ -11,11 +11,11 @@ btnPosX = 65;
 
 // Cor e Tamanho
 let TEXTMENU = 0;
-let corBtn;
-let tamanhoBtn1;
+let corBtnB;
+let tamanhoBtnB;
 
 // Slider
-var sizeSlider;
+var sizeSliderB;
 
 // cor de fundo
 r = 255; g = 255; b = 255; a = 255;
@@ -185,7 +185,7 @@ function draw() {
     // desenhar retangulo sólido
 
     fill(r, g, b, a);
-    rect(0, 0 + header1, windowWidth, windowWidth);
+    rect(0, 0 + header, windowWidth, windowWidth);
 
     // MENU TAMANHO TEXTO
     tamanhoBtn1.mousePressed(function () {
@@ -256,35 +256,35 @@ function draw() {
 
 function showBg0() {
     a = 0;
-    image(backgrounds1[0], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[0], 0, 0 + header, windowWidth, windowWidth);
 }
 function showBg1() {
     a = 0;
-    image(backgrounds1[1], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[1], 0, 0 + header, windowWidth, windowWidth);
 }
 function showBg2() {
     a = 0;
-    image(backgrounds1[2], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[2], 0, 0 + header, windowWidth, windowWidth);
 }
 function showBg3() {
     a = 0;
-    image(backgrounds1[3], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[3], 0, 0 + header, windowWidth, windowWidth);
 }
 function showBg4() {
     a = 0;
-    image(backgrounds1[4], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[4], 0, 0 + header, windowWidth, windowWidth);
 }
 function showBg5() {
     a = 0;
-    image(backgrounds1[5], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[5], 0, 0 + header, windowWidth, windowWidth);
 }
 function showBg6() {
     a = 0;
-    image(backgrounds1[6], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[6], 0, 0 + header, windowWidth, windowWidth);
 }
 function showBg7() {
     a = 0;
-    image(backgrounds1[7], 0, 0 + header1, windowWidth, windowWidth);
+    image(backgrounds1[7], 0, 0 + header, windowWidth, windowWidth);
 }
 
 

@@ -19,11 +19,11 @@ var sizeSliderS;
 r = 255; g = 255; b = 255; a = 255;
 
 // BOTOES fundos (lista)
-let bgBtnS = [];
+let stickersBtn = [];
 
 // load das imagens
 // lista de imagens
-let backgroundsS = [];
+let stickers = [];
 
 //botões concluído e cancelar
 let buttonC;
@@ -43,7 +43,7 @@ function preload() {
 
     // "empurrar" cada ficheiro para a lista backgrounds
     for (let file of backgroundFilesS) {
-        backgroundsS.push(loadImage('data/stickers/' + file));
+        stickers.push(loadImage('data/stickers/' + file));
     }
 }
 
@@ -92,35 +92,35 @@ function setup() {
 
     // IMAGEM DE FUNDO
     for (var i = 0; i < 4; i++) {
-        bgBtnS[i] = createButton('');
-        bgBtnS[i].position(btnPosXS * i + margem, btnPosYS + 170);
-        bgBtnS[i].style('width', '60px');
-        bgBtnS[i].style('height', '60px');
-        bgBtnS[i].style('border', 'none');
-        bgBtnS[i].style('background-size', '60px 60px');
-        bgBtnS[i].style('background-repeat', 'no-repeat');
+        stickersBtn[i] = createButton('');
+        stickersBtn[i].position(btnPosXS * i + margem, btnPosYS + 170);
+        stickersBtn[i].style('width', '60px');
+        stickersBtn[i].style('height', '60px');
+        stickersBtn[i].style('border', 'none');
+        stickersBtn[i].style('background-size', '60px 60px');
+        stickersBtn[i].style('background-repeat', 'no-repeat');
     }
 
     // divido em 2 para estarem alinhados
     for (var i = 4; i < 8; i++) {
-        bgBtnS[i] = createButton('');
-        bgBtnS[i].position(btnPosXS * i + + margem - (btnPosXS * 4), btnPosYS + 235);
-        bgBtnS[i].style('width', '60px');
-        bgBtnS[i].style('height', '60px');
-        bgBtnS[i].style('border', 'none');
-        bgBtnS[i].style('background-size', '60px 60px');
-        bgBtnS[i].style('background-repeat', 'no-repeat');
+        stickersBtn[i] = createButton('');
+        stickersBtn[i].position(btnPosXS * i + + margem - (btnPosXS * 4), btnPosYS + 235);
+        stickersBtn[i].style('width', '60px');
+        stickersBtn[i].style('height', '60px');
+        stickersBtn[i].style('border', 'none');
+        stickersBtn[i].style('background-size', '60px 60px');
+        stickersBtn[i].style('background-repeat', 'no-repeat');
     }
 
     // colocar imagens de fundo nos botoes
-    bgBtnS[0].style('background-image', 'url("data/stickers/sticker1.png")');
-    bgBtnS[1].style('background-image', 'url("data/stickers/sticker2.png")');
-    bgBtnS[2].style('background-image', 'url("data/stickers/sticker3.png")');
-    bgBtnS[3].style('background-image', 'url("data/stickers/sticker4.png")');
-    bgBtnS[4].style('background-image', 'url("data/stickers/sticker5.png")');
-    bgBtnS[5].style('background-image', 'url("data/stickers/sticker6.png")');
-    bgBtnS[6].style('background-image', 'url("data/stickers/sticker7.png")');
-    bgBtnS[7].style('background-image', 'url("data/stickers/sticker8.png")');
+    stickersBtn[0].style('background-image', 'url("data/stickers/sticker1.png")');
+    stickersBtn[1].style('background-image', 'url("data/stickers/sticker2.png")');
+    stickersBtn[2].style('background-image', 'url("data/stickers/sticker3.png")');
+    stickersBtn[3].style('background-image', 'url("data/stickers/sticker4.png")');
+    stickersBtn[4].style('background-image', 'url("data/stickers/sticker5.png")');
+    stickersBtn[5].style('background-image', 'url("data/stickers/sticker6.png")');
+    stickersBtn[6].style('background-image', 'url("data/stickers/sticker7.png")');
+    stickersBtn[7].style('background-image', 'url("data/stickers/sticker8.png")');
 
     buttonCA = createButton("Cancelar");
     buttonCA.size(width / 2, footerS);
@@ -148,19 +148,19 @@ function draw() {
     background(0, 0, 0, 0);
 
     // funções dos botoes para mudar a imagem
-    bgBtnS[0].mousePressed(showBg0);
-    bgBtnS[1].mousePressed(showBg1);
-    bgBtnS[2].mousePressed(showBg2);
-    bgBtnS[3].mousePressed(showBg3);
-    bgBtnS[4].mousePressed(showBg4);
-    bgBtnS[5].mousePressed(showBg5);
-    bgBtnS[6].mousePressed(showBg6);
-    bgBtnS[7].mousePressed(showBg7);
+    stickersBtn[0].mousePressed(showBg0);
+    stickersBtn[1].mousePressed(showBg1);
+    stickersBtn[2].mousePressed(showBg2);
+    stickersBtn[3].mousePressed(showBg3);
+    stickersBtn[4].mousePressed(showBg4);
+    stickersBtn[5].mousePressed(showBg5);
+    stickersBtn[6].mousePressed(showBg6);
+    stickersBtn[7].mousePressed(showBg7);
 
     clear();
-    image(backgroundsS[0], windowWidth / 2-30, windowWidth / 2);
+    image(stickers[0], windowWidth / 2-30, windowWidth / 2);
     new_size = sizeSliderS.value();
-    backgroundsS[0].resize(new_size, 0);
+    stickers[0].resize(new_size, 0);
 
     // desenhar retangulo sólido
     noStroke();
@@ -174,8 +174,8 @@ function draw() {
         // esconder outros menus
 
         for (var i = 0; i < 8; i++) {
-            bgBtnS[i].hide();
-            bgBtnS[i].attribute('disabled', '');
+            stickersBtn[i].hide();
+            stickersBtn[i].attribute('disabled', '');
         }
         ///
         sizeSliderS.show();
@@ -188,8 +188,8 @@ function draw() {
         // esconder outros menus
 
         for (var i = 0; i < 8; i++) {
-            bgBtnS[i].show();
-            bgBtnS[i].removeAttribute('disabled', '');
+            stickersBtn[i].show();
+            stickersBtn[i].removeAttribute('disabled', '');
         }
         ///
         sizeSliderS.hide();
@@ -200,35 +200,35 @@ function draw() {
 function showBg0() {
     clear();
     a = 0;
-    image(backgroundsS[0], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[0], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg1() {
     a = 0;
-    image(backgroundsS[1], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[1], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg2() {
     a = 0;
-    image(backgroundsS[2], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[2], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg3() {
     a = 0;
-    image(backgroundsS[3], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[3], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg4() {
     a = 0;
-    image(backgroundsS[4], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[4], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg5() {
     a = 0;
-    image(backgroundsS[5], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[5], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg6() {
     a = 0;
-    image(backgroundsS[6], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[6], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 function showBg7() {
     a = 0;
-    image(backgroundsS[7], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
+    image(stickers[7], 0, 0 + headerS, windowWidth / 2, windowWidth / 2);
 }
 
 function windowResized() {

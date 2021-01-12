@@ -27,8 +27,7 @@ ORDEM DOS LAYERS:
 // 4.2 FAZER FUNÇÃO "hide[Layer]Menu"
 // 4.2 .hide() os botoes (em "hide[Layer]Menu" )
 
-// 5. descomentar "hide[Layer]Menu()" (em "showBottomMenu")
-
+// 5. descomentar "hide[Layer]Menu()" (em "showBottomMenu
 // 6. COLOCAR FUNÇÕES NO BOTÃO INICIAL (em "showFirstMenu" )
 // show[botao]Menu(); showBottomMenu(); [layer]();
 
@@ -79,6 +78,36 @@ let tSize = 22; // tamanho texto
 let textbox; // onde se escreve
 let textos = []; // objeto texto
 
+/* DECLARAR STICKERS */
+// posição dos botoes
+btnPosYS = 420;
+btnPosXS = 45;
+// Tamanho e Stickers
+let tamanhoBtnS; // barra menu
+let stickerBtnS;
+var sizeSliderS;
+// BOTOES fundos (lista)
+let stickersBtn = [];
+// lista de imagens
+let stickers = [];
+
+/* DECLARAR BRILHOS */
+// Cor e Tamanho
+let brilhoBtnB;
+let tamanhoBtnB;
+var sizeSliderB;
+// BOTOES fundos (lista)
+brilhosBtn = [];
+// lista de imagens
+let brilhos = [];
+
+/* DECLARAR FORMAS */
+let formasBtn = []; // lista de botões
+let formas = []; // lista de formas
+let formaBtnF;
+let tamanhoBtnF;
+var sizeSliderF;
+
 // load de ficheiros
 function preload() {
   backgroundFiles = [ // load fundos
@@ -123,6 +152,49 @@ function preload() {
   font3 = loadFont('data/fonts/HerrVonMuellerhoff-Regular.ttf');
   font4 = loadFont('data/fonts/Meddon-Regular.ttf');
   font5 = loadFont('data/fonts/OpenSans-Bold.ttf');
+
+  stickersFiles = [
+    'sticker1.png',
+    'sticker2.png',
+    'sticker3.png',
+    'sticker4.png',
+    'sticker5.png',
+    'sticker6.png',
+    'sticker7.png',
+    'sticker8.png',
+  ];
+  for (let file of stickersFiles) {
+    stickers.push(loadImage('data/stickers/' + file));
+  }
+
+  brilhosFiles = [
+    'brilho.png',
+    'brilho1.png',
+    'brilho2.png',
+    'brilho2.png',
+    'brilho4.png',
+    'brilho5.png',
+    'brilho6.png',
+    'brilho7.png',
+
+  ];
+  for (let file of brilhosFiles) {
+    brilhos.push(loadImage('data/brilho/' + file));
+  }
+
+  formasFiles = [
+    'forma1.png',
+    'forma2.png',
+    'forma3.png',
+    'forma4.png',
+    'forma5.png',
+    'forma6.png',
+    'forma7.png',
+    'forma8.png',
+  ];
+  for (let file of formasFiles) {
+    formas.push(loadImage('data/formas/' + file));
+  }
 }
 
 //////////////////////////////////
@@ -300,7 +372,7 @@ function fundo() {
   molduraBtn[7].mousePressed(function () {
     moldura = 7;
   });
-  bMenu[0].mousePressed(function() {
+  bMenu[0].mousePressed(function () {
     moldura = 8;
     hideMolduraMenu();
     hideBottomMenu();
@@ -370,11 +442,61 @@ function texto() {
     hideBottomMenu();
   });
 
-} function stickers() {
+} function sticker() {
+
+  stickersBtn[0].mousePressed(function () {
+    image(stickers[0], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
+  stickersBtn[1].mousePressed(function () {
+    image(stickers[1], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
+  stickersBtn[2].mousePressed(function () {
+    image(stickers[2], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
+  stickersBtn[3].mousePressed(function () {
+    image(stickers[3], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
+  stickersBtn[4].mousePressed(function () {
+    image(stickers[4], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
+  stickersBtn[5].mousePressed(function () {
+    image(stickers[5], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
+  stickersBtn[6].mousePressed(function () {
+    image(stickers[6], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
+  stickersBtn[7].mousePressed(function () {
+    image(stickers[7], 0, 0 + header, windowWidth / 2, windowWidth / 2);
+  });
 
 } function brilho() {
 
-} function formas() {
+  brilhosBtn[0].mousePressed(function () {
+    image(brilhos[0], 0, 0 + header, windowWidth, windowWidth)
+  });
+  brilhosBtn[1].mousePressed(function () {
+    image(brilhos[1], 0, 0 + header, windowWidth, windowWidth)
+  });
+  brilhosBtn[2].mousePressed(function () {
+    image(brilhos[2], 0, 0 + header, windowWidth, windowWidth)
+  });
+  brilhosBtn[3].mousePressed(function () {
+    image(brilhos[3], 0, 0 + header, windowWidth, windowWidth)
+  });
+  brilhosBtn[4].mousePressed(function () {
+    image(brilhos[4], 0, 0 + header, windowWidth, windowWidth)
+  });
+  brilhosBtn[5].mousePressed(function () {
+    image(brilhos[5], 0, 0 + header, windowWidth, windowWidth)
+  });
+  brilhosBtn[6].mousePressed(function () {
+    image(brilhos[6], 0, 0 + header, windowWidth, windowWidth)
+  });
+  brilhosBtn[7].mousePressed(function () {
+    image(brilhos[7], 0, 0 + header, windowWidth, windowWidth)
+  });
+
+} function forma() {
 
 }
 
@@ -513,6 +635,145 @@ function hideTextoMenu() {
   }
 }
 
+function showStickerMenu() {
+  // MENU MOSTRAR STICKERS/ESCONDER SLIDER
+  tamanhoBtnS.show();
+  tamanhoBtnS.removeAttribute('disabled');
+  stickerBtnS.show();
+  stickerBtnS.removeAttribute('disabled');
+
+  for (var i = 0; i < 8; i++) {
+    stickersBtn[i].show();
+    stickersBtn[i].removeAttribute('disabled');
+  }
+  sizeSliderS.hide();
+
+  stickerBtnS.mousePressed(function () {
+    for (var i = 0; i < 8; i++) {
+      stickersBtn[i].show();
+      stickersBtn[i].removeAttribute('disabled');
+    }
+    sizeSliderS.hide();
+  });
+
+  // MENU ESCONDER STICKERS/MOSTRAR SLIDER
+  tamanhoBtnS.mousePressed(function () {
+    // esconder outros menus
+    for (var i = 0; i < 8; i++) {
+      stickersBtn[i].hide();
+      stickersBtn[i].attribute('disabled', '');
+    }
+    sizeSliderS.show();
+  });
+}
+
+function hideStickerMenu() {
+  tamanhoBtnS.hide();
+  tamanhoBtnS.attribute('disabled', '');
+  stickerBtnS.hide();
+  stickerBtnS.attribute('disabled');
+
+  for (var i = 0; i < 8; i++) {
+    stickersBtn[i].hide();
+    stickersBtn[i].attribute('disabled', '');
+  }
+  sizeSliderS.hide();
+}
+
+function showBrilhoMenu() {
+  // MENU MOSTRAR STICKERS/ESCONDER SLIDER
+  tamanhoBtnB.show();
+  tamanhoBtnB.removeAttribute('disabled');
+  brilhoBtnB.show();
+  brilhoBtnB.removeAttribute('disabled');
+
+  for (var i = 0; i < 8; i++) {
+    brilhosBtn[i].show();
+    brilhosBtn[i].removeAttribute('disabled');
+  }
+  sizeSliderB.hide();
+
+  brilhoBtnB.mousePressed(function () {
+    for (var i = 0; i < 8; i++) {
+      brilhosBtn[i].show();
+      brilhosBtn[i].removeAttribute('disabled');
+    }
+    sizeSliderB.hide();
+  });
+
+  // MENU ESCONDER STICKERS/MOSTRAR SLIDER
+  tamanhoBtnB.mousePressed(function () {
+    // esconder outros menus
+    for (var i = 0; i < 8; i++) {
+      brilhosBtn[i].hide();
+      brilhosBtn[i].attribute('disabled', '');
+    }
+    sizeSliderB.show();
+  });
+}
+
+function hideBrilhoMenu() {
+
+  tamanhoBtnB.hide();
+  tamanhoBtnB.attribute('disabled', '');
+  brilhoBtnB.hide();
+  brilhoBtnB.attribute('disabled');
+
+  for (var i = 0; i < 8; i++) {
+    brilhosBtn[i].hide();
+    brilhosBtn[i].attribute('disabled', '');
+  }
+  sizeSliderB.hide();
+
+}
+
+function showFormaMenu() {
+  // MENU MOSTRAR STICKERS/ESCONDER SLIDER
+  tamanhoBtnF.show();
+  tamanhoBtnF.removeAttribute('disabled');
+  formaBtnF.show();
+  formaBtnF.removeAttribute('disabled');
+
+  for (var i = 0; i < 8; i++) {
+    formasBtn[i].show();
+    formasBtn[i].removeAttribute('disabled');
+  }
+  sizeSliderF.hide();
+
+  formaBtnF.mousePressed(function () {
+    for (var i = 0; i < 8; i++) {
+      formasBtn[i].show();
+      formasBtn[i].removeAttribute('disabled');
+    }
+    sizeSliderF.hide();
+  });
+
+  // MENU ESCONDER STICKERS/MOSTRAR SLIDER
+  tamanhoBtnF.mousePressed(function () {
+    // esconder outros menus
+    for (var i = 0; i < 8; i++) {
+      formasBtn[i].hide();
+      formasBtn[i].attribute('disabled', '');
+    }
+    sizeSliderF.show();
+  });
+}
+
+function hideFormaMenu() {
+
+  tamanhoBtnF.hide();
+  tamanhoBtnF.attribute('disabled', '');
+  formaBtnF.hide();
+  formaBtnF.attribute('disabled');
+
+  for (var i = 0; i < 8; i++) {
+    formasBtn[i].hide();
+    formasBtn[i].attribute('disabled', '');
+  }
+  sizeSliderF.hide();
+
+}
+
 //////////////////////* NAV MENUS */
 /* BOTTOM MENU */
 function showBottomMenu() {
@@ -544,9 +805,9 @@ function showBottomMenu() {
     hideFundoMenu();
     hideTextoMenu();
     hideMolduraMenu();
-    // hideStickerMenu();
-    // hideFormaMenu();
-    // hideBrilhoMenu();
+    hideStickerMenu();
+    hideBrilhoMenu();
+    hideFormaMenu();
     showFirstMenu();
   });
   bMenu[1].mousePressed(function () {
@@ -554,9 +815,9 @@ function showBottomMenu() {
     hideFundoMenu();
     hideTextoMenu();
     hideMolduraMenu();
-    // hideStickerMenu();
-    // hideFormaMenu();
-    // hideBrilhoMenu();
+    hideStickerMenu();
+    hideBrilhoMenu();
+    hideFormaMenu();
     showFirstMenu();
   });
 }
@@ -614,9 +875,24 @@ function showFirstMenu() {
     hideFirstMenu();
     texto();
   });
-  button[3].mousePressed(stickers);
-  button[4].mousePressed(brilho);
-  button[5].mousePressed(formas);
+  button[3].mousePressed(function () { // stickers
+    showStickerMenu();
+    showBottomMenu();
+    hideFirstMenu();
+    sticker();
+  });
+  button[4].mousePressed(function () { // brilhos
+    showBrilhoMenu();
+    showBottomMenu();
+    hideFirstMenu();
+    brilho();
+  });
+  button[5].mousePressed(function() {
+    showFormaMenu();
+    showBottomMenu();
+    hideFirstMenu();
+    forma();
+  });
 }
 
 function hideFirstMenu() {
@@ -820,4 +1096,188 @@ function createButtons() {
   corTexto[4].style('background-color', '#3CB2FF');
   corTexto[5].style('background-color', '#7ED24B');
   corTexto[6].style('background-color', '#FFD22C');
+
+  // STICKERS
+  margem = (windowWidth - (btnPosXS * 4 + 8)) / 2;
+  // BOTOES slider stickers
+  stickerBtnS = createButton("Stickers");
+  stickerBtnS.position(0, w + 57, 'fixed');
+  stickerBtnS.size(windowWidth / 3, 35);
+  stickerBtnS.style("font-family", "Open Sans");
+  stickerBtnS.style("font-size", "12px");
+  stickerBtnS.style("color", "#af7dfd");
+  stickerBtnS.style('background-color', 'transparent');
+  stickerBtnS.style('border', 'solid 0.5px #af7dfd');
+  stickerBtnS.hide();
+  stickerBtnS.attribute('disable', '');
+
+  // BOTOES slider tamanho
+  tamanhoBtnS = createButton("Tamanho");
+  tamanhoBtnS.position(w / 3, w + 57, 'fixed');
+  tamanhoBtnS.size(windowWidth / 3, 35);
+  tamanhoBtnS.style("font-family", "Open Sans");
+  tamanhoBtnS.style("font-size", "12px");
+  tamanhoBtnS.style("color", "#af7dfd");
+  tamanhoBtnS.style('background-color', 'transparent');
+  tamanhoBtnS.style('border', 'solid 0.5px #af7dfd');
+  tamanhoBtnS.hide();
+  tamanhoBtnS.attribute('disable', '');
+
+  sizeSliderS = createSlider(60, 200, 60);
+  sizeSliderS.size(200, 20);
+  sizeSliderS.position((windowWidth - 200) / 2, windowWidth + 130);
+
+  // esconder (aparece quando se clica no menu)
+  sizeSliderS.hide();
+
+  // IMAGEM DE FUNDO
+  margem = (w - (btnPosXS * 4)) / 2;
+  for (var i = 0; i < 8; i++) {
+    stickersBtn[i] = createButton('');
+    stickersBtn[i].position(btnPosXS * i + margem, w + 110);
+    stickersBtn[i].style('width', '40px');
+    stickersBtn[i].style('height', '40px');
+    stickersBtn[i].style('border', 'none');
+    stickersBtn[i].style('background-size', '40px 40px');
+    stickersBtn[i].style('background-repeat', 'no-repeat');
+    // divido em 2 para estarem alinhados
+    if (i >= 4) {
+      stickersBtn[i].position(btnPosXS * i + margem - (btnPosXS * 4), w + 120 + 35);
+    }
+  }
+
+  // colocar imagens de fundo nos botoes
+  stickersBtn[0].style('background-image', 'url("data/stickers/sticker1.png")');
+  stickersBtn[1].style('background-image', 'url("data/stickers/sticker2.png")');
+  stickersBtn[2].style('background-image', 'url("data/stickers/sticker3.png")');
+  stickersBtn[3].style('background-image', 'url("data/stickers/sticker4.png")');
+  stickersBtn[4].style('background-image', 'url("data/stickers/sticker5.png")');
+  stickersBtn[5].style('background-image', 'url("data/stickers/sticker6.png")');
+  stickersBtn[6].style('background-image', 'url("data/stickers/sticker7.png")');
+  stickersBtn[7].style('background-image', 'url("data/stickers/sticker8.png")');
+  // esconder
+  for (var i = 0; i < 8; i++) {
+    stickersBtn[i].hide();
+    stickersBtn[i].attribute('disabled');
+  }
+  sizeSliderS.hide();
+
+  // BRILHOS
+  margem = (windowWidth - (btnPosX * 4 + 8)) / 2;
+
+  // BOTOES slider stickers
+  brilhoBtnB = createButton("Brilhos");
+  brilhoBtnB.position(0, w + 57, 'fixed');
+  brilhoBtnB.size(windowWidth / 3, 35);
+  brilhoBtnB.style("font-family", "Open Sans");
+  brilhoBtnB.style("font-size", "12px");
+  brilhoBtnB.style("color", "#af7dfd");
+  brilhoBtnB.style('background-color', 'transparent');
+  brilhoBtnB.style('border', 'solid 0.5px #af7dfd');
+  brilhoBtnB.hide();
+  brilhoBtnB.attribute('disable', '');
+
+  tamanhoBtnB = createButton("Tamanho");
+  tamanhoBtnB.position(w / 3, windowWidth + 57, 'fixed');
+  tamanhoBtnB.size(windowWidth / 3, 35);
+  tamanhoBtnB.style("font-family", "Open Sans");
+  tamanhoBtnB.style("font-size", "12px");
+  tamanhoBtnB.style("color", "#af7dfd");
+  tamanhoBtnB.style('background-color', 'transparent');
+  tamanhoBtnB.style('border', 'solid 0.5px #af7dfd');
+  tamanhoBtnB.hide();
+  tamanhoBtnB.attribute('disable', '');
+
+  sizeSliderB = createSlider(10, 100, 22);
+  sizeSliderB.size(200, 20);
+  sizeSliderB.position((windowWidth - 200) / 2, windowWidth + 130);
+  sizeSliderB.hide();
+
+  // IMAGEM DE FUNDO
+  btnPosXS = btnPosXS + 10;
+  margem = (w - (btnPosXS * 4)) / 2;
+  for (var i = 0; i < 8; i++) {
+    brilhosBtn[i] = createButton('');
+    brilhosBtn[i].position(btnPosXS * i + margem, w + 98);
+    brilhosBtn[i].style('width', '50px');
+    brilhosBtn[i].style('height', '50px');
+    brilhosBtn[i].style('border', 'none');
+    brilhosBtn[i].style('background-size', '50px 50px');
+    brilhosBtn[i].style('background-repeat', 'no-repeat');
+
+    brilhosBtn[i].hide();
+    brilhosBtn[i].attribute('disable', '');
+
+    if (i >= 4) {
+      brilhosBtn[i].position(btnPosXS * i + margem - (btnPosXS * 4), w + 153);
+    }
+  }
+  brilhosBtn[0].style('background-image', 'url("data/brilho/brilho.png")');
+  brilhosBtn[1].style('background-image', 'url("data/brilho/brilho1.png")');
+  brilhosBtn[2].style('background-image', 'url("data/brilho/brilho2.png")');
+  brilhosBtn[3].style('background-image', 'url("data/brilho/brilho3.png")');
+  brilhosBtn[4].style('background-image', 'url("data/brilho/brilho4.png")');
+  brilhosBtn[5].style('background-image', 'url("data/brilho/brilho5.png")');
+  brilhosBtn[6].style('background-image', 'url("data/brilho/brilho6.png")');
+  brilhosBtn[7].style('background-image', 'url("data/brilho/brilho7.png")');
+
+
+  // FORMAS
+  margem = (windowWidth - (btnPosX * 4 + 8)) / 2;
+  // BOTOES slider stickers
+  formaBtnF = createButton("Formas");
+  formaBtnF.position(0, w + 57, 'fixed');
+  formaBtnF.size(windowWidth / 3, 35);
+  formaBtnF.style("font-family", "Open Sans");
+  formaBtnF.style("font-size", "12px");
+  formaBtnF.style("color", "#af7dfd");
+  formaBtnF.style('background-color', 'transparent');
+  formaBtnF.style('border', 'solid 0.5px #af7dfd');
+  formaBtnF.hide();
+  formaBtnF.attribute('disable', '');
+
+  tamanhoBtnF = createButton("Tamanho");
+  tamanhoBtnF.position(w / 3, windowWidth + 57, 'fixed');
+  tamanhoBtnF.size(windowWidth / 3, 35);
+  tamanhoBtnF.style("font-family", "Open Sans");
+  tamanhoBtnF.style("font-size", "12px");
+  tamanhoBtnF.style("color", "#af7dfd");
+  tamanhoBtnF.style('background-color', 'transparent');
+  tamanhoBtnF.style('border', 'solid 0.5px #af7dfd');
+  tamanhoBtnF.hide();
+  tamanhoBtnF.attribute('disable', '');
+
+   sizeSliderF = createSlider(10, 100, 22);
+  sizeSliderF.size(200, 20);
+  sizeSliderF.position((windowWidth - 200) / 2, windowWidth + 130);
+  sizeSliderF.hide();
+
+  // IMAGEM DE FUNDO
+  btnPosXS = btnPosXS-10;
+  margem = (w - (btnPosXS * 4)) / 2;
+  for (var i = 0; i < 8; i++) {
+    formasBtn[i] = createButton('');
+    formasBtn[i].position(btnPosXS * i + margem, w + 110);
+    formasBtn[i].style('width', '40px');
+    formasBtn[i].style('height', '40px');
+    formasBtn[i].style('border', 'none');
+    formasBtn[i].style('background-size', '40px 40px');
+    formasBtn[i].style('background-repeat', 'no-repeat');
+
+    formasBtn[i].hide();
+    formasBtn[i].attribute('disable', '');
+
+    if (i >= 4) {
+      formasBtn[i].position(btnPosXS * i + margem - (btnPosXS * 4), w + 155);
+    }
+  }
+  formasBtn[0].style('background-image', 'url("data/formas/forma1.png")');
+  formasBtn[1].style('background-image', 'url("data/formas/forma2.png")');
+  formasBtn[2].style('background-image', 'url("data/formas/forma3.png")');
+  formasBtn[3].style('background-image', 'url("data/formas/forma4.png")');
+  formasBtn[4].style('background-image', 'url("data/formas/forma5.png")');
+  formasBtn[5].style('background-image', 'url("data/formas/forma6.png")');
+  formasBtn[6].style('background-image', 'url("data/formas/forma7.png")');
+  formasBtn[7].style('background-image', 'url("data/formas/forma8.png")');
+
 }
