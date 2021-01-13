@@ -1339,7 +1339,7 @@ function createButtons() {
   // BOTOES slider stickers
   stickerBtnS = createButton("Stickers");
   stickerBtnS.position(0, w + 35, 'fixed');
-  stickerBtnS.size(w / 3, 35);
+  stickerBtnS.size(w / 2, 35);
   stickerBtnS.style("font-family", "Open Sans");
   stickerBtnS.style('text-shadow', '0 0 2px #d8b7ff');
   stickerBtnS.style("font-size", "12px");
@@ -1351,8 +1351,8 @@ function createButtons() {
 
   // BOTOES slider tamanho
   tamanhoBtnS = createButton("Tamanho");
-  tamanhoBtnS.position(w / 3, w + 35, 'fixed');
-  tamanhoBtnS.size(w / 3, 35);
+  tamanhoBtnS.position(w / 2, w + 35, 'fixed');
+  tamanhoBtnS.size(w / 2, 35);
   tamanhoBtnS.style("font-family", "Open Sans");
   tamanhoBtnS.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnS.style("font-size", "12px");
@@ -1405,7 +1405,7 @@ function createButtons() {
   // BOTOES slider stickers
   brilhoBtnB = createButton("Brilhos");
   brilhoBtnB.position(0, w + 35, 'fixed');
-  brilhoBtnB.size(w / 3, 35);
+  brilhoBtnB.size(w / 2, 35);
   brilhoBtnB.style("font-family", "Open Sans");
   brilhoBtnB.style('text-shadow', '0 0 2px #d8b7ff');
   brilhoBtnB.style("font-size", "12px");
@@ -1415,8 +1415,8 @@ function createButtons() {
   brilhoBtnB.hide();
   brilhoBtnB.attribute('disable', '');
   tamanhoBtnB = createButton("Tamanho");
-  tamanhoBtnB.position(w / 3, w + 35, 'fixed');
-  tamanhoBtnB.size(w / 3, 35);
+  tamanhoBtnB.position(w / 2, w + 35, 'fixed');
+  tamanhoBtnB.size(w / 2, 35);
   tamanhoBtnB.style("font-family", "Open Sans");
   tamanhoBtnB.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnB.style("font-size", "12px");
@@ -1464,7 +1464,7 @@ function createButtons() {
   // BOTOES slider stickers
   formaBtnF = createButton("Formas");
   formaBtnF.position(0, w + 35, 'fixed');
-  formaBtnF.size(w / 3, 35);
+  formaBtnF.size(w / 2, 35);
   formaBtnF.style("font-family", "Open Sans");
   formaBtnF.style('text-shadow', '0 0 2px #d8b7ff');
   formaBtnF.style("font-size", "12px");
@@ -1475,8 +1475,8 @@ function createButtons() {
   formaBtnF.attribute('disable', '');
 
   tamanhoBtnF = createButton("Tamanho");
-  tamanhoBtnF.position(w / 3, w + 35, 'fixed');
-  tamanhoBtnF.size(w / 3, 35);
+  tamanhoBtnF.position(w / 2, w + 35, 'fixed');
+  tamanhoBtnF.size(w / 2, 35);
   tamanhoBtnF.style("font-family", "Open Sans");
   tamanhoBtnF.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnF.style("font-size", "12px");
