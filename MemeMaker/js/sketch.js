@@ -2,9 +2,6 @@
 Catarina Lobão, Francisca Marques, Giuliana Almasio, Mariana Simões, Marta Sousa
 FBAUP 2020/2021*/
 
-/* legenda: "----" é preciso melhorar pequenas coisas
-legenda: "!!!" é preciso colocar algo urgente */
-
 /* 
 ORDEM DOS LAYERS:
 1. FUNDO
@@ -32,7 +29,7 @@ CAPÍTULOS
 
 //////////////////////////////////
 let footer = 35;
-let header = 35;
+let header = 45;
 let w = window.innerWidth;
 let h = window.innerHeight;
 let c; // canvas
@@ -210,6 +207,13 @@ function setup() {
 
   c.parent('index');
 
+  // header
+  let hdr = createDiv('');
+  hdr.position(0, 0);
+  hdr.size(w, header);
+  hdr.style('background-color', '#fff');
+  hdr.style('box-shadow', '1px 1px 10px #d8b7ff');
+
   createButtons();
   showFirstMenu();
 
@@ -237,15 +241,12 @@ function setup() {
 
   pAlerta.style('margin-left', '10vw');
   pAlerta.style('margin-right', '10vw');
-    pAlerta.style('font-size', '12px');
-    pAlerta.style('text-align', 'left');
-    pAlerta.style('position', 'absolute');
-    pAlerta.style('line-height', '1.2');
-    pAlerta.style('top', '50%');
-    pAlerta.style('transform', 'translateY(-50%)');
-
-
-
+  pAlerta.style('font-size', '12px');
+  pAlerta.style('text-align', 'left');
+  pAlerta.style('position', 'absolute');
+  pAlerta.style('line-height', '1.2');
+  pAlerta.style('top', '50%');
+  pAlerta.style('transform', 'translateY(-50%)');
 
   iconFechar.parent(divAlerta);
   pAlerta.parent(divAlerta);
@@ -257,15 +258,18 @@ function setup() {
   fonttt = font5;
   textFont(fonttt);
   textos.push(new Texto(-100, -1000, tSize, 'Escreve aqui!'));
+for (let t of textos){
+  t.update();
+  t.updateText('', 22, '#fff', font5);
+}
 }
 
 //////////////////////////////////
 function draw() {
-  /*----- colocar fundos dos menus aqui  */
   //// LAYER 1: FUNDO
-  stroke(1);
   imageMode(CORNER);
   background(bg);
+
   //// LAYER 2: MOLDURAS
   switch (moldura) {
     case 0:
@@ -302,25 +306,29 @@ function draw() {
   let escrito = textbox.value(); // o que se escreve
   // UPDATE: texto, tamanho, cor, font
   // update posição
-/*   if (textos.length > 0) {
-    if (interactTexto == true) {
-      textos[textos.length - 1].update(); // update drag
-      textos[textos.length - 1].updateText(escrito, tSize, Tc, fonttt);
-      }
-      // mostrar todos
-      for (let t of textos) {
-        t.show(); // display + aplicar tamanho
-      }
-  } */
+  if (interactTexto == true) {
+    print(textos[textos.length - 1].update());
+    textos[textos.length - 1].update(); // update drag
+    textos[textos.length - 1].updateText(escrito, tSize, Tc, fonttt);
+  }
+  // mostrar todos
+  for (let t of textos) {
+    t.show(); // display + aplicar tamanho
+  }
 
+
+  /* 
+    for (let t of textos) {
+          t.show(); // display + aplicar tamanho
+    } */
 
   //// LAYER 4: STICKERS
   sSize = sizeSliderS.value();
   if (interactSticker == true) {
-      // update posição do último
-      stickers[stickers.length - 1].update();
-      // update tamanho / escolha do último
-      stickers[stickers.length - 1].updateSize(sSize, qualSticker);
+    // update posição do último
+    stickers[stickers.length - 1].update();
+    // update tamanho / escolha do último
+    stickers[stickers.length - 1].updateSize(sSize, qualSticker);
   }
   // mostrar todos
   for (let s of stickers) {
@@ -359,11 +367,8 @@ function draw() {
 
   ////* BARRA MENU */
   // está em draw para ser redesenhado por cima dos objetos do canvas
-  fill(255);
-  rect(0, w + 35, w, h);
-  stroke(175, 125, 253);
-  strokeWeight(0.7);
-  rect(0, w, w, 35);
+  /*   fill('red');
+    rect(100, 100, 100, 100); */
 }
 
 
@@ -1053,9 +1058,9 @@ function showFirstMenu() {
 
     var margem = (w - 75 * 3) / 2;
     if (i < 3) {
-      button[i].position(75 * i + margem, w+80);
+      button[i].position(75 * i + margem, w + 80);
     } else {
-      button[i].position(75 * i + margem - (75 * 3), w+155);
+      button[i].position(75 * i + margem - (75 * 3), w + 155);
     }
   }
 
@@ -1163,7 +1168,7 @@ function createButtons() {
   var margem = (w - (btnPosX * 6 + 20)) / 2;
   for (var i = 0; i < 7; i++) {
     cor[i] = createButton('');
-    cor[i].position(btnPosX * i + margem, w+75);
+    cor[i].position(btnPosX * i + margem, w + 75);
     cor[i].style('width', '20px');
     cor[i].style('height', '20px');
     cor[i].style('border-radius', '50%');
@@ -1182,14 +1187,14 @@ function createButtons() {
 
   for (var i = 0; i < 14; i++) {
     bgBtn[i] = createButton('');
-    bgBtn[i].position(btnPosX * i + margem, w+75 + 30);
+    bgBtn[i].position(btnPosX * i + margem, w + 75 + 30);
     bgBtn[i].style('width', '20px');
     bgBtn[i].style('height', '20px');
     bgBtn[i].style('border-radius', '50%');
     bgBtn[i].style('border', 'solid 0.5px #af7dfd');
     bgBtn[i].style('background-size', 'cover');
     if (i > 6) {
-      bgBtn[i].position(btnPosX * i + + margem - (btnPosX * 7), w+75 + 60);
+      bgBtn[i].position(btnPosX * i + + margem - (btnPosX * 7), w + 75 + 60);
     }
     bgBtn[i].hide();
     bgBtn[i].attribute('disabled', '');
@@ -1240,35 +1245,35 @@ function createButtons() {
   //// texto
   // menu barra
   textoBM = createButton("Texto");
-  textoBM.position(0, w+35, 'fixed');
+  textoBM.position(0, w + 35, 'fixed');
   textoBM.size(w / 3, 35);
   textoBM.style("font-family", "Open Sans");
   textoBM.style('text-shadow', '0 0 2px #d8b7ff');
   textoBM.style("font-size", "12px");
   textoBM.style("color", "#af7dfd");
-  textoBM.style('background-color', 'transparent');
+  textoBM.style('background-color', '#fff');
   textoBM.style('border', 'solid 0.5px #af7dfd');
   textoBM.hide();
   textoBM.attribute('disabled', '');
   corTBM = createButton("Cor");
-  corTBM.position(w / 3, w+35, 'fixed');
+  corTBM.position(w / 3, w + 35, 'fixed');
   corTBM.size(w / 3, 35);
   corTBM.style("font-family", "Open Sans");
   corTBM.style('text-shadow', '0 0 2px #d8b7ff');
   corTBM.style("font-size", "12px");
   corTBM.style("color", "#af7dfd");
-  corTBM.style('background-color', 'transparent');
+  corTBM.style('background-color', '#fff');
   corTBM.style('border', 'solid 0.5px #af7dfd');
   corTBM.hide();
   corTBM.attribute('disabled', '');
   tamanhoTBM = createButton("Tamanho");
-  tamanhoTBM.position((w / 3) * 2, w+35, 'fixed');
+  tamanhoTBM.position((w / 3) * 2, w + 35, 'fixed');
   tamanhoTBM.size(w / 3, 35);
   tamanhoTBM.style("font-family", "Open Sans");
   tamanhoTBM.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoTBM.style("font-size", "12px");
   tamanhoTBM.style("color", "#af7dfd");
-  tamanhoTBM.style('background-color', 'transparent');
+  tamanhoTBM.style('background-color', '#fff');
   tamanhoTBM.style('border', 'solid 0.5px #af7dfd');
   tamanhoTBM.hide();
   tamanhoTBM.attribute('disabled', '');
@@ -1285,11 +1290,11 @@ function createButtons() {
   margem = (w - (btnPosX * 5)) / 2;
   for (var i = 0; i < 5; i++) {
     fontBtn[i] = createButton('Aa');
-    fontBtn[i].position(btnPosX * i + margem, w+85);
+    fontBtn[i].position(btnPosX * i + margem, w + 85);
     fontBtn[i].style('width', '20px');
     fontBtn[i].style('height', '20px');
     fontBtn[i].style('border', 'none');
-    fontBtn[i].style('background-color', 'transparent');
+    fontBtn[i].style('background-color', '#fff');
     fontBtn[i].style('color', '#9b2fff');
     fontBtn[i].hide();
     fontBtn[i].attribute('disabled', '');
@@ -1298,10 +1303,10 @@ function createButtons() {
   fontBtn[1].style('font-family', 'myCrafty');
   fontBtn[2].style('font-family', 'myHerr');
   fontBtn[2].style('font-size', '15px');
-  fontBtn[2].position(btnPosX * 2 + margem, w+85 - 1);
+  fontBtn[2].position(btnPosX * 2 + margem, w + 85 - 1);
   fontBtn[3].style('font-family', 'myMeddon');
   fontBtn[3].style('font-size', '10px');
-  fontBtn[3].position(btnPosX * 3 + margem - 3, w+85 - 1);
+  fontBtn[3].position(btnPosX * 3 + margem - 3, w + 85 - 1);
   fontBtn[4].style('font-family', 'myOpenSans');
   fontBtn[4].style('font-weight', 'bold');
   // SLIDER TAMANHO
@@ -1313,7 +1318,7 @@ function createButtons() {
   margem = (w - (btnPosX * 6 + 20)) / 2;
   for (var i = 0; i < 7; i++) {
     corTexto[i] = createButton('');
-    corTexto[i].position(btnPosX * i + margem, w+85 + 45);
+    corTexto[i].position(btnPosX * i + margem, w + 85 + 45);
     corTexto[i].style('width', '20px');
     corTexto[i].style('height', '20px');
     corTexto[i].style('border-radius', '50%');
@@ -1331,7 +1336,6 @@ function createButtons() {
 
   // STICKERS
   margem = (w - (btnPosXS * 4 + 8)) / 2;
-
   // BOTOES slider stickers
   stickerBtnS = createButton("Stickers");
   stickerBtnS.position(0, w + 35, 'fixed');
@@ -1340,7 +1344,7 @@ function createButtons() {
   stickerBtnS.style('text-shadow', '0 0 2px #d8b7ff');
   stickerBtnS.style("font-size", "12px");
   stickerBtnS.style("color", "#af7dfd");
-  stickerBtnS.style('background-color', 'transparent');
+  stickerBtnS.style('background-color', '#fff');
   stickerBtnS.style('border', 'solid 0.5px #af7dfd');
   stickerBtnS.hide();
   stickerBtnS.attribute('disable', '');
@@ -1353,7 +1357,7 @@ function createButtons() {
   tamanhoBtnS.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnS.style("font-size", "12px");
   tamanhoBtnS.style("color", "#af7dfd");
-  tamanhoBtnS.style('background-color', 'transparent');
+  tamanhoBtnS.style('background-color', '#fff');
   tamanhoBtnS.style('border', 'solid 0.5px #af7dfd');
   tamanhoBtnS.hide();
   tamanhoBtnS.attribute('disable', '');
@@ -1398,7 +1402,6 @@ function createButtons() {
 
   // BRILHOS
   margem = (w - (btnPosX * 4 + 8)) / 2;
-
   // BOTOES slider stickers
   brilhoBtnB = createButton("Brilhos");
   brilhoBtnB.position(0, w + 35, 'fixed');
@@ -1407,11 +1410,10 @@ function createButtons() {
   brilhoBtnB.style('text-shadow', '0 0 2px #d8b7ff');
   brilhoBtnB.style("font-size", "12px");
   brilhoBtnB.style("color", "#af7dfd");
-  brilhoBtnB.style('background-color', 'transparent');
+  brilhoBtnB.style('background-color', '#fff');
   brilhoBtnB.style('border', 'solid 0.5px #af7dfd');
   brilhoBtnB.hide();
   brilhoBtnB.attribute('disable', '');
-
   tamanhoBtnB = createButton("Tamanho");
   tamanhoBtnB.position(w / 3, w + 35, 'fixed');
   tamanhoBtnB.size(w / 3, 35);
@@ -1419,11 +1421,10 @@ function createButtons() {
   tamanhoBtnB.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnB.style("font-size", "12px");
   tamanhoBtnB.style("color", "#af7dfd");
-  tamanhoBtnB.style('background-color', 'transparent');
+  tamanhoBtnB.style('background-color', '#fff');
   tamanhoBtnB.style('border', 'solid 0.5px #af7dfd');
   tamanhoBtnB.hide();
   tamanhoBtnB.attribute('disable', '');
-
   sizeSliderB = createSlider(100, 1000, 200);
   sizeSliderB.size(200, 20);
   sizeSliderB.position((w - 200) / 2, w + 130);
@@ -1468,7 +1469,7 @@ function createButtons() {
   formaBtnF.style('text-shadow', '0 0 2px #d8b7ff');
   formaBtnF.style("font-size", "12px");
   formaBtnF.style("color", "#af7dfd");
-  formaBtnF.style('background-color', 'transparent');
+  formaBtnF.style('background-color', '#fff');
   formaBtnF.style('border', 'solid 0.5px #af7dfd');
   formaBtnF.hide();
   formaBtnF.attribute('disable', '');
@@ -1480,7 +1481,7 @@ function createButtons() {
   tamanhoBtnF.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnF.style("font-size", "12px");
   tamanhoBtnF.style("color", "#af7dfd");
-  tamanhoBtnF.style('background-color', 'transparent');
+  tamanhoBtnF.style('background-color', '#fff');
   tamanhoBtnF.style('border', 'solid 0.5px #af7dfd');
   tamanhoBtnF.hide();
   tamanhoBtnF.attribute('disable', '');
