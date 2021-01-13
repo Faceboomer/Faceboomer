@@ -231,11 +231,11 @@ function setup() {
   iconFechar.addClass('fa fa-times');
   iconFechar.style('float', 'right');
 
-  let pAlerta = createP('Bem vindo/a!<br>O Boa Noite ajuda-te a gerar as tuas próprias imagens para fazeres, finalmente, parte da comunidade Faceboomer!<br>Toca em qualquer botão para começar a personalizar.');
+  let pAlerta = createP('Bem vindo/a!<br>O Boa Noite ajuda-te a gerar as tuas próprias imagens para fazeres, finalmente, parte da comunidade Faceboomer! Toca em qualquer botão para começar a personalizar.');
 
-  pAlerta.style('margin-left', '8px');
-  pAlerta.style('margin-right', '8px');
-    pAlerta.style('font-size', '10px');
+  pAlerta.style('margin-left', '10vw');
+  pAlerta.style('margin-right', '10vw');
+    pAlerta.style('font-size', '12px');
     pAlerta.style('text-align', 'left');
     pAlerta.style('position', 'absolute');
     pAlerta.style('line-height', '1.2');
