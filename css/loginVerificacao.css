@@ -148,3 +148,8 @@ main p#finalP2 {
   box-shadow: 1px 1px 10px #d8b7ff;
   border-radius: 10px;
 }
+
+a {
+  text-decoration: none;
+  color: #7300ff;
+}

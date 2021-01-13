@@ -1,7 +1,7 @@
 
 /* pag login */
 header {
-    position: absolute;
+  /*  position: absolute;
     top: 0;
     padding: 0 15vw;
     padding-top: 6vh;
@@ -9,7 +9,8 @@ header {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    padding-top: 0;
 }
 
 h2{
