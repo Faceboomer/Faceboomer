@@ -219,6 +219,7 @@ function setup() {
   divAlerta.size(w - 50, 130);
   divAlerta.position(30, w / 3);
   divAlerta.style('font-family', 'Open Sans');
+  divAlerta.style('text-shadow', '0 0 2px #d8b7ff');
   divAlerta.style('font-size', '12px');
   divAlerta.style('border-radius', '15px');
   divAlerta.style('box-shadow', '1px 1px 10px #d8b7ff');
@@ -230,6 +231,7 @@ function setup() {
   let iconFechar = createElement('i');
   iconFechar.addClass('fa fa-times');
   iconFechar.style('float', 'right');
+  iconFechar.style('text-shadow', '0 0 2px #d8b7ff');
 
   let pAlerta = createP('Bem vindo/a!<br>O Boa Noite ajuda-te a gerar as tuas próprias imagens para fazeres, finalmente, parte da comunidade Faceboomer! Toca em qualquer botão para começar a personalizar.');
 
@@ -964,6 +966,7 @@ function showBottomMenu() {
     bMenu[i].position(0, h - footer);
     bMenu[i].style("font-family", "Open Sans");
     bMenu[i].style("font-size", "12px");
+    bMenu[i].style('text-shadow', '0 0 2px #d8b7ff');
     bMenu[i].style('box-shadow', '1px 1px 10px #d8b7ff');
     bMenu[i].style("color", "#af7dfd");
     bMenu[i].style('background-color', 'rgba(255, 255, 255, 0.8)');
@@ -1011,12 +1014,14 @@ function showFirstMenu() {
   let linkVoltar = createA('../Final.html', '');
   let voltarIcon = createElement('i');
   voltarIcon.addClass('fa fa-arrow-left');
+  voltarIcon.style('text-shadow', '0 0 2px #d8b7ff');
   voltarIcon.position(0, 3);
   voltarIcon.attribute('href', '../Final.html');
   voltarIcon.parent(linkVoltar);
 
   let guardarIcon = createElement('i');
   guardarIcon.addClass('fa fa-download');
+  guardarIcon.style('text-shadow', '0 0 2px #d8b7ff');
   guardarIcon.position(w - 50, 3);
   let guardar = createButton('');
   guardar.position(w - 38, 13);
@@ -1038,6 +1043,7 @@ function showFirstMenu() {
   for (var i = 0; i < 6; i++) {
     button[i].size(60, 60);
     button[i].style('font-family', 'Open Sans');
+    button[i].style('text-shadow', '0 0 2px #d8b7ff');
     button[i].style('font-size', '12px');
     button[i].style('border-radius', '15px');
     button[i].style('box-shadow', '1px 1px 10px #d8b7ff');
@@ -1237,6 +1243,7 @@ function createButtons() {
   textoBM.position(0, w+35, 'fixed');
   textoBM.size(w / 3, 35);
   textoBM.style("font-family", "Open Sans");
+  textoBM.style('text-shadow', '0 0 2px #d8b7ff');
   textoBM.style("font-size", "12px");
   textoBM.style("color", "#af7dfd");
   textoBM.style('background-color', 'transparent');
@@ -1247,6 +1254,7 @@ function createButtons() {
   corTBM.position(w / 3, w+35, 'fixed');
   corTBM.size(w / 3, 35);
   corTBM.style("font-family", "Open Sans");
+  corTBM.style('text-shadow', '0 0 2px #d8b7ff');
   corTBM.style("font-size", "12px");
   corTBM.style("color", "#af7dfd");
   corTBM.style('background-color', 'transparent');
@@ -1257,6 +1265,7 @@ function createButtons() {
   tamanhoTBM.position((w / 3) * 2, w+35, 'fixed');
   tamanhoTBM.size(w / 3, 35);
   tamanhoTBM.style("font-family", "Open Sans");
+  tamanhoTBM.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoTBM.style("font-size", "12px");
   tamanhoTBM.style("color", "#af7dfd");
   tamanhoTBM.style('background-color', 'transparent');
@@ -1269,6 +1278,7 @@ function createButtons() {
   textbox.style('border', 'solid 1px #d8b7ff');
   textbox.style("font-family", "Open Sans");
   textbox.style('color', '#af7dfd');
+  textbox.style('text-shadow', '0 0 2px #d8b7ff');
   textbox.hide();
   textbox.attribute('disabled', '');
   // BOTOES ESCOLHER FONT
@@ -1327,6 +1337,7 @@ function createButtons() {
   stickerBtnS.position(0, w + 35, 'fixed');
   stickerBtnS.size(w / 3, 35);
   stickerBtnS.style("font-family", "Open Sans");
+  stickerBtnS.style('text-shadow', '0 0 2px #d8b7ff');
   stickerBtnS.style("font-size", "12px");
   stickerBtnS.style("color", "#af7dfd");
   stickerBtnS.style('background-color', 'transparent');
@@ -1339,6 +1350,7 @@ function createButtons() {
   tamanhoBtnS.position(w / 3, w + 35, 'fixed');
   tamanhoBtnS.size(w / 3, 35);
   tamanhoBtnS.style("font-family", "Open Sans");
+  tamanhoBtnS.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnS.style("font-size", "12px");
   tamanhoBtnS.style("color", "#af7dfd");
   tamanhoBtnS.style('background-color', 'transparent');
@@ -1392,6 +1404,7 @@ function createButtons() {
   brilhoBtnB.position(0, w + 35, 'fixed');
   brilhoBtnB.size(w / 3, 35);
   brilhoBtnB.style("font-family", "Open Sans");
+  brilhoBtnB.style('text-shadow', '0 0 2px #d8b7ff');
   brilhoBtnB.style("font-size", "12px");
   brilhoBtnB.style("color", "#af7dfd");
   brilhoBtnB.style('background-color', 'transparent');
@@ -1403,6 +1416,7 @@ function createButtons() {
   tamanhoBtnB.position(w / 3, w + 35, 'fixed');
   tamanhoBtnB.size(w / 3, 35);
   tamanhoBtnB.style("font-family", "Open Sans");
+  tamanhoBtnB.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnB.style("font-size", "12px");
   tamanhoBtnB.style("color", "#af7dfd");
   tamanhoBtnB.style('background-color', 'transparent');
@@ -1451,6 +1465,7 @@ function createButtons() {
   formaBtnF.position(0, w + 35, 'fixed');
   formaBtnF.size(w / 3, 35);
   formaBtnF.style("font-family", "Open Sans");
+  formaBtnF.style('text-shadow', '0 0 2px #d8b7ff');
   formaBtnF.style("font-size", "12px");
   formaBtnF.style("color", "#af7dfd");
   formaBtnF.style('background-color', 'transparent');
@@ -1462,6 +1477,7 @@ function createButtons() {
   tamanhoBtnF.position(w / 3, w + 35, 'fixed');
   tamanhoBtnF.size(w / 3, 35);
   tamanhoBtnF.style("font-family", "Open Sans");
+  tamanhoBtnF.style('text-shadow', '0 0 2px #d8b7ff');
   tamanhoBtnF.style("font-size", "12px");
   tamanhoBtnF.style("color", "#af7dfd");
   tamanhoBtnF.style('background-color', 'transparent');
