@@ -23,11 +23,8 @@ main {
   position: relative;
 }
 #mainFinal {
-  margin: auto;
+  margin: 15vh 12vw;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 label {
   font-size: 30px;

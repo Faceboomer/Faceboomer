@@ -1,110 +1,148 @@
-*{
-  box-sizing: border-box;
-}
-
 body {
-    color: #AF7DFD;
-    background-color: white;
-    margin: 0;
-    font-family: "myOpenSans", Helvetica, Arial, sans-serif;
-    position: relative;
+  position: relative;
+  color: #af7dfd;
+  background-color: white;
+  margin: 0;
+  font-family: "myOpenSans", Helvetica, Arial, sans-serif;
 }
 
 @font-face {
-    font-family: myOpenSans;
-    src: url(../../fonts/OpenSans-Regular.ttf);
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: myOpenSans;
-    src: url(../../fonts/OpenSans-Bold.ttf);
-    font-weight: bold;
-  }
+  font-family: myOpenSans;
+  src: url(../../fonts/OpenSans-Regular.ttf);
+  font-weight: normal;
+}
 
- header {
-    margin: 0;
-    padding: 1vh 0;
-    overflow: hidden;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 1px 1px 10px #d8b7ff;
-  }
+@font-face {
+  font-family: myOpenSans;
+  src: url(../../fonts/OpenSans-Bold.ttf);
+  font-weight: bold;
+}
 
-  #placeImg {
-    position: relative;
-    top: 56.8px;
-    width: 100%;
-    -moz-box-shadow: inset 0 -10px 10px -10px  #d8b7ff;
-    -webkit-box-shadow: inset 0 -10px 10px -10px  #d8b7ff;
-    box-shadow: inset 0 -10px 10px -10px #d8b7ff;
-  }
+/* fonts para o css do sketch */
 
-/*   /* para ser sempre quadrado.
-  truque encontrado em: https://spin.atomicobject.com/2015/07/14/css-responsive-square/ 
-  #placeImg:after{
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  } */
+@font-face {
+  font-family: myBonbon;
+  src: url(../data/fonts/Bonbon-Regular.ttf);
+  font-weight: normal;
+}
 
-  a {
-      text-decoration: none;
-      color: #AF7DFD;;
-  }
+@font-face {
+  font-family: myCrafty;
+  src: url(../data/fonts/CraftyGirls-Regular.ttf);
+  font-weight: normal;
+}
 
-  i {
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+@font-face {
+  font-family: myHerr;
+  src: url(../data/fonts/HerrVonMuellerhoff-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: myMeddon;
+  src: url(../data/fonts/Meddon-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: myBrownies;
+  src: url(../data/fonts/brownies_cake.ttf);
+  font-weight: normal;
+}
 
-  .fa-arrow-left {
-    margin-left: 1vh;
-  }
+header {
+  margin: 0;
+  padding: 1vh 0;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+}
 
-  .fa-share-alt {
-    margin-right: 1vh;
-  }
+.sketch {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 
-  .elementos {
-    display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: 90px 90px 90px;
-    grid-template-rows: 90px 90px;
-    grid-gap: 20px 0;
-    align-content: center;
-    padding: 35px 0;
-    /*box-shadow: 0px -1px 10px #d8b7ff;*/
-    bottom: 0%;
-    position: fixed;
-    width: 100%;
-  }
-  
-  .elementos .elemento {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-    text-transform: capitalize;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px #d8b7ff;
-  }
+.placeImg {
+  height: 65vh;
+  -moz-box-shadow: inset 0 -10px 10px -10px #d8b7ff;
+  -webkit-box-shadow: inset 0 -10px 10px -10px #d8b7ff;
+  box-shadow: inset 0 -10px 10px -10px #d8b7ff;
+}
 
-  .elemento p {
-    bottom: 0;
-    text-align: center;
-    display: inline-block;
-  }
+a {
+  text-decoration: none;
+  color: #af7dfd;
+}
 
-  .elemento i {
-      display: block;
-      float: none;
-      text-align: center;
-      font-size: 25px;
-      padding-bottom: 10px;
-  }
- 
+i {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.fa-arrow-left {
+  /* margin-left: 1vh; */
+}
+
+.fa-share-alt {
+  /* margin-right: 1vh; */
+}
+
+.elementos {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 90px 90px 90px;
+  grid-template-rows: 90px 90px;
+  grid-gap: 20px 0;
+  align-content: center;
+  padding: 35px 0;
+  /*box-shadow: 0px -1px 10px #d8b7ff;*/
+  bottom: 0%;
+  position: fixed;
+  width: 100%;
+}
+
+.elementos .elemento {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  text-transform: capitalize;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #d8b7ff;
+}
+
+.elemento p {
+  bottom: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.elemento i {
+  display: block;
+  float: none;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+main.placeImg {
+  margin-top: 75px;
+  text-align: center;
+}
+
+.loadingclass img {
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
