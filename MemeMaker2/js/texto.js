@@ -39,9 +39,11 @@ class Texto {
 
     // construir objeto
     show() {
+       
         textSize(this.s);
         fill(this.c);
         textFont(this.f);
+
         // texto, x, y
         let t = text(this.p, this.x, this.y);
 

@@ -29,13 +29,30 @@ CAPÍTULOS
 11. createButtons()
 */
 
+// PARA ADICIONAR NOVOS LAYERS, PASSAR PELOS SEGUINTES PASSOS:
+// 1. DECLARAR VARIÁVEIS (no início)
+// 2. LOAD DE ASSETS (em "preload()" )
+
+// 3. CRIAR OS BOTÕES DO LAYER RESPETIVO (em "CreateButtons" )
+// 3.1 depois de verificar a posição dos botões, ESCONDER BOTÕES (em "CreateButtons" )
+
+// 4. FAZER FUNÇÃO "show[Layer]Menu"
+// 4.1 .show() os botoes (em "show[Layer]Menu" )
+// 4.2 FAZER FUNÇÃO "hide[Layer]Menu"
+// 4.2 .hide() os botoes (em "hide[Layer]Menu" )
+
+// 5. descomentar "hide[Layer]Menu()" (em "showBottomMenu
+// 6. COLOCAR FUNÇÕES NO BOTÃO INICIAL (em "showFirstMenu" )
+// show[botao]Menu(); showBottomMenu(); [layer]();
+
+// 7. FAZER A FUNÇÃO LAYER + a classe (outro ficheiro) se necessário
+
 
 //////////////////////////////////
 let footer = 35;
 let header = 35;
 let w = window.innerWidth;
 let h = window.innerHeight;
-let c; // canvas
 
 /* DECLARAR MENU */
 /* inicial */
@@ -89,6 +106,11 @@ let stickersImg = []; // lista de imagens
 let qualSticker = 8;
 let stickers = [] // lista de objetos sticker
 let interactSticker = false;
+// stickers bom dia
+let bomDiaBtn = []; // botoes
+let bomDia = []; // opções
+let bDiaCor = []; // cores
+
 
 /* DECLARAR BRILHOS */
 let brilhoBtnB; // menu barra
@@ -157,6 +179,8 @@ function preload() {
   font3 = loadFont('data/fonts/HerrVonMuellerhoff-Regular.ttf');
   font4 = loadFont('data/fonts/Meddon-Regular.ttf');
   font5 = loadFont('data/fonts/OpenSans-Bold.ttf');
+  font6 = loadFont('data/fonts/brownies_cake.ttf');
+
 
   stickersFiles = [
     'sticker1.png',
@@ -205,7 +229,7 @@ function preload() {
 //////////////////////////////////
 function setup() {
 
-  c = createCanvas(w, w);
+  let c = createCanvas(w, w);
   c.position(0, header);
 
   c.parent('index');
@@ -250,7 +274,6 @@ function setup() {
 function draw() {
   /*----- colocar fundos dos menus aqui  */
   //// LAYER 1: FUNDO
-  stroke(1);
   imageMode(CORNER);
   background(bg);
   //// LAYER 2: MOLDURAS
@@ -287,27 +310,28 @@ function draw() {
   noStroke();
   tSize = sliderT.value(); // tamanho texto
   let escrito = textbox.value(); // o que se escreve
+  Tc = '#9a2fff';
   // UPDATE: texto, tamanho, cor, font
   // update posição
-/*   if (textos.length > 0) {
-    if (interactTexto == true) {
-      textos[textos.length - 1].update(); // update drag
-      textos[textos.length - 1].updateText(escrito, tSize, Tc, fonttt);
-      }
-      // mostrar todos
-      for (let t of textos) {
-        t.show(); // display + aplicar tamanho
-      }
-  } */
-
+  /* if (interactTexto == true) { */
+  // !!! BUG!
+  textos[textos.length - 1].update(); // update drag
+  textos[textos.length - 1].updateText(escrito, tSize, Tc, fonttt);
+  //}
+  // mostrar todos
+  for (let t of textos) {
+    t.show(); // display + aplicar tamanho
+  }
 
   //// LAYER 4: STICKERS
   sSize = sizeSliderS.value();
   if (interactSticker == true) {
+    if (brilhos.length > 0) {
       // update posição do último
       stickers[stickers.length - 1].update();
       // update tamanho / escolha do último
       stickers[stickers.length - 1].updateSize(sSize, qualSticker);
+    }
   }
   // mostrar todos
   for (let s of stickers) {
@@ -422,13 +446,6 @@ function fundo() {
   });
   cor[6].mousePressed(function () {
     bg = '#ffd12c';
-  });
-
-  bMenu[0].mousePressed(function () {
-    bg = 255;
-    showFirstMenu();
-    hideFundoMenu();
-    hideBottomMenu();
   });
 
 }
@@ -563,6 +580,56 @@ function sticker() {
   });
 
   stickers.push(new Sticker(w / 2, w / 2, bSize));
+
+  boanoiteBtn.mousePressed(function () {
+    var d = new Date();
+    var weekday = d.getDay(); // dia de semana
+    var wd = "";
+    let bdia = "";
+
+    if (hour() > 19 && hour() < 5) {
+      bdia = "Boa Noite!"
+    }
+    if (hour() > 4 && hour() < 13) {
+      bdia = "Bom Dia!"
+    }
+    if (hour() > 12 && hour() < 20) {
+      bdia = "Boa Tarde!"
+    }
+    switch (weekday) {
+      case 0:
+        wd = "Domingo";
+        break;
+      case 1:
+        wd = "Segunda-Feira";
+        break;
+      case 2:
+        wd = "Terça-Feira";
+        break;
+      case 3:
+        wd = "Quarta-Feira";
+        break;
+      case 4:
+        wd = "Quinta-Feira";
+        break;
+      case 5:
+        wd = "Sexta-Feira";
+        break;
+      case 6:
+        wd = "Sábado";
+        break;
+    }
+    push();
+    rotate(radians(-3));
+    textFont(font6);
+    textAlign(CENTER, CENTER);
+    textSize(40);
+    fill('red');
+    text("Feliz " + wd + "!", w / 2, w - 22);
+
+    text(bdia, w / 2, header + 22);
+    pop();
+  });
 
   // ao clicar cancelar
   bMenu[0].mousePressed(function () {
@@ -800,6 +867,8 @@ function showStickerMenu() {
   tamanhoBtnS.removeAttribute('disabled');
   stickerBtnS.show();
   stickerBtnS.removeAttribute('disabled');
+  boanoiteBtn.show();
+  boanoiteBtn.removeAttribute('disabled');
 
   for (var i = 0; i < 8; i++) {
     stickersBtn[i].show();
@@ -812,6 +881,10 @@ function showStickerMenu() {
       stickersBtn[i].show();
       stickersBtn[i].removeAttribute('disabled');
     }
+    for (var i = 0; i < 7; i++) {
+      bDiaCor[i].hide();
+      bDiaCor[i].attribute('disabled', '');
+    }
     sizeSliderS.hide();
   });
 
@@ -822,7 +895,24 @@ function showStickerMenu() {
       stickersBtn[i].hide();
       stickersBtn[i].attribute('disabled', '');
     }
+    for (var i = 0; i < 7; i++) {
+      bDiaCor[i].hide();
+      bDiaCor[i].attribute('disabled', '');
+    }
     sizeSliderS.show();
+  });
+
+  boanoiteBtn.mousePressed(function () {
+    print('jk')
+    for (var i = 0; i < 7; i++) {
+      bDiaCor[i].show();
+      bDiaCor[i].removeAttribute('disabled');
+    }
+    for (var i = 0; i < 8; i++) {
+      stickersBtn[i].hide();
+      stickersBtn[i].attribute('disabled', '');
+    }
+    sizeSliderS.hide();
   });
 }
 
@@ -839,6 +929,9 @@ function hideStickerMenu() {
     stickersBtn[i].attribute('disabled', '');
   }
   sizeSliderS.hide();
+
+  boanoiteBtn.hide();
+  boanoiteBtn.attribute('disable', '');
 }
 
 ////////* BRILHO MENU */
@@ -1034,11 +1127,11 @@ function showFirstMenu() {
     button[i].style('background-color', 'rgba(255, 255, 255, 0.8)');
     button[i].style('border', 'none');
 
-    var margem = (w - 75 * 3) / 2;
+    var margem = (w - 60 * 3) / 2;
     if (i < 3) {
-      button[i].position(75 * i + margem, w+80);
+      button[i].position(75 * i + 50, h - 160);
     } else {
-      button[i].position(75 * i + margem - (75 * 3), w+155);
+      button[i].position(75 * i + 50 - (75 * 3), h - 85);
     }
   }
 
@@ -1146,7 +1239,7 @@ function createButtons() {
   var margem = (w - (btnPosX * 6 + 20)) / 2;
   for (var i = 0; i < 7; i++) {
     cor[i] = createButton('');
-    cor[i].position(btnPosX * i + margem, w+75);
+    cor[i].position(btnPosX * i + margem, btnPosY);
     cor[i].style('width', '20px');
     cor[i].style('height', '20px');
     cor[i].style('border-radius', '50%');
@@ -1165,14 +1258,14 @@ function createButtons() {
 
   for (var i = 0; i < 14; i++) {
     bgBtn[i] = createButton('');
-    bgBtn[i].position(btnPosX * i + margem, w+75 + 30);
+    bgBtn[i].position(btnPosX * i + margem, btnPosY + 30);
     bgBtn[i].style('width', '20px');
     bgBtn[i].style('height', '20px');
     bgBtn[i].style('border-radius', '50%');
     bgBtn[i].style('border', 'solid 0.5px #af7dfd');
     bgBtn[i].style('background-size', 'cover');
     if (i > 6) {
-      bgBtn[i].position(btnPosX * i + + margem - (btnPosX * 7), w+75 + 60);
+      bgBtn[i].position(btnPosX * i + + margem - (btnPosX * 7), btnPosY + 60);
     }
     bgBtn[i].hide();
     bgBtn[i].attribute('disabled', '');
@@ -1223,33 +1316,35 @@ function createButtons() {
   //// texto
   // menu barra
   textoBM = createButton("Texto");
-  textoBM.position(0, w+35, 'fixed');
+  textoBM.position(0, w + 57, 'fixed');
   textoBM.size(w / 3, 35);
   textoBM.style("font-family", "Open Sans");
   textoBM.style("font-size", "12px");
   textoBM.style("color", "#af7dfd");
   textoBM.style('background-color', 'transparent');
-  textoBM.style('border', 'solid 0.5px #af7dfd');
+  textoBM.style('border', 'none');
+  textoBM.style('border-right', 'solid 1px #d8b7ff');
   textoBM.hide();
   textoBM.attribute('disabled', '');
   corTBM = createButton("Cor");
-  corTBM.position(w / 3, w+35, 'fixed');
+  corTBM.position(w / 3, w + 57, 'fixed');
   corTBM.size(w / 3, 35);
   corTBM.style("font-family", "Open Sans");
   corTBM.style("font-size", "12px");
   corTBM.style("color", "#af7dfd");
   corTBM.style('background-color', 'transparent');
-  corTBM.style('border', 'solid 0.5px #af7dfd');
+  corTBM.style('border', 'none');
+  corTBM.style('border-right', 'solid 1px #d8b7ff');
   corTBM.hide();
   corTBM.attribute('disabled', '');
   tamanhoTBM = createButton("Tamanho");
-  tamanhoTBM.position((w / 3) * 2, w+35, 'fixed');
+  tamanhoTBM.position((w / 3) * 2, w + 57, 'fixed');
   tamanhoTBM.size(w / 3, 35);
   tamanhoTBM.style("font-family", "Open Sans");
   tamanhoTBM.style("font-size", "12px");
   tamanhoTBM.style("color", "#af7dfd");
   tamanhoTBM.style('background-color', 'transparent');
-  tamanhoTBM.style('border', 'solid 0.5px #af7dfd');
+  tamanhoTBM.style('border', 'none');
   tamanhoTBM.hide();
   tamanhoTBM.attribute('disabled', '');
   textbox = createElement('textarea', 'Escreve aqui!');
@@ -1264,7 +1359,7 @@ function createButtons() {
   margem = (w - (btnPosX * 5)) / 2;
   for (var i = 0; i < 5; i++) {
     fontBtn[i] = createButton('Aa');
-    fontBtn[i].position(btnPosX * i + margem, w+85);
+    fontBtn[i].position(btnPosX * i + margem, btnPosY);
     fontBtn[i].style('width', '20px');
     fontBtn[i].style('height', '20px');
     fontBtn[i].style('border', 'none');
@@ -1277,22 +1372,22 @@ function createButtons() {
   fontBtn[1].style('font-family', 'myCrafty');
   fontBtn[2].style('font-family', 'myHerr');
   fontBtn[2].style('font-size', '15px');
-  fontBtn[2].position(btnPosX * 2 + margem, w+85 - 1);
+  fontBtn[2].position(btnPosX * 2 + margem, btnPosY - 1);
   fontBtn[3].style('font-family', 'myMeddon');
   fontBtn[3].style('font-size', '10px');
-  fontBtn[3].position(btnPosX * 3 + margem - 3, w+85 - 1);
+  fontBtn[3].position(btnPosX * 3 + margem - 3, btnPosY - 1);
   fontBtn[4].style('font-family', 'myOpenSans');
   fontBtn[4].style('font-weight', 'bold');
   // SLIDER TAMANHO
   sliderT = createSlider(10, 100, 22);
   sliderT.size(200, 20);
-  sliderT.position((w - 200) / 2, w + 130);
+  sliderT.position((windowWidth - 200) / 2, windowWidth + 130);
   sliderT.hide();
   // OPÇÕES CORES DE TEXTO
-  margem = (w - (btnPosX * 6 + 20)) / 2;
+  margem = (windowWidth - (btnPosX * 6 + 20)) / 2;
   for (var i = 0; i < 7; i++) {
     corTexto[i] = createButton('');
-    corTexto[i].position(btnPosX * i + margem, w+85 + 45);
+    corTexto[i].position(btnPosX * i + margem, btnPosY + 45);
     corTexto[i].style('width', '20px');
     corTexto[i].style('height', '20px');
     corTexto[i].style('border-radius', '50%');
@@ -1309,12 +1404,12 @@ function createButtons() {
   corTexto[6].style('background-color', '#FFD22C');
 
   // STICKERS
-  margem = (w - (btnPosXS * 4 + 8)) / 2;
+  margem = (windowWidth - (btnPosXS * 4 + 8)) / 2;
 
   // BOTOES slider stickers
   stickerBtnS = createButton("Stickers");
-  stickerBtnS.position(0, w + 35, 'fixed');
-  stickerBtnS.size(w / 3, 35);
+  stickerBtnS.position(0, w + 57, 'fixed');
+  stickerBtnS.size(windowWidth / 3, 35);
   stickerBtnS.style("font-family", "Open Sans");
   stickerBtnS.style("font-size", "12px");
   stickerBtnS.style("color", "#af7dfd");
@@ -1325,8 +1420,8 @@ function createButtons() {
 
   // BOTOES slider tamanho
   tamanhoBtnS = createButton("Tamanho");
-  tamanhoBtnS.position(w / 3, w + 35, 'fixed');
-  tamanhoBtnS.size(w / 3, 35);
+  tamanhoBtnS.position(w / 3, w + 57, 'fixed');
+  tamanhoBtnS.size(windowWidth / 3, 35);
   tamanhoBtnS.style("font-family", "Open Sans");
   tamanhoBtnS.style("font-size", "12px");
   tamanhoBtnS.style("color", "#af7dfd");
@@ -1337,7 +1432,40 @@ function createButtons() {
 
   sizeSliderS = createSlider(60, 200, 60);
   sizeSliderS.size(200, 20);
-  sizeSliderS.position((w - 200) / 2, w + 130);
+  sizeSliderS.position((windowWidth - 200) / 2, windowWidth + 130);
+
+  //BOA NOITE botão menu barra
+  boanoiteBtn = createButton("Boa Tarde");
+  boanoiteBtn.position((windowWidth / 3) * 2, windowWidth + 57, 'fixed');
+  boanoiteBtn.size(windowWidth / 3, 35);
+  boanoiteBtn.style("font-family", "myBrownie");
+  boanoiteBtn.style("font-size", "12px");
+  boanoiteBtn.style("color", "#af7dfd");
+  boanoiteBtn.style('background-color', 'transparent');
+  boanoiteBtn.style('border', 'solid 0.5px #af7dfd');
+  boanoiteBtn.hide();
+  boanoiteBtn.attribute('disable', '');
+
+  // OPÇÕES CORES DE BOA TARDE
+  margem = (windowWidth - (btnPosX * 6 + 20)) / 2;
+  for (var i = 0; i < 7; i++) {
+    bDiaCor[i] = createButton('');
+    bDiaCor[i].position(btnPosX * i + margem, btnPosY + 65);
+    bDiaCor[i].style('width', '20px');
+    bDiaCor[i].style('height', '20px');
+    bDiaCor[i].style('border-radius', '50%');
+    bDiaCor[i].style('border', 'solid 0.5px #af7dfd');
+    bDiaCor[i].hide();
+    bDiaCor[i].attribute('disable', '');
+  }
+  bDiaCor[0].style('background-color', '#000');
+  bDiaCor[1].style('background-color', '#fff');
+  bDiaCor[2].style('background-color', '#9b2fff');
+  bDiaCor[3].style('background-color', '#FF241A');
+  bDiaCor[4].style('background-color', '#3CB2FF');
+  bDiaCor[5].style('background-color', '#7ED24B');
+  bDiaCor[6].style('background-color', '#FFD22C');
+
   // esconder (aparece quando se clica no menu)
   sizeSliderS.hide();
 
@@ -1374,12 +1502,12 @@ function createButtons() {
   sizeSliderS.hide();
 
   // BRILHOS
-  margem = (w - (btnPosX * 4 + 8)) / 2;
+  margem = (windowWidth - (btnPosX * 4 + 8)) / 2;
 
   // BOTOES slider stickers
   brilhoBtnB = createButton("Brilhos");
-  brilhoBtnB.position(0, w + 35, 'fixed');
-  brilhoBtnB.size(w / 3, 35);
+  brilhoBtnB.position(0, w + 57, 'fixed');
+  brilhoBtnB.size(windowWidth / 3, 35);
   brilhoBtnB.style("font-family", "Open Sans");
   brilhoBtnB.style("font-size", "12px");
   brilhoBtnB.style("color", "#af7dfd");
@@ -1389,8 +1517,8 @@ function createButtons() {
   brilhoBtnB.attribute('disable', '');
 
   tamanhoBtnB = createButton("Tamanho");
-  tamanhoBtnB.position(w / 3, w + 35, 'fixed');
-  tamanhoBtnB.size(w / 3, 35);
+  tamanhoBtnB.position(w / 3, windowWidth + 57, 'fixed');
+  tamanhoBtnB.size(windowWidth / 3, 35);
   tamanhoBtnB.style("font-family", "Open Sans");
   tamanhoBtnB.style("font-size", "12px");
   tamanhoBtnB.style("color", "#af7dfd");
@@ -1401,7 +1529,7 @@ function createButtons() {
 
   sizeSliderB = createSlider(100, 1000, 200);
   sizeSliderB.size(200, 20);
-  sizeSliderB.position((w - 200) / 2, w + 130);
+  sizeSliderB.position((windowWidth - 200) / 2, windowWidth + 130);
   sizeSliderB.hide();
 
   // IMAGEM DE FUNDO
@@ -1434,11 +1562,11 @@ function createButtons() {
 
 
   // FORMAS
-  margem = (w - (btnPosX * 4 + 8)) / 2;
+  margem = (windowWidth - (btnPosX * 4 + 8)) / 2;
   // BOTOES slider stickers
   formaBtnF = createButton("Formas");
-  formaBtnF.position(0, w + 35, 'fixed');
-  formaBtnF.size(w / 3, 35);
+  formaBtnF.position(0, w + 57, 'fixed');
+  formaBtnF.size(windowWidth / 3, 35);
   formaBtnF.style("font-family", "Open Sans");
   formaBtnF.style("font-size", "12px");
   formaBtnF.style("color", "#af7dfd");
@@ -1448,8 +1576,8 @@ function createButtons() {
   formaBtnF.attribute('disable', '');
 
   tamanhoBtnF = createButton("Tamanho");
-  tamanhoBtnF.position(w / 3, w + 35, 'fixed');
-  tamanhoBtnF.size(w / 3, 35);
+  tamanhoBtnF.position(w / 3, windowWidth + 57, 'fixed');
+  tamanhoBtnF.size(windowWidth / 3, 35);
   tamanhoBtnF.style("font-family", "Open Sans");
   tamanhoBtnF.style("font-size", "12px");
   tamanhoBtnF.style("color", "#af7dfd");
@@ -1460,7 +1588,7 @@ function createButtons() {
 
   sizeSliderF = createSlider(70, 300, 22);
   sizeSliderF.size(200, 20);
-  sizeSliderF.position((w - 200) / 2, w + 130);
+  sizeSliderF.position((windowWidth - 200) / 2, windowWidth + 130);
   sizeSliderF.hide();
 
   // IMAGEM DE FUNDO
