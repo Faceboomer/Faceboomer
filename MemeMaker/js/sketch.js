@@ -130,7 +130,7 @@ function preload() {
   ];
   // "empurrar" cada ficheiro para a lista backgrounds
   for (let file of backgroundFiles) {
-    backgrounds.push(loadImage('MemeMaker/data/Fundos/' + file));
+    backgrounds.push(loadImage('data/Fundos/' + file));
   }
 
   framesFiles = [ // load molduras
