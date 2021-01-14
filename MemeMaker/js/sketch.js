@@ -237,7 +237,7 @@ function setup() {
   iconFechar.style('float', 'right');
   iconFechar.style('text-shadow', '0 0 2px #d8b7ff');
 
-  let pAlerta = createP('Bem vindo/a!<br>O Boa Noite ajuda-te a gerar as tuas próprias imagens para fazeres, finalmente, parte da comunidade Faceboomer! Toca em qualquer botão para começar a personalizar.');
+  let pAlerta = createP('Bem vindo/a!<br>O Coollage ajuda-te a gerar as tuas próprias imagens para fazeres, finalmente, parte da comunidade Faceboomer! Toca em qualquer botão para começar a personalizar.');
 
   pAlerta.style('margin-left', '10vw');
   pAlerta.style('margin-right', '10vw');
